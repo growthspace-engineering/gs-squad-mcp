@@ -5,7 +5,7 @@
   "main": "dist/cli/main-stdio.js",
   "types": "dist/cli/main-stdio.d.ts",
   "bin": {
-    "gs-squad-mcp": "./dist/cli/main-stdio.js"
+    "gs-squad-mcp": "dist/cli/main-stdio.js"
   },
   "scripts": {
     "build": "npm run barrels && nest build",

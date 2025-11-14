@@ -43,6 +43,10 @@ claude-squad/
 .env
 .env.*
 
+# npmrc files (keep .npmrc.gh for CI)
+.npmrc
+!.npmrc.gh
+
 # Other
 node_modules/
 coverage/
