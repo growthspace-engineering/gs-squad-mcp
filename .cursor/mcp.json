@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "gs-squad-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "ts-node",
+        "--require",
+        "tsconfig-paths/register",
+        "src/cli/main-stdio.ts"
+      ]
+    }
+  }
+}
