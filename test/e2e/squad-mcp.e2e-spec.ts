@@ -38,7 +38,7 @@ Test role body content.
 
     await writeFile(
       join(testTemplatesDir, 'run-agent.template'),
-      '-c echo "<%= prompt %>"'
+      'echo "<%= prompt %>"'
     );
 
     process.env.AGENTS_DIRECTORY_PATH = testAgentsDir;
@@ -128,7 +128,7 @@ Test role body content.
 
     await writeFile(
       join(testTemplatesDir, 'create-chat.template'),
-      '-c "echo chat-123"'
+      'echo chat-123'
     );
 
     process.env.CREATE_CHAT_TEMPLATE_PATH = join(

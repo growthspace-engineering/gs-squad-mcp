@@ -1,0 +1,2 @@
+echo "[DRY MODE]\nrole=<%= roleId %>\nprovider=<%= typeof provider !== 'undefined' ? provider : 'N/A' %>\nmodel=<%= typeof model !== 'undefined' ? model : 'N/A' %>\nchatId=<%= typeof generatedUuid !== 'undefined' ? generatedUuid : 'N/A' %>\n======\n<%= prompt %>"
+
