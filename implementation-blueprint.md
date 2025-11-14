@@ -1135,5 +1135,5 @@ Use Husky to enforce local checks:
 * [x] Final pass on:
 
   * [x] ESLint
-  * [ ] `agents/` role quality
+  * [x] `agents/` role quality
   * [ ] README/CONTRIBUTING clarity
