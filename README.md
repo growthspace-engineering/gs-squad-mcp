@@ -1,6 +1,28 @@
-# Gs Squad MCP
+<p align="center">
+  <a href="https://github.com/growthspace-engineering" target="blank"><img src="GS-logo.svg" width="250" alt="GrowthSpace Logo" /></a>
+  <h2 align="center">
+    @growthspace-engineering/gs-squad-mcp
+  </h2>
+</p>
 
-A TypeScript / NestJS MCP (Model Context Protocol) server that spawns role-specialized CLI agents using stdio. Enables orchestrators (like Cursor, Claude MCP host, or custom orchestrators) to spawn multiple specialized agents that work together as a "squad."
+<p align="center">
+  <a href="https://github.com/growthspace-engineering/gs-squad-mcp/releases">
+    <img src="https://img.shields.io/github/v/release/growthspace-engineering/gs-squad-mcp?display_name=tag&label=latest&logo=npm&color=CB3837&style=for-the-badge">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/growthspace-engineering/gs-squad-mcp/tags">
+    <img src="https://img.shields.io/github/v/tag/growthspace-engineering/gs-squad-mcp?filter=*-beta*&label=beta&logo=npm&color=CB3837&style=flat-square">
+  </a>
+  <a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg"></a>
+</p>
+
+<p align="center">
+  A TypeScript / NestJS MCP that spawns role-specialized CLI agents using stdio
+</p>
+
+<hr>
 
 ## Overview
 
