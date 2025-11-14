@@ -1,0 +1,50 @@
+# Source files
+src/
+test/
+
+# Development config files
+tsconfig*.json
+jest*.cjs
+jest.setup.ts
+barrelsby.json
+.eslintrc.cjs
+nest-cli.json
+release.config.cjs
+commitlint.config.cjs
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+
+# Development tools
+.husky/
+.vscode/
+.cursorindexingignore
+
+# Documentation (keep README.md)
+CONTRIBUTING.md
+implementation-blueprint.md
+product-definition.md
+technical-documentation.md
+
+# Reference repos
+adk-samples/
+claude-squad/
+
+# Build artifacts
+*.tsbuildinfo
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Other
+node_modules/
+coverage/
+.nyc_output/
+
