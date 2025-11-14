@@ -938,31 +938,31 @@ Use Husky to enforce local checks:
 
 **Goal:** Prompt construction for stateless and stateful modes is solid and tested.
 
-* [ ] Implement `PromptBuilderService`
+* [x] Implement `PromptBuilderService`
 
-  * [ ] `buildPromptStateless(role, task)`
-  * [ ] `buildPromptStatefulNewChat(role, task)`
-  * [ ] `buildPromptStatefulExistingChat(task)`
-  * [ ] Append setup/reporting footer in all three paths
-* [ ] Unit tests (`prompt-builder.service.spec.ts`)
+  * [x] `buildPromptStateless(role, task)`
+  * [x] `buildPromptStatefulNewChat(role, task)`
+  * [x] `buildPromptStatefulExistingChat(task)`
+  * [x] Append setup/reporting footer in all three paths
+* [x] Unit tests (`prompt-builder.service.spec.ts`)
 
-  * [ ] `test.todo`: stateless prompt contains:
+  * [x] `test.todo`: stateless prompt contains:
 
-    * [ ] `# Role` + role body
-    * [ ] `# Task` + task text
-    * [ ] setup & reporting footer
-  * [ ] `test.todo`: stateful new chat contains:
+    * [x] `# Role` + role body
+    * [x] `# Task` + task text
+    * [x] setup & reporting footer
+  * [x] `test.todo`: stateful new chat contains:
 
-    * [ ] `# Role` + role body
-    * [ ] `# Initial Task` + task
-    * [ ] footer
-  * [ ] `test.todo`: stateful existing chat contains:
+    * [x] `# Role` + role body
+    * [x] `# Initial Task` + task
+    * [x] footer
+  * [x] `test.todo`: stateful existing chat contains:
 
-    * [ ] `# Task` + task only
-    * [ ] footer
-  * [ ] Implement tests & logic
-* [ ] Run unit tests and fix any failures
-* [ ] Run coverage to ensure key paths are covered
+    * [x] `# Task` + task only
+    * [x] footer
+  * [x] Implement tests & logic
+* [x] Run unit tests and fix any failures
+* [x] Run coverage to ensure key paths are covered
 
 ---
 

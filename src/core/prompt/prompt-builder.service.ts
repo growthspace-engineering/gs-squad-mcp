@@ -3,25 +3,57 @@ import { IRoleDefinition } from '../roles/role-definition.interface';
 
 @Injectable()
 export class PromptBuilderService {
+  private readonly setupReportingFooter = `---
+
+# Setup & Reporting Rules
+
+If you notice any setup or environment problems that prevent you from ` +
+    `completing your task,
+you MUST clearly report them as SETUP / ENVIRONMENT ISSUES.
+
+Explain what you observed and suggest specific steps for the human to fix.
+Do not pretend the task succeeded if the environment blocks you.`;
+
   buildPromptStateless(
-    _role: IRoleDefinition,
-    _task: string
+    role: IRoleDefinition,
+    task: string
   ): string {
-    // TODO: Implement stateless prompt construction
-    return '';
+    return `# Role
+
+${role.body}
+
+---
+
+# Task
+
+${task}
+
+${this.setupReportingFooter}`;
   }
 
   buildPromptStatefulNewChat(
-    _role: IRoleDefinition,
-    _task: string
+    role: IRoleDefinition,
+    task: string
   ): string {
-    // TODO: Implement stateful new chat prompt construction
-    return '';
+    return `# Role
+
+${role.body}
+
+---
+
+# Initial Task
+
+${task}
+
+${this.setupReportingFooter}`;
   }
 
-  buildPromptStatefulExistingChat(_task: string): string {
-    // TODO: Implement stateful existing chat prompt construction
-    return '';
+  buildPromptStatefulExistingChat(task: string): string {
+    return `# Task
+
+${task}
+
+${this.setupReportingFooter}`;
   }
 }
 
