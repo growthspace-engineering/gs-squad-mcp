@@ -1089,34 +1089,34 @@ Use Husky to enforce local checks:
 
 **Goal:** Enforce quality gates locally and in CI; prepare for releases.
 
-* [ ] Configure ESLint rules (style + TS best practices)
-* [ ] Add Husky
+* [x] Configure ESLint rules (style + TS best practices)
+* [x] Add Husky
 
-  * [ ] `pre-commit` hook:
+  * [x] `pre-commit` hook:
 
-    * [ ] `npm run lint`
-    * [ ] `npm test`
-  * [ ] `commit-msg` hook:
+    * [x] `npm run lint`
+    * [x] `npm test`
+  * [x] `commit-msg` hook:
 
-    * [ ] Run Commitlint
-  * [ ] Optional `pre-push`:
+    * [x] Run Commitlint
+  * [x] Optional `pre-push`:
 
-    * [ ] `npm run test:e2e`
-* [ ] Add Commitlint + Commitizen
+    * [x] `npm run test:e2e`
+* [x] Add Commitlint + Commitizen
 
-  * [ ] copy/adapt from `gs-mcp-proxy-pii-redactor`
-  * [ ] `npm run commit` script
-* [ ] Configure GitHub Actions `ci.yml`
+  * [x] copy/adapt from `gs-mcp-proxy-pii-redactor`
+  * [x] `npm run commit` script
+* [x] Configure GitHub Actions `ci.yml`
 
-  * [ ] `npm ci`
-  * [ ] `npm run lint`
-  * [ ] `npm test`
-  * [ ] `npm run test:e2e`
-  * [ ] `npm run build`
-* [ ] Configure `release.yml` for GitHub npm registry
+  * [x] `npm ci`
+  * [x] `npm run lint`
+  * [x] `npm test`
+  * [x] `npm run test:e2e`
+  * [x] `npm run build`
+* [x] Configure `release.yml` for GitHub npm registry
 
-  * [ ] Use `NODE_AUTH_TOKEN` PAT
-  * [ ] `npm publish` to `https://npm.pkg.github.com`
+  * [x] Use `NODE_AUTH_TOKEN` PAT
+  * [x] `npm publish` to `https://npm.pkg.github.com`
 
 ---
 
