@@ -24,6 +24,7 @@
 
 <hr>
 
+
 ## Overview
 
 Gs Squad MCP allows any IDE or agentic orchestrator to spawn multiple **role-specialized CLI agents** that work together. Each spawned process:
