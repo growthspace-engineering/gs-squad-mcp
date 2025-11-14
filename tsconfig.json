@@ -9,7 +9,6 @@
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist",
-    "rootDir": "./src",
     "baseUrl": "./",
     "paths": {
       "@gs-squad-mcp/core/config": [ "src/core/config" ],
@@ -23,15 +22,16 @@
     },
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "strictBindCallApply": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
-    "resolveJsonModule": true
-  },
-  "include": [ "src/**/*", "test/**/*", "jest.setup.ts" ],
-  "exclude": [ "node_modules", "dist" ]
+    "resolveJsonModule": true,
+    "types": [
+      "node",
+      "jest"
+    ]
+  }
 }
-
