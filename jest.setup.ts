@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { register } from 'tsconfig-paths';
 import { compilerOptions } from './tsconfig.json';
 

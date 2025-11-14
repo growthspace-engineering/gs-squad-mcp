@@ -1,5 +1,6 @@
+import 'reflect-metadata';
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppModule } from '@gs-squad-mcp/nest';
+import { AppModule } from '../../src/nest/app.module';
 import { SquadService } from '@gs-squad-mcp/core/mcp';
 import { SquadConfigService } from '@gs-squad-mcp/core/config';
 import { RoleRepositoryService } from '@gs-squad-mcp/core/roles';
