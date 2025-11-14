@@ -8,12 +8,23 @@ import { IStartSquadMembersStatefulPayload } from
   './contracts/start-squad-members-stateful.payload';
 import { IStartSquadMembersStatefulResponse } from
   './contracts/start-squad-members-stateful.response';
+import { RoleRepositoryService } from '../roles/role-repository.service';
 
 @Injectable()
 export class SquadService {
+  constructor(
+    private readonly roleRepository: RoleRepositoryService
+  ) {}
+
   async listRoles(): Promise<IListRolesResponse> {
-    // TODO: Implement role listing
-    return { roles: [] };
+    const roles = await this.roleRepository.getAllRoles();
+    return {
+      roles: roles.map((role) => ({
+        id: role.id,
+        name: role.name,
+        description: role.description
+      }))
+    };
   }
 
   async startSquadMembersStateless(
