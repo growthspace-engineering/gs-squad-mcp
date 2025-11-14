@@ -141,3 +141,7 @@ vite.config.ts.timestamp-*
 .vite/
 
 .specstory/
+
+# roles reference repos
+adk-samples/
+claude-squad/
