@@ -28,13 +28,12 @@ describe('ProcessRunnerService', () => {
   });
 
   it('successful command returns exitCode 0', async () => {
-    const command = process.platform === 'win32' ? 'cmd' : 'sh';
-    const args =
+    const command =
       process.platform === 'win32'
-        ? [ '/c', 'echo test && exit 0' ]
-        : [ '-c', 'echo test' ];
+        ? 'cmd /c "echo test && exit 0"'
+        : 'echo test';
 
-    const result = await service.runProcess(command, args, testCwd, 5000);
+    const result = await service.runProcess(command, [], testCwd, 5000);
 
     expect(result.exitCode).toBe(0);
     expect(result.timedOut).toBe(false);
@@ -43,13 +42,10 @@ describe('ProcessRunnerService', () => {
   });
 
   it('failing command returns non-zero exitCode', async () => {
-    const command = process.platform === 'win32' ? 'cmd' : 'sh';
-    const args =
-      process.platform === 'win32'
-        ? [ '/c', 'exit 1' ]
-        : [ '-c', 'exit 1' ];
+    const command =
+      process.platform === 'win32' ? 'cmd /c "exit 1"' : 'exit 1';
 
-    const result = await service.runProcess(command, args, testCwd, 5000);
+    const result = await service.runProcess(command, [], testCwd, 5000);
 
     expect(result.exitCode).not.toBe(0);
     expect(result.exitCode).toBe(1);
@@ -57,51 +53,45 @@ describe('ProcessRunnerService', () => {
   });
 
   it('long-running command times out', async () => {
-    const command = process.platform === 'win32' ? 'cmd' : 'sh';
-    const args =
+    const command =
       process.platform === 'win32'
-        ? [ '/c', 'timeout /t 10 /nobreak' ]
-        : [ '-c', 'sleep 10' ];
+        ? 'cmd /c "timeout /t 10 /nobreak"'
+        : 'sleep 10';
 
-    const result = await service.runProcess(command, args, testCwd, 500);
+    const result = await service.runProcess(command, [], testCwd, 500);
 
     expect(result.timedOut).toBe(true);
     expect(result.exitCode).toBeNull();
   }, 10000);
 
   it('should capture stdout correctly', async () => {
-    const command = process.platform === 'win32' ? 'cmd' : 'sh';
-    const args =
+    const command =
       process.platform === 'win32'
-        ? [ '/c', 'echo "output line 1" && echo "output line 2"' ]
-        : [ '-c', 'echo "output line 1"; echo "output line 2"' ];
+        ? 'cmd /c "echo output line 1 && echo output line 2"'
+        : 'echo "output line 1"; echo "output line 2"';
 
-    const result = await service.runProcess(command, args, testCwd, 5000);
+    const result = await service.runProcess(command, [], testCwd, 5000);
 
     expect(result.stdout).toContain('output line 1');
     expect(result.stdout).toContain('output line 2');
   });
 
   it('should capture stderr correctly', async () => {
-    const command = process.platform === 'win32' ? 'cmd' : 'sh';
-    const args =
+    const command =
       process.platform === 'win32'
-        ? [ '/c', 'echo error >&2' ]
-        : [ '-c', 'echo error >&2' ];
+        ? 'cmd /c "echo error >&2"'
+        : 'echo error >&2';
 
-    const result = await service.runProcess(command, args, testCwd, 5000);
+    const result = await service.runProcess(command, [], testCwd, 5000);
 
     expect(result.stderr).toContain('error');
   });
 
   it('should use correct cwd', async () => {
-    const command = process.platform === 'win32' ? 'cmd' : 'sh';
-    const args =
-      process.platform === 'win32'
-        ? [ '/c', 'cd' ]
-        : [ '-c', 'pwd' ];
+    const command =
+      process.platform === 'win32' ? 'cmd /c cd' : 'pwd';
 
-    const result = await service.runProcess(command, args, testCwd, 5000);
+    const result = await service.runProcess(command, [], testCwd, 5000);
 
     expect(result.stdout).toContain(testCwd);
   });

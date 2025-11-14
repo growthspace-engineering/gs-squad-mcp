@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { readFile } from 'fs/promises';
 import { resolve } from 'path';
+import { render } from 'ejs';
 import { IListRolesResponse } from
   '@gs-squad-mcp/core/mcp/contracts';
 import { IStartSquadMembersStatelessPayload } from
@@ -86,6 +87,20 @@ export class SquadService {
     return { squadId, members };
   }
 
+  /**
+   * Escapes a prompt string for safe use in double-quoted shell arguments.
+   * Escapes special characters and converts newlines to literal \n.
+   */
+  private escapePromptForShell(prompt: string): string {
+    return prompt
+      .replace(/\\/g, '\\\\') // Escape backslashes first
+      .replace(/\$/g, '\\$') // Escape dollar signs
+      .replace(/`/g, '\\`') // Escape backticks
+      .replace(/"/g, '\\"') // Escape double quotes
+      .replace(/\n/g, '\\n') // Convert newlines to literal \n
+      .replace(/\r/g, ''); // Remove carriage returns
+  }
+
   private async executeStatelessMember(
     memberInput: {
       roleId: string;
@@ -101,24 +116,28 @@ export class SquadService {
       throw new Error(`Role not found: ${memberInput.roleId}`);
     }
 
-    const prompt = this.promptBuilder.buildPromptStateless(
+    const rawPrompt = this.promptBuilder.buildPromptStateless(
       role,
       memberInput.task
     );
+    const prompt = this.escapePromptForShell(rawPrompt);
 
     const resolvedCwd = memberInput.cwd
       ? resolve(workspaceRoot, memberInput.cwd)
       : workspaceRoot;
 
     const templateContent = await readFile(config.runTemplatePath, 'utf-8');
-    let renderedArgs: string[];
+    let renderedCommand: string;
     try {
-      renderedArgs = this.templateRenderer.render(templateContent, {
+      // Render the template to get the full command string
+      const rendered = render(templateContent, {
         prompt,
         cwd: resolvedCwd,
         roleId: memberInput.roleId,
-        task: memberInput.task
+        task: memberInput.task,
+        chatId: undefined // Not used in stateless mode, but needed for template
       });
+      renderedCommand = rendered.trim();
     } catch (error) {
       throw new Error(
         `Failed to render template ${config.runTemplatePath}: ${
@@ -127,26 +146,15 @@ export class SquadService {
       );
     }
 
-    if (!renderedArgs || renderedArgs.length === 0) {
+    if (!renderedCommand || renderedCommand.length === 0) {
       throw new Error(
         `Template ${config.runTemplatePath} rendered to empty command`
       );
     }
 
-    // Template contains the full command - first arg is command, rest are args
-    const command = renderedArgs[0] || config.engineCommand;
-    const args = renderedArgs.slice(1);
-
-    if (!command) {
-      throw new Error(
-        `No command found in template ${config.runTemplatePath}. ` +
-          `Rendered args: ${JSON.stringify(renderedArgs)}`
-      );
-    }
-
     const result = await this.processRunner.runProcess(
-      command,
-      args,
+      renderedCommand,
+      [],
       resolvedCwd,
       config.processTimeoutMs
     );
@@ -189,22 +197,36 @@ export class SquadService {
         config.createChatTemplatePath,
         'utf-8'
       );
-      const renderedCreateChatArgs = this.templateRenderer.render(
-        createChatTemplate,
-        {
+      let renderedCreateChatCommand: string;
+      try {
+        renderedCreateChatCommand = render(createChatTemplate, {
           roleId: memberInput.roleId,
           cwd: resolvedCwd
-        }
-      );
+        }).trim();
+      } catch (error) {
+        throw new Error(
+          `Failed to render create-chat template ${
+            config.createChatTemplatePath
+          }: ${
+            error instanceof Error ? error.message : String(error)
+          }`
+        );
+      }
 
-      // Template contains full command - first arg is command, rest are args
-      const createChatCommand =
-        renderedCreateChatArgs[0] || config.engineCommand;
-      const createChatArgs = renderedCreateChatArgs.slice(1);
+      if (
+        !renderedCreateChatCommand ||
+        renderedCreateChatCommand.length === 0
+      ) {
+        throw new Error(
+          `Create-chat template ${
+            config.createChatTemplatePath
+          } rendered to empty command`
+        );
+      }
 
       const createChatResult = await this.processRunner.runProcess(
-        createChatCommand,
-        createChatArgs,
+        renderedCreateChatCommand,
+        [],
         resolvedCwd,
         config.processTimeoutMs
       );
@@ -221,20 +243,22 @@ export class SquadService {
       }
     }
 
-    const prompt = hadChatId
+    const rawPrompt = hadChatId
       ? this.promptBuilder.buildPromptStatefulExistingChat(memberInput.task)
       : this.promptBuilder.buildPromptStatefulNewChat(role, memberInput.task);
+    const prompt = this.escapePromptForShell(rawPrompt);
 
     const runTemplateContent = await readFile(config.runTemplatePath, 'utf-8');
-    let renderedRunArgs: string[];
+    let renderedRunCommand: string;
     try {
-      renderedRunArgs = this.templateRenderer.render(runTemplateContent, {
+      // Render the template to get the full command string
+      renderedRunCommand = render(runTemplateContent, {
         prompt,
         chatId: chatId || undefined,
         cwd: resolvedCwd,
         roleId: memberInput.roleId,
         task: memberInput.task
-      });
+      }).trim();
     } catch (error) {
       throw new Error(
         `Failed to render template ${config.runTemplatePath}: ${
@@ -243,26 +267,15 @@ export class SquadService {
       );
     }
 
-    if (!renderedRunArgs || renderedRunArgs.length === 0) {
+    if (!renderedRunCommand || renderedRunCommand.length === 0) {
       throw new Error(
         `Template ${config.runTemplatePath} rendered to empty command`
       );
     }
 
-    // Template contains the full command - first arg is command, rest are args
-    const runCommand = renderedRunArgs[0] || config.engineCommand;
-    const runArgs = renderedRunArgs.slice(1);
-
-    if (!runCommand) {
-      throw new Error(
-        `No command found in template ${config.runTemplatePath}. ` +
-          `Rendered args: ${JSON.stringify(renderedRunArgs)}`
-      );
-    }
-
     const result = await this.processRunner.runProcess(
-      runCommand,
-      runArgs,
+      renderedRunCommand,
+      [],
       resolvedCwd,
       config.processTimeoutMs
     );
