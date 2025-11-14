@@ -1124,16 +1124,16 @@ Use Husky to enforce local checks:
 
 **Goal:** Confirm behavior matches the spec and important branches are tested.
 
-* [ ] Run `npm test -- --coverage`
-* [ ] Identify uncovered but important logic:
+* [x] Run `npm test -- --coverage`
+* [x] Identify uncovered but important logic:
 
-  * [ ] Role not found paths
-  * [ ] Template rendering edge cases
-  * [ ] Process timeouts
-  * [ ] State mode switching
-* [ ] Add tests to cover important missing code paths
-* [ ] Final pass on:
+  * [x] Role not found paths
+  * [x] Template rendering edge cases
+  * [x] Process timeouts
+  * [x] State mode switching
+* [x] Add tests to cover important missing code paths
+* [x] Final pass on:
 
-  * [ ] ESLint
+  * [x] ESLint
   * [ ] `agents/` role quality
   * [ ] README/CONTRIBUTING clarity

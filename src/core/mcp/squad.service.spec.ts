@@ -387,5 +387,46 @@ describe('SquadService', () => {
         service.startSquadMembersStateful(payload)
       ).rejects.toThrow('Failed to create chat');
     });
+
+    it('role not found throws error', async () => {
+      roleRepository.getRoleById.mockResolvedValue(null);
+
+      const payload = {
+        members: [
+          {
+            roleId: 'nonexistent-role',
+            task: 'Task'
+          }
+        ]
+      };
+
+      await expect(
+        service.startSquadMembersStateful(payload)
+      ).rejects.toThrow('Role not found: nonexistent-role');
+    });
+
+    it('empty chatId from create-chat throws error', async () => {
+      processRunner.runProcess.mockResolvedValueOnce({
+        exitCode: 0,
+        stdout: '   \n\t  ',
+        stderr: '',
+        timedOut: false
+      });
+
+      const payload = {
+        members: [
+          {
+            roleId: 'test-role',
+            task: 'Task'
+          }
+        ]
+      };
+
+      await expect(
+        service.startSquadMembersStateful(payload)
+      ).rejects.toThrow(
+        'Failed to extract chatId from create-chat output'
+      );
+    });
   });
 });

@@ -105,4 +105,16 @@ describe('ProcessRunnerService', () => {
 
     expect(result.stdout).toContain(testCwd);
   });
+
+  it('should handle process spawn errors', async () => {
+    const result = await service.runProcess(
+      'nonexistent-command-that-does-not-exist',
+      [],
+      testCwd,
+      5000
+    );
+
+    expect(result.exitCode).not.toBe(0);
+    expect(result.timedOut).toBe(false);
+  });
 });
