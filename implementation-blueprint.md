@@ -836,26 +836,26 @@ Use Husky to enforce local checks:
 
 ### 17.1 Milestone 0 – Repo bootstrap
 
-* [ ] Initialize Node/TypeScript project
+* [x] Initialize Node/TypeScript project
 
-  * [ ] `npm init` with `"name": "@growthspace-engineering/gs-squad-mcp"`
-  * [ ] Add `tsconfig.json`
-  * [ ] Add `.gitignore`
-* [ ] Add NestJS
+  * [x] `npm init` with `"name": "@growthspace-engineering/gs-squad-mcp"`
+  * [x] Add `tsconfig.json`
+  * [x] Add `.gitignore`
+* [x] Add NestJS
 
-  * [ ] Install NestJS and CLI
-  * [ ] Scaffold basic Nest project structure (no HTTP server needed yet)
-* [ ] Add Jest test setup
+  * [x] Install NestJS and CLI
+  * [x] Scaffold basic Nest project structure (no HTTP server needed yet)
+* [x] Add Jest test setup
 
-  * [ ] Unit test config (`jest.config.cjs`)
-  * [ ] E2E test config (`jest-e2e.config.cjs`)
-* [ ] Add ESLint
+  * [x] Unit test config (`jest.config.cjs`)
+  * [x] E2E test config (`jest-e2e.config.cjs`)
+* [x] Add ESLint
 
-  * [ ] Configure single quotes, 80-char max, no trailing commas
-  * [ ] Configure object/array spacing rules
-* [ ] Add basic scripts to `package.json`
+  * [x] Configure single quotes, 80-char max, no trailing commas
+  * [x] Configure object/array spacing rules
+* [x] Add basic scripts to `package.json`
 
-  * [ ] `"build"`, `"lint"`, `"test"`, `"test:e2e"`
+  * [x] `"build"`, `"lint"`, `"test"`, `"test:e2e"`
 
 ---
 
@@ -863,36 +863,36 @@ Use Husky to enforce local checks:
 
 **Goal:** Core scaffolding compiles, basic tests are in place (even if TODOs).
 
-* [ ] Create `ISquadConfig` and `SquadConfigService`
+* [x] Create `ISquadConfig` and `SquadConfigService`
 
-  * [ ] `src/core/config/squad-config.interface.ts`
-  * [ ] `src/core/config/squad-config.service.ts`
-  * [ ] Read env vars:
+  * [x] `src/core/config/squad-config.interface.ts`
+  * [x] `src/core/config/squad-config.service.ts`
+  * [x] Read env vars:
 
-    * [ ] `STATE_MODE`
-    * [ ] `ENGINE_COMMAND`
-    * [ ] `RUN_TEMPLATE_PATH`
-    * [ ] `CREATE_CHAT_TEMPLATE_PATH`
-    * [ ] `AGENTS_DIRECTORY_PATH`
-    * [ ] `PROCESS_TIMEOUT_MS`
-  * [ ] Add unit test file with `test.todo` for:
+    * [x] `STATE_MODE`
+    * [x] `ENGINE_COMMAND`
+    * [x] `RUN_TEMPLATE_PATH`
+    * [x] `CREATE_CHAT_TEMPLATE_PATH`
+    * [x] `AGENTS_DIRECTORY_PATH`
+    * [x] `PROCESS_TIMEOUT_MS`
+  * [x] Add unit test file with `test.todo` for:
 
-    * [ ] default values
-    * [ ] env override behavior
-* [ ] Create `IRoleDefinition`
+    * [x] default values
+    * [x] env override behavior
+* [x] Create `IRoleDefinition`
 
-  * [ ] `src/core/roles/role-definition.interface.ts`
-* [ ] Create empty implementations (with TODO tests):
+  * [x] `src/core/roles/role-definition.interface.ts`
+* [x] Create empty implementations (with TODO tests):
 
-  * [ ] `RoleRepositoryService`
-  * [ ] `PromptBuilderService`
-  * [ ] `TemplateRendererService`
-  * [ ] `ProcessRunnerService`
-  * [ ] `SquadService` (method signatures only)
-* [ ] Add `AppModule` wiring all these services
+  * [x] `RoleRepositoryService`
+  * [x] `PromptBuilderService`
+  * [x] `TemplateRendererService`
+  * [x] `ProcessRunnerService`
+  * [x] `SquadService` (method signatures only)
+* [x] Add `AppModule` wiring all these services
 
-  * [ ] `src/nest/app.module.ts`
-  * [ ] Basic test to ensure Nest context boots without error
+  * [x] `src/nest/app.module.ts`
+  * [x] Basic test to ensure Nest context boots without error
 
 ---
 
@@ -900,37 +900,37 @@ Use Husky to enforce local checks:
 
 **Goal:** `listRoles` works against real `agents/` files.
 
-* [ ] Create `agents/` folder
-* [ ] Import initial role definitions
+* [x] Create `agents/` folder
+* [x] Import initial role definitions
 
-  * [ ] Copy/adapt roles from `jamsajones/claude-squad`
-  * [ ] Copy/adapt additional roles from `google/adk-samples`
-  * [ ] Normalize each:
+  * [x] Copy/adapt roles from `jamsajones/claude-squad`
+  * [x] Copy/adapt additional roles from `google/adk-samples`
+  * [x] Normalize each:
 
-    * [ ] Remove vendor-specific references (Claude, Gemini, ADK, etc.)
-    * [ ] Ensure frontmatter has `name`, `description`
-    * [ ] Align body structure with your preferred format
-* [ ] Implement `RoleRepositoryService`
+    * [x] Remove vendor-specific references (Claude, Gemini, ADK, etc.)
+    * [x] Ensure frontmatter has `name`, `description`
+    * [x] Align body structure with your preferred format
+* [x] Implement `RoleRepositoryService`
 
-  * [ ] Load `.md` files from `agentsDirectoryPath`
-  * [ ] Parse frontmatter to `name` + `description`
-  * [ ] Extract body
-  * [ ] Cache in memory
-* [ ] Unit tests (`role-repository.service.spec.ts`)
+  * [x] Load `.md` files from `agentsDirectoryPath`
+  * [x] Parse frontmatter to `name` + `description`
+  * [x] Extract body
+  * [x] Cache in memory
+* [x] Unit tests (`role-repository.service.spec.ts`)
 
-  * [ ] `test.todo`: loads roles from folder
-  * [ ] `test.todo`: parses frontmatter correctly
-  * [ ] `test.todo`: returns null for unknown role
-  * [ ] Implement tests & logic
-* [ ] Implement `SquadService.listRoles`
+  * [x] `test.todo`: loads roles from folder
+  * [x] `test.todo`: parses frontmatter correctly
+  * [x] `test.todo`: returns null for unknown role
+  * [x] Implement tests & logic
+* [x] Implement `SquadService.listRoles`
 
-  * [ ] Uses `RoleRepositoryService.getAllRoles`
-  * [ ] Maps to `IListRolesResponse`
-* [ ] Unit tests for `listRoles`
+  * [x] Uses `RoleRepositoryService.getAllRoles`
+  * [x] Maps to `IListRolesResponse`
+* [x] Unit tests for `listRoles`
 
-  * [ ] `test.todo`: returns expected shape
-  * [ ] `test.todo`: reflects updated agents
-  * [ ] Implement tests & logic
+  * [x] `test.todo`: returns expected shape
+  * [x] `test.todo`: reflects updated agents
+  * [x] Implement tests & logic
 
 ---
 
