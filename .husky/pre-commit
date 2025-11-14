@@ -1,2 +1,5 @@
-npm run lint
+[ -n "$CI" ] && exit 0
+
+npx lint-staged --allow-empty
+
 npm test
