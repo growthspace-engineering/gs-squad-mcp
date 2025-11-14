@@ -18,5 +18,29 @@
     "titleBar.inactiveBackground": "#5bb0f499",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#5bb0f4"
+  "peacock.color": "#5bb0f4",
+  "jest.useJest30": true,
+  "jest.virtualFolders": [
+    {
+      "name": "unit-tests",
+      "rootPath": "src"
+    },
+    {
+      "name": "e2e-tests",
+      "jestCommandLine": "npm run test:e2e -- --runInBand",
+      "rootPath": "test"
+    }
+  ],
+  "jest.runMode": {
+    "type": "on-save",
+    "coverage": false,
+    "runAllTestsOnStartup": true
+  },
+  "testing.automaticallyOpenTestResults": "neverOpen",
+  "eslint.enable": true,
+  "eslint.run": "onSave",
+  "eslint.format.enable": true,
+  "eslint.format.options": {
+    "fix": true
+  }
 }
