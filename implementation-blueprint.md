@@ -970,29 +970,29 @@ Use Husky to enforce local checks:
 
 **Goal:** We can render command templates and run a CLI command with timeout.
 
-* [ ] Implement `TemplateRendererService`
+* [x] Implement `TemplateRendererService`
 
-  * [ ] Read template content from disk
-  * [ ] Render with context (`prompt`, `chatId`, `cwd`, `roleId`, `task`)
-  * [ ] Return an array of arguments for `spawn`
-* [ ] Unit tests (`template-renderer.service.spec.ts`)
+  * [x] Read template content from disk
+  * [x] Render with context (`prompt`, `chatId`, `cwd`, `roleId`, `task`)
+  * [x] Return an array of arguments for `spawn`
+* [x] Unit tests (`template-renderer.service.spec.ts`)
 
-  * [ ] `test.todo`: handles template without `chatId`
-  * [ ] `test.todo`: handles template with `chatId`
-  * [ ] `test.todo`: trims / splits args correctly
-  * [ ] Implement tests & logic
-* [ ] Implement `ProcessRunnerService`
+  * [x] `test.todo`: handles template without `chatId`
+  * [x] `test.todo`: handles template with `chatId`
+  * [x] `test.todo`: trims / splits args correctly
+  * [x] Implement tests & logic
+* [x] Implement `ProcessRunnerService`
 
-  * [ ] `runProcess(command, args, cwd, timeoutMs)`
-  * [ ] Uses `child_process.spawn`
-  * [ ] Aggregates `stdout`, `stderr`
-  * [ ] Handles timeout with `timedOut` flag
-* [ ] Unit tests (`process-runner.service.spec.ts`)
+  * [x] `runProcess(command, args, cwd, timeoutMs)`
+  * [x] Uses `child_process.spawn`
+  * [x] Aggregates `stdout`, `stderr`
+  * [x] Handles timeout with `timedOut` flag
+* [x] Unit tests (`process-runner.service.spec.ts`)
 
-  * [ ] `test.todo`: successful command → exitCode 0
-  * [ ] `test.todo`: failing command → non-zero exitCode
-  * [ ] `test.todo`: long-running command → timeout
-  * [ ] Implement tests & logic
+  * [x] `test.todo`: successful command → exitCode 0
+  * [x] `test.todo`: failing command → non-zero exitCode
+  * [x] `test.todo`: long-running command → timeout
+  * [x] Implement tests & logic
 
 ---
 

@@ -33,6 +33,7 @@
     "@nestjs/common": "^10.4.20",
     "@nestjs/core": "^10.4.20",
     "@nestjs/platform-express": "^10.4.20",
+    "ejs": "^3.1.10",
     "gray-matter": "^4.0.3",
     "nest-commander": "^3.20.1",
     "reflect-metadata": "^0.1.14",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@nestjs/cli": "^10.4.9",
     "@nestjs/testing": "^10.4.20",
+    "@types/ejs": "^3.1.5",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.19.25",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
