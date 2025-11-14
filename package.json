@@ -4,6 +4,9 @@
   "description": "A TypeScript / NestJS MCP that spawns role-specialized CLI agents using stdio",
   "main": "dist/cli/main-stdio.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "gs-squad-mcp": "./dist/cli/main-stdio.js"
+  },
   "scripts": {
     "build": "nest build",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",

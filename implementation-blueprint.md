@@ -1046,33 +1046,33 @@ Use Husky to enforce local checks:
 
 **Goal:** Full Nest-based MCP stdio server is wired and bootable.
 
-* [ ] Wire `AppModule` with all core services
+* [x] Wire `AppModule` with all core services
 
-  * [ ] Ensure `SquadService` injectable
-* [ ] Implement `McpCliCommand`
+  * [x] Ensure `SquadService` injectable
+* [x] Implement `McpCliCommand`
 
-  * [ ] Set up a simple MCP stdio loop:
+  * [x] Set up a simple MCP stdio loop:
 
-    * [ ] Read JSON line(s) from stdin
-    * [ ] Dispatch:
+    * [x] Read JSON line(s) from stdin
+    * [x] Dispatch:
 
-      * [ ] `list_roles` → `SquadService.listRoles`
-      * [ ] `start_squad_members`:
+      * [x] `list_roles` → `SquadService.listRoles`
+      * [x] `start_squad_members`:
 
-        * [ ] Choose stateless/stateful based on config
-    * [ ] Write JSON response to stdout
-  * [ ] Add `*.spec.ts` with TODOs for basic routing tests
-* [ ] Implement `main-stdio.ts` bootstrap
+        * [x] Choose stateless/stateful based on config
+    * [x] Write JSON response to stdout
+  * [x] Add `*.spec.ts` with TODOs for basic routing tests
+* [x] Implement `main-stdio.ts` bootstrap
 
-  * [ ] Create Nest `ApplicationContext`
-  * [ ] Resolve `McpCliCommand` and call `run()`
-* [ ] e2e test (`test/e2e/squad-mcp.e2e-spec.ts`)
+  * [x] Create Nest `ApplicationContext`
+  * [x] Resolve `McpCliCommand` and call `run()`
+* [x] e2e test (`test/e2e/squad-mcp.e2e-spec.ts`)
 
-  * [ ] `test.todo`: create testing module + call `SquadService` directly
-  * [ ] `test.todo`: `listRoles` returns something non-empty
-  * [ ] `test.todo`: stateless call spawns fake engine and returns output
-  * [ ] `test.todo`: stateful call creates and reuses `chatId`
-  * [ ] Implement tests & logic
+  * [x] `test.todo`: create testing module + call `SquadService` directly
+  * [x] `test.todo`: `listRoles` returns something non-empty
+  * [x] `test.todo`: stateless call spawns fake engine and returns output
+  * [x] `test.todo`: stateful call creates and reuses `chatId`
+  * [x] Implement tests & logic
 
 *(Optional later)*
 

@@ -6,6 +6,7 @@ import { TemplateRendererService } from
   '../core/engine/template-renderer.service';
 import { ProcessRunnerService } from '../core/engine/process-runner.service';
 import { SquadService } from '../core/mcp/squad.service';
+import { McpCliCommand } from '../cli/mcp-cli.command';
 
 @Module({
   imports: [],
@@ -16,7 +17,8 @@ import { SquadService } from '../core/mcp/squad.service';
     PromptBuilderService,
     TemplateRendererService,
     ProcessRunnerService,
-    SquadService
+    SquadService,
+    McpCliCommand
   ],
   exports: [ SquadService ]
 })
