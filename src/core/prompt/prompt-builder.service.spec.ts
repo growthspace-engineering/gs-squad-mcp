@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { PromptBuilderService } from './prompt-builder.service';
-import { IRoleDefinition } from '../roles/role-definition.interface';
+import { IRoleDefinition } from '@gs-squad-mcp/core/roles';
 
 describe('PromptBuilderService', () => {
   let service: PromptBuilderService;

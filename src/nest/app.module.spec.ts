@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppModule } from './app.module';
-import { SquadService } from '../core/mcp/squad.service';
+import { SquadService } from '@gs-squad-mcp/core/mcp';
 
 describe('AppModule', () => {
   let module: TestingModule;

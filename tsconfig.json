@@ -10,6 +10,16 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
+    "paths": {
+      "@gs-squad-mcp/core/config": [ "src/core/config" ],
+      "@gs-squad-mcp/core/roles": [ "src/core/roles" ],
+      "@gs-squad-mcp/core/prompt": [ "src/core/prompt" ],
+      "@gs-squad-mcp/core/engine": [ "src/core/engine" ],
+      "@gs-squad-mcp/core/mcp": [ "src/core/mcp" ],
+      "@gs-squad-mcp/core/mcp/contracts": [ "src/core/mcp/contracts" ],
+      "@gs-squad-mcp/nest": [ "src/nest" ],
+      "@gs-squad-mcp/cli": [ "src/cli" ]
+    },
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,

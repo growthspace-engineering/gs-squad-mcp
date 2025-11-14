@@ -1,24 +1,25 @@
 import { Injectable } from '@nestjs/common';
 import { readFile } from 'fs/promises';
 import { resolve } from 'path';
-import { IListRolesResponse } from './contracts/list-roles.response';
+import { IListRolesResponse } from
+  '@gs-squad-mcp/core/mcp/contracts';
 import { IStartSquadMembersStatelessPayload } from
-  './contracts/start-squad-members-stateless.payload';
+  '@gs-squad-mcp/core/mcp/contracts';
 import { IStartSquadMembersStatelessResponse } from
-  './contracts/start-squad-members-stateless.response';
+  '@gs-squad-mcp/core/mcp/contracts';
 import { IStartSquadMemberOutputBase } from
-  './contracts/start-squad-members-stateless.response';
+  '@gs-squad-mcp/core/mcp/contracts';
 import { IStartSquadMembersStatefulPayload } from
-  './contracts/start-squad-members-stateful.payload';
+  '@gs-squad-mcp/core/mcp/contracts';
 import { IStartSquadMembersStatefulResponse } from
-  './contracts/start-squad-members-stateful.response';
+  '@gs-squad-mcp/core/mcp/contracts';
 import { IStartSquadMemberStatefulOutput } from
-  './contracts/start-squad-members-stateful.response';
-import { RoleRepositoryService } from '../roles/role-repository.service';
-import { PromptBuilderService } from '../prompt/prompt-builder.service';
-import { TemplateRendererService } from '../engine/template-renderer.service';
-import { ProcessRunnerService } from '../engine/process-runner.service';
-import { SquadConfigService } from '../config/squad-config.service';
+  '@gs-squad-mcp/core/mcp/contracts';
+import { RoleRepositoryService } from '@gs-squad-mcp/core/roles';
+import { PromptBuilderService } from '@gs-squad-mcp/core/prompt';
+import { TemplateRendererService } from '@gs-squad-mcp/core/engine';
+import { ProcessRunnerService } from '@gs-squad-mcp/core/engine';
+import { SquadConfigService } from '@gs-squad-mcp/core/config';
 
 @Injectable()
 export class SquadService {

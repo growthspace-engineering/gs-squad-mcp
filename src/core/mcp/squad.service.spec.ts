@@ -1,11 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SquadService } from './squad.service';
-import { RoleRepositoryService } from '../roles/role-repository.service';
-import { PromptBuilderService } from '../prompt/prompt-builder.service';
-import { TemplateRendererService } from '../engine/template-renderer.service';
-import { ProcessRunnerService } from '../engine/process-runner.service';
-import { SquadConfigService } from '../config/squad-config.service';
-import { IRoleDefinition } from '../roles/role-definition.interface';
+import { SquadService } from '@gs-squad-mcp/core/mcp';
+import { RoleRepositoryService } from '@gs-squad-mcp/core/roles';
+import { PromptBuilderService } from '@gs-squad-mcp/core/prompt';
+import { TemplateRendererService } from '@gs-squad-mcp/core/engine';
+import { ProcessRunnerService } from '@gs-squad-mcp/core/engine';
+import { SquadConfigService } from '@gs-squad-mcp/core/config';
+import { IRoleDefinition } from '@gs-squad-mcp/core/roles';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { tmpdir } from 'os';

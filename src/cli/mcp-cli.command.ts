@@ -1,6 +1,6 @@
 import { Command, CommandRunner } from 'nest-commander';
-import { SquadService } from '../core/mcp/squad.service';
-import { SquadConfigService } from '../core/config/squad-config.service';
+import { SquadService } from '../core/mcp';
+import { SquadConfigService } from '../core/config';
 import * as readline from 'readline';
 
 interface IMcpRequest {

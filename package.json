@@ -8,10 +8,12 @@
     "gs-squad-mcp": "./dist/cli/main-stdio.js"
   },
   "scripts": {
-    "build": "nest build",
+    "build": "npm run barrels && nest build",
+    "barrels": "barrelsby -c barrelsby.json",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
     "test": "jest --passWithNoTests",
-    "test:e2e": "jest --config ./jest-e2e.config.cjs --passWithNoTests"
+    "test:e2e": "jest --config ./jest-e2e.config.cjs --passWithNoTests",
+    "start:dev": "npm run barrels && nest start --watch"
   },
   "repository": {
     "type": "git",
@@ -50,9 +52,11 @@
     "@types/node": "^20.19.25",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
+    "barrelsby": "^2.8.1",
     "eslint": "^8.57.1",
     "jest": "^30.2.0",
     "ts-jest": "^29.4.5",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3"
   }
 }

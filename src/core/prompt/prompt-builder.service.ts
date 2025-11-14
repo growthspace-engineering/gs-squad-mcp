@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { IRoleDefinition } from '../roles/role-definition.interface';
+import { IRoleDefinition } from '@gs-squad-mcp/core/roles';
 
 @Injectable()
 export class PromptBuilderService {

@@ -1,0 +1,20 @@
+{
+  "directory": [
+    "src/core/config",
+    "src/core/roles",
+    "src/core/prompt",
+    "src/core/engine",
+    "src/core/mcp",
+    "src/core/mcp/contracts",
+    "src/nest",
+    "src/cli"
+  ],
+  "exclude": [
+    "\\.spec\\.ts$",
+    "\\.e2e-spec\\.ts$",
+    "index\\.ts$"
+  ],
+  "delete": true,
+  "singleQuotes": true
+}
+

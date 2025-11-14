@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { readdir, readFile } from 'fs/promises';
 import { join, basename, extname } from 'path';
 import matter from 'gray-matter';
-import { IRoleDefinition } from './role-definition.interface';
-import { SquadConfigService } from '../config/squad-config.service';
+import { IRoleDefinition } from '@gs-squad-mcp/core/roles';
+import { SquadConfigService } from '@gs-squad-mcp/core/config';
 
 @Injectable()
 export class RoleRepositoryService {

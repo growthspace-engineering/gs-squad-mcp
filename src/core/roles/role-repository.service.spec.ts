@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { RoleRepositoryService } from './role-repository.service';
-import { SquadConfigService } from '../config/squad-config.service';
+import { SquadConfigService } from '@gs-squad-mcp/core/config';
 import { mkdir, writeFile, rm } from 'fs/promises';
 import { join } from 'path';
 import { tmpdir } from 'os';

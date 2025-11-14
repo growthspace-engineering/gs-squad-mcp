@@ -1,9 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppModule } from '../../src/nest/app.module';
-import { SquadService } from '../../src/core/mcp/squad.service';
-import { SquadConfigService } from '../../src/core/config/squad-config.service';
-import { RoleRepositoryService } from
-  '../../src/core/roles/role-repository.service';
+import { AppModule } from '@gs-squad-mcp/nest';
+import { SquadService } from '@gs-squad-mcp/core/mcp';
+import { SquadConfigService } from '@gs-squad-mcp/core/config';
+import { RoleRepositoryService } from '@gs-squad-mcp/core/roles';
 import { mkdir, writeFile, rm } from 'fs/promises';
 import { join } from 'path';
 import { tmpdir } from 'os';
