@@ -42,5 +42,8 @@
   "eslint.format.enable": true,
   "eslint.format.options": {
     "fix": true
+  },
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
   }
 }
