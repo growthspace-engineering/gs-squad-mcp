@@ -1000,45 +1000,45 @@ Use Husky to enforce local checks:
 
 **Goal:** Core squad logic for stateless & stateful modes is implemented and tested.
 
-* [ ] Implement `startSquadMembersStateless` in `SquadService`
+* [x] Implement `startSquadMembersStateless` in `SquadService`
 
-  * [ ] Generate `squadId`
-  * [ ] For each member:
+  * [x] Generate `squadId`
+  * [x] For each member:
 
-    * [ ] Load role by `roleId`
-    * [ ] Build prompt (stateless)
-    * [ ] Render run template
-    * [ ] Run process with `ProcessRunnerService`
-    * [ ] Map result to `IStartSquadMemberOutputBase`
-* [ ] Unit tests (`squad.service.spec.ts`) – stateless
+    * [x] Load role by `roleId`
+    * [x] Build prompt (stateless)
+    * [x] Render run template
+    * [x] Run process with `ProcessRunnerService`
+    * [x] Map result to `IStartSquadMemberOutputBase`
+* [x] Unit tests (`squad.service.spec.ts`) – stateless
 
-  * [ ] `test.todo`: single member happy path
-  * [ ] `test.todo`: multiple members in one call
-  * [ ] `test.todo`: missing role → error handling
-  * [ ] `test.todo`: status mapping (exitCode/timeouts)
-  * [ ] Implement tests & logic
-* [ ] Implement `startSquadMembersStateful`
+  * [x] `test.todo`: single member happy path
+  * [x] `test.todo`: multiple members in one call
+  * [x] `test.todo`: missing role → error handling
+  * [x] `test.todo`: status mapping (exitCode/timeouts)
+  * [x] Implement tests & logic
+* [x] Implement `startSquadMembersStateful`
 
-  * [ ] Branch on `chatId`:
+  * [x] Branch on `chatId`:
 
-    * [ ] No `chatId`:
+    * [x] No `chatId`:
 
-      * [ ] Run `create-chat` template via `ProcessRunnerService`
-      * [ ] Extract `chatId` from `stdout.trim()`
-      * [ ] Build prompt with `buildPromptStatefulNewChat`
-    * [ ] With `chatId`:
+      * [x] Run `create-chat` template via `ProcessRunnerService`
+      * [x] Extract `chatId` from `stdout.trim()`
+      * [x] Build prompt with `buildPromptStatefulNewChat`
+    * [x] With `chatId`:
 
-      * [ ] Build prompt with `buildPromptStatefulExistingChat`
-  * [ ] Render run template
-  * [ ] Run process
-  * [ ] Map result to `IStartSquadMemberStatefulOutput`
-* [ ] Unit tests – stateful
+      * [x] Build prompt with `buildPromptStatefulExistingChat`
+  * [x] Render run template
+  * [x] Run process
+  * [x] Map result to `IStartSquadMemberStatefulOutput`
+* [x] Unit tests – stateful
 
-  * [ ] `test.todo`: new chat returns `chatId`
-  * [ ] `test.todo`: existing chat reuses `chatId`
-  * [ ] `test.todo`: failure in create-chat handled gracefully
-  * [ ] Implement tests & logic
-* [ ] Run unit tests and coverage to ensure important code is covered
+  * [x] `test.todo`: new chat returns `chatId`
+  * [x] `test.todo`: existing chat reuses `chatId`
+  * [x] `test.todo`: failure in create-chat handled gracefully
+  * [x] Implement tests & logic
+* [x] Run unit tests and coverage to ensure important code is covered
 
 ---
 
