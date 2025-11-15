@@ -10,8 +10,30 @@ import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { tmpdir } from 'os';
 import { mkdir, rm } from 'fs/promises';
+import { render as ejsRender } from 'ejs';
 
 jest.mock('fs/promises');
+
+function defaultEjsRenderer(
+  template: string,
+  data: Record<string, unknown>
+): string {
+  return template.replace(
+    /<%=\s*([\w.]+)\s*%>/g,
+    (_match, key: string) => {
+      const value = (data as Record<string, unknown>)[key];
+      return value === undefined || value === null
+        ? ''
+        : String(value);
+    }
+  );
+}
+
+jest.mock('ejs', () => ({
+  render: jest.fn(defaultEjsRenderer)
+}));
+
+const mockEjsRender = ejsRender as jest.MockedFunction<typeof ejsRender>;
 
 describe('SquadService', () => {
   let service: SquadService;
@@ -26,6 +48,8 @@ describe('SquadService', () => {
     testWorkspace = join(tmpdir(), `test-workspace-${Date.now()}`);
     await mkdir(testWorkspace, { recursive: true });
     jest.spyOn(process, 'cwd').mockReturnValue(testWorkspace);
+    mockEjsRender.mockClear();
+    mockEjsRender.mockImplementation(defaultEjsRenderer);
 
     const module: TestingModule = await Test.createTestingModule({
       providers: [
@@ -75,11 +99,13 @@ describe('SquadService', () => {
 
     configService.getConfig.mockReturnValue({
       stateMode: 'stateless',
-      engineCommand: 'test-engine',
+      engine: 'claude',
+      executionMode: undefined,
       runTemplatePath: 'templates/run.template',
       createChatTemplatePath: 'templates/create-chat.template',
       agentsDirectoryPath: 'agents',
-      processTimeoutMs: 5000
+      processTimeoutMs: 5000,
+      sequentialDelayMs: 0
     });
   });
 
@@ -90,6 +116,7 @@ describe('SquadService', () => {
       // Ignore cleanup errors
     }
     jest.clearAllMocks();
+    delete process.env.PROCESS_RUNNER_SERIALIZE;
   });
 
   describe('listRoles', () => {
@@ -223,6 +250,51 @@ describe('SquadService', () => {
       expect(result.members[1].memberId).toContain(result.squadId);
     });
 
+    it('serializes members when engine uses cursor-agent', async () => {
+    configService.getConfig.mockReturnValue({
+        stateMode: 'stateless',
+      engine: 'cursor-agent',
+      executionMode: undefined,
+        runTemplatePath: 'templates/run.template',
+        createChatTemplatePath: 'templates/create-chat.template',
+        agentsDirectoryPath: 'agents',
+        processTimeoutMs: 5000,
+        sequentialDelayMs: 10
+      });
+
+      let concurrentExecutions = 0;
+      let maxConcurrentExecutions = 0;
+      processRunner.runProcess.mockImplementation(async () => {
+        concurrentExecutions += 1;
+        maxConcurrentExecutions = Math.max(
+          maxConcurrentExecutions,
+          concurrentExecutions
+        );
+        await new Promise((resolve) => setTimeout(resolve, 5));
+        concurrentExecutions -= 1;
+        return {
+          exitCode: 0,
+          stdout: 'output',
+          stderr: '',
+          timedOut: false
+        };
+      });
+
+      const payload = {
+        members: [
+          { roleId: 'test-role', task: 'Task 1' },
+          { roleId: 'test-role', task: 'Task 2' },
+          { roleId: 'test-role', task: 'Task 3' }
+        ]
+      };
+
+      await service.startSquadMembersStateless(payload);
+
+      expect(processRunner.runProcess).toHaveBeenCalledTimes(3);
+      expect(maxConcurrentExecutions).toBe(1);
+      expect(concurrentExecutions).toBe(0);
+    });
+
     it('missing role error handling', async () => {
       roleRepository.getRoleById.mockResolvedValue(null);
 
@@ -281,6 +353,170 @@ describe('SquadService', () => {
         await service.startSquadMembersStateless(payload);
       expect(result3.members[0].status).toBe('timeout');
     });
+
+    it('escapes prompts with shell metacharacters', async () => {
+      const payload = {
+        members: [
+          { roleId: 'test-role', task: 'Dangerous task' }
+        ]
+      };
+      const rawPrompt = 'line1\r\nline2\\path$VAR`"';
+      promptBuilder.buildPromptStateless.mockReturnValue(rawPrompt);
+      (readFile as jest.Mock).mockResolvedValue('<%= prompt %>');
+
+      await service.startSquadMembersStateless(payload);
+
+      const executedCommand =
+        processRunner.runProcess.mock.calls[0][0];
+      expect(executedCommand).toContain('\\n');
+      expect(executedCommand).toContain('\\\\path');
+      expect(executedCommand).toContain('\\$VAR');
+      expect(executedCommand).toContain('\\`');
+      expect(executedCommand).toContain('\\"');
+      expect(executedCommand).not.toContain('\r');
+    });
+
+    it('throws when run template rendering fails', async () => {
+      mockEjsRender.mockImplementationOnce(() => {
+        throw new Error('render blew up');
+      });
+
+      await expect(
+        service.startSquadMembersStateless({
+          members: [
+            { roleId: 'test-role', task: 'Task' }
+          ]
+        })
+      ).rejects.toThrow(
+        'Failed to render template templates/run.template: render blew up'
+      );
+    });
+
+    it('throws when run template renders to empty command', async () => {
+      mockEjsRender.mockReturnValueOnce('   ');
+
+      await expect(
+        service.startSquadMembersStateless({
+          members: [
+            { roleId: 'test-role', task: 'Task' }
+          ]
+        })
+      ).rejects.toThrow(
+        'Template templates/run.template rendered to empty command'
+      );
+    });
+
+    it(
+      'forces sequential execution when PROCESS_RUNNER_SERIALIZE=true',
+      async () => {
+        process.env.PROCESS_RUNNER_SERIALIZE = 'true';
+        const payload = {
+          members: [
+            { roleId: 'test-role', task: 'Task 1' },
+            { roleId: 'test-role', task: 'Task 2' },
+            { roleId: 'test-role', task: 'Task 3' }
+          ]
+        };
+
+        let concurrentExecutions = 0;
+        let maxConcurrentExecutions = 0;
+        processRunner.runProcess.mockImplementation(async () => {
+          concurrentExecutions += 1;
+          maxConcurrentExecutions = Math.max(
+            maxConcurrentExecutions,
+            concurrentExecutions
+          );
+          await new Promise((resolve) => setTimeout(resolve, 5));
+          concurrentExecutions -= 1;
+          return {
+            exitCode: 0,
+            stdout: 'output',
+            stderr: '',
+            timedOut: false
+          };
+        });
+
+        await service.startSquadMembersStateless(payload);
+
+        expect(maxConcurrentExecutions).toBe(1);
+      }
+    );
+
+    it(
+      'forces parallel execution when PROCESS_RUNNER_SERIALIZE=false',
+      async () => {
+        process.env.PROCESS_RUNNER_SERIALIZE = 'false';
+        configService.getConfig.mockReturnValue({
+          stateMode: 'stateless',
+          engine: 'cursor-agent',
+          executionMode: undefined,
+          runTemplatePath: 'templates/run.template',
+          createChatTemplatePath: 'templates/create-chat.template',
+          agentsDirectoryPath: 'agents',
+          processTimeoutMs: 5000,
+          sequentialDelayMs: 0
+        });
+
+        let concurrentExecutions = 0;
+        let maxConcurrentExecutions = 0;
+        processRunner.runProcess.mockImplementation(async () => {
+          concurrentExecutions += 1;
+          maxConcurrentExecutions = Math.max(
+            maxConcurrentExecutions,
+            concurrentExecutions
+          );
+          await new Promise((resolve) => setTimeout(resolve, 5));
+          concurrentExecutions -= 1;
+          return {
+            exitCode: 0,
+            stdout: 'output',
+            stderr: '',
+            timedOut: false
+          };
+        });
+
+        await service.startSquadMembersStateless({
+          members: [
+            { roleId: 'test-role', task: 'Task 1' },
+            { roleId: 'test-role', task: 'Task 2' },
+            { roleId: 'test-role', task: 'Task 3' }
+          ]
+        });
+
+        expect(maxConcurrentExecutions).toBeGreaterThan(1);
+      }
+    );
+
+    it('propagates process runner errors', async () => {
+      processRunner.runProcess.mockRejectedValue(
+        new Error('process failed')
+      );
+
+      await expect(
+        service.startSquadMembersStateless({
+          members: [
+            { roleId: 'test-role', task: 'Task' }
+          ]
+        })
+      ).rejects.toThrow('process failed');
+    });
+
+    it('prefers timeout status even if exit code is zero', async () => {
+      processRunner.runProcess.mockResolvedValueOnce({
+        exitCode: 0,
+        stdout: '',
+        stderr: '',
+        timedOut: true
+      });
+
+      const result = await service.startSquadMembersStateless({
+        members: [
+          { roleId: 'test-role', task: 'Task' }
+        ]
+      });
+
+      expect(result.members[0].status).toBe('timeout');
+    });
   });
 
   describe('startSquadMembersStateful', () => {
@@ -337,6 +573,21 @@ describe('SquadService', () => {
       expect(result.members[0].chatId).toBe('chat-123');
       expect(promptBuilder.buildPromptStatefulNewChat).toHaveBeenCalled();
       expect(processRunner.runProcess).toHaveBeenCalledTimes(2);
+    });
+
+    it('errors when create-chat template renders empty command', async () => {
+      mockEjsRender.mockReturnValueOnce('   ');
+
+      await expect(
+        service.startSquadMembersStateful({
+          members: [
+            { roleId: 'test-role', task: 'Task' }
+          ]
+        })
+      ).rejects.toThrow([
+        'Create-chat template templates/create-chat.template',
+        'rendered to empty command'
+      ].join(' '));
     });
 
     it('existing chat reuses chatId', async () => {
@@ -426,6 +677,259 @@ describe('SquadService', () => {
         service.startSquadMembersStateful(payload)
       ).rejects.toThrow(
         'Failed to extract chatId from create-chat output'
+      );
+    });
+
+    it('throws when create-chat template rendering fails', async () => {
+      mockEjsRender.mockImplementationOnce(() => {
+        throw new Error('bad template');
+      });
+
+      await expect(
+        service.startSquadMembersStateful({
+          members: [
+            { roleId: 'test-role', task: 'Task' }
+          ]
+        })
+      ).rejects.toThrow([
+        'Failed to render create-chat template',
+        'templates/create-chat.template: bad template'
+      ].join(' '));
+    });
+
+    it('throws when run template renders empty string', async () => {
+      processRunner.runProcess
+        .mockResolvedValueOnce({
+          exitCode: 0,
+          stdout: 'chat-1',
+          stderr: '',
+          timedOut: false
+        });
+      mockEjsRender
+        .mockImplementationOnce(defaultEjsRenderer)
+        .mockReturnValueOnce('   ');
+
+      await expect(
+        service.startSquadMembersStateful({
+          members: [
+            { roleId: 'test-role', task: 'Task' }
+          ]
+        })
+      ).rejects.toThrow(
+        'Template templates/run.template rendered to empty command'
+      );
+    });
+
+    it('treats empty chatId input as request for new chat', async () => {
+      processRunner.runProcess
+        .mockResolvedValueOnce({
+          exitCode: 0,
+          stdout: 'chat-xyz',
+          stderr: '',
+          timedOut: false
+        })
+        .mockResolvedValueOnce({
+          exitCode: 0,
+          stdout: 'result',
+          stderr: '',
+          timedOut: false
+        });
+
+      const result = await service.startSquadMembersStateful({
+        members: [
+          { roleId: 'test-role', task: 'Task', chatId: '' }
+        ]
+      });
+
+      expect(result.members[0].chatId).toBe('chat-xyz');
+      expect(processRunner.runProcess).toHaveBeenCalledTimes(2);
+      expect(
+        promptBuilder.buildPromptStatefulNewChat
+      ).toHaveBeenCalled();
+      expect(
+        promptBuilder.buildPromptStatefulExistingChat
+      ).not.toHaveBeenCalled();
+    });
+
+    it('throws when run template rendering fails', async () => {
+      processRunner.runProcess.mockResolvedValueOnce({
+        exitCode: 0,
+        stdout: 'chat-1',
+        stderr: '',
+        timedOut: false
+      });
+      mockEjsRender
+        .mockImplementationOnce(defaultEjsRenderer)
+        .mockImplementationOnce(() => {
+          throw new Error('render boom');
+        });
+
+      await expect(
+        service.startSquadMembersStateful({
+          members: [
+            { roleId: 'test-role', task: 'Task' }
+          ]
+        })
+      ).rejects.toThrow(
+        'Failed to render template templates/run.template: render boom'
+      );
+    });
+
+    it('propagates errors from run command execution', async () => {
+      processRunner.runProcess
+        .mockResolvedValueOnce({
+          exitCode: 0,
+          stdout: 'chat-abc',
+          stderr: '',
+          timedOut: false
+        })
+        .mockRejectedValueOnce(new Error('run failed'));
+
+      await expect(
+        service.startSquadMembersStateful({
+          members: [
+            { roleId: 'test-role', task: 'Task' }
+          ]
+        })
+      ).rejects.toThrow('run failed');
+    });
+
+    it(
+      'sets timeout status even when exit code indicates success',
+      async () => {
+        processRunner.runProcess
+          .mockResolvedValueOnce({
+            exitCode: 0,
+            stdout: 'chat-abc',
+            stderr: '',
+            timedOut: false
+          })
+          .mockResolvedValueOnce({
+            exitCode: 0,
+            stdout: 'output',
+            stderr: '',
+            timedOut: true
+          });
+
+        const result = await service.startSquadMembersStateful({
+          members: [
+            { roleId: 'test-role', task: 'Task' }
+          ]
+        });
+
+        expect(result.members[0].status).toBe('timeout');
+      }
+    );
+
+    it(
+      'serializes stateful members when executionMode requests sequential',
+      async () => {
+        configService.getConfig.mockReturnValue({
+          stateMode: 'stateful',
+          engine: 'claude',
+          executionMode: 'sequential',
+          runTemplatePath: 'templates/run.template',
+          createChatTemplatePath: 'templates/create-chat.template',
+          agentsDirectoryPath: 'agents',
+          processTimeoutMs: 5000,
+          sequentialDelayMs: 1
+        });
+        processRunner.runProcess.mockResolvedValue({
+          exitCode: 0,
+          stdout: 'chat-abc',
+          stderr: '',
+          timedOut: false
+        });
+
+        let concurrentExecutions = 0;
+        let maxConcurrentExecutions = 0;
+        processRunner.runProcess.mockImplementation(async () => {
+          concurrentExecutions += 1;
+          maxConcurrentExecutions = Math.max(
+            maxConcurrentExecutions,
+            concurrentExecutions
+          );
+          await new Promise((resolve) => setTimeout(resolve, 2));
+          concurrentExecutions -= 1;
+          return {
+            exitCode: 0,
+            stdout: 'chat-abc',
+            stderr: '',
+            timedOut: false
+          };
+        });
+
+        await service.startSquadMembersStateful({
+          members: [
+            { roleId: 'test-role', task: 'Task 1' },
+            { roleId: 'test-role', task: 'Task 2' }
+          ]
+        });
+
+        expect(maxConcurrentExecutions).toBe(1);
+      }
+    );
+
+    it(
+      'runs stateful members in parallel when executionMode=parallel',
+      async () => {
+        configService.getConfig.mockReturnValue({
+          stateMode: 'stateful',
+          engine: 'cursor-agent',
+          executionMode: 'parallel',
+          runTemplatePath: 'templates/run.template',
+          createChatTemplatePath: 'templates/create-chat.template',
+          agentsDirectoryPath: 'agents',
+          processTimeoutMs: 5000,
+          sequentialDelayMs: 5
+        });
+        processRunner.runProcess.mockResolvedValue({
+          exitCode: 0,
+          stdout: 'chat-abc',
+          stderr: '',
+          timedOut: false
+        });
+
+        let concurrentExecutions = 0;
+        let maxConcurrentExecutions = 0;
+        processRunner.runProcess.mockImplementation(async () => {
+          concurrentExecutions += 1;
+          maxConcurrentExecutions = Math.max(
+            maxConcurrentExecutions,
+            concurrentExecutions
+          );
+          await new Promise((resolve) => setTimeout(resolve, 2));
+          concurrentExecutions -= 1;
+          return {
+            exitCode: 0,
+            stdout: 'chat-abc',
+            stderr: '',
+            timedOut: false
+          };
+        });
+
+        await service.startSquadMembersStateful({
+          members: [
+            { roleId: 'test-role', task: 'Task 1' },
+            { roleId: 'test-role', task: 'Task 2' },
+            { roleId: 'test-role', task: 'Task 3' }
+          ]
+        });
+
+        expect(maxConcurrentExecutions).toBeGreaterThan(1);
+      }
+    );
+  });
+
+  describe('escapePromptForShell', () => {
+    it('handles various whitespace and control characters', () => {
+      const rawPrompt = 'line1\r\nline2\\path$VAR`"';
+      const escaped = (
+        service as unknown as { escapePromptForShell(prompt: string): string }
+      ).escapePromptForShell(rawPrompt);
+
+      expect(escaped).toBe(
+        String.raw`line1\nline2\\path\$VAR\`\"`
       );
     });
   });

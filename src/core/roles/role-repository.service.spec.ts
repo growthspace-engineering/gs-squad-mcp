@@ -22,8 +22,9 @@ describe('RoleRepositoryService', () => {
             getConfig: () => ({
               agentsDirectoryPath: testAgentsDir,
               stateMode: 'stateless' as const,
-              engineCommand: 'cursor-agent',
-              runTemplatePath: 'templates/run-agent.template',
+              engine: 'cursor-agent' as const,
+              executionMode: undefined,
+              runTemplatePath: 'templates/run-cursor-agent.template',
               processTimeoutMs: 300000
             })
           }
@@ -98,6 +99,47 @@ Role body.
     expect(role!.id).toBe('backend');
   });
 
+  it(
+    'should default metadata when markdown lacks frontmatter entirely',
+    async () => {
+      await writeFile(
+        join(testAgentsDir, 'plain.md'),
+        `
+
+  Just some body content that should be trimmed.
+  `
+      );
+
+      const role = await service.getRoleById('plain');
+      expect(role).not.toBeNull();
+      expect(role!.name).toBe('plain');
+      expect(role!.description).toBe('');
+      expect(role!.body).toBe('Just some body content that should be trimmed.');
+    }
+  );
+
+  it(
+    'should treat blank frontmatter fields as missing and trim the body',
+    async () => {
+      await writeFile(
+        join(testAgentsDir, 'blank-fields.md'),
+        `---
+name: ""
+description: ""
+---
+
+  Body with leading whitespace.  
+`
+      );
+
+      const role = await service.getRoleById('blank-fields');
+      expect(role).not.toBeNull();
+      expect(role!.name).toBe('blank-fields');
+      expect(role!.description).toBe('');
+      expect(role!.body).toBe('Body with leading whitespace.');
+    }
+  );
+
   it('should return null for unknown role', async () => {
     const role = await service.getRoleById('unknown-role');
     expect(role).toBeNull();
@@ -132,5 +174,89 @@ Body 2.
 
     const roles2 = await service.getAllRoles();
     expect(roles2).toHaveLength(1); // Still cached
+  });
+
+  it('should reload roles when cache is invalidated', async () => {
+    await writeFile(
+      join(testAgentsDir, 'role-a.md'),
+      `---
+name: Role A
+description: First cached role
+---
+
+Body A.
+`
+    );
+
+    const initial = await service.getAllRoles();
+    expect(initial).toHaveLength(1);
+
+    (service as any).rolesCache = null;
+
+    await writeFile(
+      join(testAgentsDir, 'role-b.md'),
+      `---
+name: Role B
+description: Second role
+---
+
+Body B.
+`
+    );
+
+    const reloaded = await service.getAllRoles();
+    const ids = reloaded.map((role) => role.id).sort();
+    expect(ids).toEqual([ 'role-a', 'role-b' ]);
+  });
+
+  it(
+    'should throw a descriptive error when the agents directory is unreadable',
+    async () => {
+      await rm(testAgentsDir, { recursive: true, force: true });
+
+      await expect(service.getAllRoles()).rejects.toThrow(
+        `Failed to load roles from ${testAgentsDir}`
+      );
+    }
+  );
+
+  it(
+    'should throw a descriptive error when markdown parsing fails',
+    async () => {
+      await writeFile(
+        join(testAgentsDir, 'broken.md'),
+        `---
+  {{ invalid
+  `
+      );
+
+      await expect(service.getAllRoles()).rejects.toThrow(
+        `Failed to load roles from ${testAgentsDir}`
+      );
+    }
+  );
+
+  it('should return consistent data when accessed concurrently', async () => {
+    await writeFile(
+      join(testAgentsDir, 'multi.md'),
+      `---
+name: Multi
+description: Concurrent role
+---
+
+Concurrent body.
+`
+    );
+
+    const [ rolesA, rolesB, specific ] = await Promise.all([
+      service.getAllRoles(),
+      service.getAllRoles(),
+      service.getRoleById('multi')
+    ]);
+
+    expect(rolesA).toHaveLength(1);
+    expect(rolesB).toHaveLength(1);
+    expect(specific).not.toBeNull();
+    expect(specific!.name).toBe('Multi');
   });
 });

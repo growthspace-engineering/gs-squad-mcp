@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { readFile } from 'fs/promises';
 import { resolve } from 'path';
+import { render } from 'ejs';
+import { randomUUID } from 'crypto';
 import { IListRolesResponse } from
   '@gs-squad-mcp/core/mcp/contracts';
 import { IStartSquadMembersStatelessPayload } from
@@ -49,10 +51,39 @@ export class SquadService {
     const config = this.configService.getConfig();
     const workspaceRoot = process.cwd();
 
-    const members = await Promise.all(
-      payload.members.map(async (memberInput, index) => {
+    const requiresSerial = this.requiresSerialExecution(
+      config.engine,
+      config.executionMode
+    );
+    const members: IStartSquadMemberOutputBase[] = [];
+
+    if (requiresSerial) {
+      for (let index = 0; index < payload.members.length; index += 1) {
+        const memberInput = payload.members[index];
         const memberId = this.generateMemberId(squadId, index);
-        return this.executeStatelessMember(
+        const result = await this.executeStatelessMember(
+          memberInput,
+          memberId,
+          config,
+          workspaceRoot
+        );
+        members.push(result);
+
+        // If not last member, delay before next execution
+        if (
+          index < payload.members.length - 1 &&
+          config.sequentialDelayMs > 0
+        ) {
+          await new Promise((resolve) =>
+            setTimeout(resolve, config.sequentialDelayMs)
+          );
+        }
+      }
+    } else {
+      const parallelResults = await Promise.all(
+        payload.members.map(async (memberInput, index) => {
+          const memberId = this.generateMemberId(squadId, index);
+          return this.executeStatelessMember(
           memberInput,
           memberId,
           config,
@@ -60,6 +91,8 @@ export class SquadService {
         );
       })
     );
+      members.push(...parallelResults);
+    }
 
     return { squadId, members };
   }
@@ -71,10 +104,39 @@ export class SquadService {
     const config = this.configService.getConfig();
     const workspaceRoot = process.cwd();
 
-    const members = await Promise.all(
-      payload.members.map(async (memberInput, index) => {
+    const requiresSerial = this.requiresSerialExecution(
+      config.engine,
+      config.executionMode
+    );
+    const members: IStartSquadMemberStatefulOutput[] = [];
+
+    if (requiresSerial) {
+      for (let index = 0; index < payload.members.length; index += 1) {
+        const memberInput = payload.members[index];
         const memberId = this.generateMemberId(squadId, index);
-        return this.executeStatefulMember(
+        const result = await this.executeStatefulMember(
+          memberInput,
+          memberId,
+          config,
+          workspaceRoot
+        );
+        members.push(result);
+
+        // If not last member, delay before next execution
+        if (
+          index < payload.members.length - 1 &&
+          config.sequentialDelayMs > 0
+        ) {
+          await new Promise((resolve) =>
+            setTimeout(resolve, config.sequentialDelayMs)
+          );
+        }
+      }
+    } else {
+      const parallelResults = await Promise.all(
+        payload.members.map(async (memberInput, index) => {
+          const memberId = this.generateMemberId(squadId, index);
+          return this.executeStatefulMember(
           memberInput,
           memberId,
           config,
@@ -82,8 +144,24 @@ export class SquadService {
         );
       })
     );
+      members.push(...parallelResults);
+    }
 
     return { squadId, members };
+  }
+
+  /**
+   * Escapes a prompt string for safe use in double-quoted shell arguments.
+   * Escapes special characters and converts newlines to literal \n.
+   */
+  private escapePromptForShell(prompt: string): string {
+    return prompt
+      .replace(/\\/g, '\\\\') // Escape backslashes first
+      .replace(/\$/g, '\\$') // Escape dollar signs
+      .replace(/`/g, '\\`') // Escape backticks
+      .replace(/"/g, '\\"') // Escape double quotes
+      .replace(/\n/g, '\\n') // Convert newlines to literal \n
+      .replace(/\r/g, ''); // Remove carriage returns
   }
 
   private async executeStatelessMember(
@@ -101,26 +179,45 @@ export class SquadService {
       throw new Error(`Role not found: ${memberInput.roleId}`);
     }
 
-    const prompt = this.promptBuilder.buildPromptStateless(
+    const rawPrompt = this.promptBuilder.buildPromptStateless(
       role,
       memberInput.task
     );
+    const prompt = this.escapePromptForShell(rawPrompt);
 
     const resolvedCwd = memberInput.cwd
       ? resolve(workspaceRoot, memberInput.cwd)
       : workspaceRoot;
 
     const templateContent = await readFile(config.runTemplatePath, 'utf-8');
-    const args = this.templateRenderer.render(templateContent, {
-      prompt,
-      cwd: resolvedCwd,
-      roleId: memberInput.roleId,
-      task: memberInput.task
-    });
+    let renderedCommand: string;
+    try {
+      // Render the template to get the full command string
+      const rendered = render(templateContent, {
+        prompt,
+        cwd: resolvedCwd,
+        roleId: memberInput.roleId,
+        task: memberInput.task,
+        chatId: undefined // Not used in stateless mode, but needed for template
+      });
+      renderedCommand = rendered.trim();
+    } catch (error) {
+      throw new Error(
+        `Failed to render template ${config.runTemplatePath}: ${
+          error instanceof Error ? error.message : String(error)
+        }`
+      );
+    }
+
+    if (!renderedCommand || renderedCommand.length === 0) {
+      throw new Error(
+        `Template ${config.runTemplatePath} rendered to empty command`
+      );
+    }
 
     const result = await this.processRunner.runProcess(
-      config.engineCommand,
-      args,
+      renderedCommand,
+      [],
       resolvedCwd,
       config.processTimeoutMs
     );
@@ -163,17 +260,38 @@ export class SquadService {
         config.createChatTemplatePath,
         'utf-8'
       );
-      const createChatArgs = this.templateRenderer.render(
-        createChatTemplate,
-        {
+      let renderedCreateChatCommand: string;
+      try {
+        const generatedUuid = randomUUID();
+        renderedCreateChatCommand = render(createChatTemplate, {
           roleId: memberInput.roleId,
-          cwd: resolvedCwd
-        }
-      );
+          cwd: resolvedCwd,
+          generatedUuid
+        }).trim();
+      } catch (error) {
+        throw new Error(
+          `Failed to render create-chat template ${
+            config.createChatTemplatePath
+          }: ${
+            error instanceof Error ? error.message : String(error)
+          }`
+        );
+      }
+
+      if (
+        !renderedCreateChatCommand ||
+        renderedCreateChatCommand.length === 0
+      ) {
+        throw new Error(
+          `Create-chat template ${
+            config.createChatTemplatePath
+          } rendered to empty command`
+        );
+      }
 
       const createChatResult = await this.processRunner.runProcess(
-        config.engineCommand,
-        createChatArgs,
+        renderedCreateChatCommand,
+        [],
         resolvedCwd,
         config.processTimeoutMs
       );
@@ -190,22 +308,39 @@ export class SquadService {
       }
     }
 
-    const prompt = hadChatId
+    const rawPrompt = hadChatId
       ? this.promptBuilder.buildPromptStatefulExistingChat(memberInput.task)
       : this.promptBuilder.buildPromptStatefulNewChat(role, memberInput.task);
+    const prompt = this.escapePromptForShell(rawPrompt);
 
     const runTemplateContent = await readFile(config.runTemplatePath, 'utf-8');
-    const runArgs = this.templateRenderer.render(runTemplateContent, {
-      prompt,
-      chatId: chatId || undefined,
-      cwd: resolvedCwd,
-      roleId: memberInput.roleId,
-      task: memberInput.task
-    });
+    let renderedRunCommand: string;
+    try {
+      // Render the template to get the full command string
+      renderedRunCommand = render(runTemplateContent, {
+        prompt,
+        chatId: chatId || undefined,
+        cwd: resolvedCwd,
+        roleId: memberInput.roleId,
+        task: memberInput.task
+      }).trim();
+    } catch (error) {
+      throw new Error(
+        `Failed to render template ${config.runTemplatePath}: ${
+          error instanceof Error ? error.message : String(error)
+        }`
+      );
+    }
+
+    if (!renderedRunCommand || renderedRunCommand.length === 0) {
+      throw new Error(
+        `Template ${config.runTemplatePath} rendered to empty command`
+      );
+    }
 
     const result = await this.processRunner.runProcess(
-      config.engineCommand,
-      runArgs,
+      renderedRunCommand,
+      [],
       resolvedCwd,
       config.processTimeoutMs
     );
@@ -240,6 +375,26 @@ export class SquadService {
       return 'completed';
     }
     return 'error';
+  }
+
+  private requiresSerialExecution(
+    engine: 'cursor-agent' | 'claude' | 'codex',
+    executionMode?: 'sequential' | 'parallel'
+  ): boolean {
+    const envOverride = process.env.PROCESS_RUNNER_SERIALIZE;
+    if (envOverride === 'true') {
+      return true;
+    }
+    if (envOverride === 'false') {
+      return false;
+    }
+    if (executionMode === 'sequential') {
+      return true;
+    }
+    if (executionMode === 'parallel') {
+      return false;
+    }
+    return engine === 'cursor-agent';
   }
 }
 

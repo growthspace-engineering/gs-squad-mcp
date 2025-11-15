@@ -1,0 +1,3 @@
+claude -p --output-format=json<% if (typeof chatId !== undefined && chatId) { %> --session-id "<%= chatId %>"<% } %> "<%= prompt %>" \
+  | jq -rc '.result.content[] | select(.type == "text") | .text'
+

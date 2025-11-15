@@ -7,8 +7,16 @@ export class TemplateRendererService {
     templateContent: string,
     context: Record<string, unknown>
   ): string[] {
-    const rendered = render(templateContent, context);
-    return this.splitIntoArgs(rendered);
+    try {
+      const rendered = render(templateContent, context);
+      return this.splitIntoArgs(rendered);
+    } catch (error) {
+      throw new Error(
+        `Template rendering failed: ${
+          error instanceof Error ? error.message : String(error)
+        }. Template: ${templateContent.substring(0, 100)}...`
+      );
+    }
   }
 
   private splitIntoArgs(rendered: string): string[] {

@@ -1,0 +1,2 @@
+cursor-agent --approve-mcps --model=composer-1 --print<% if (typeof chatId !== undefined && chatId) { %> --resume <%= chatId %><% } %> agent "<%= prompt %>"
+

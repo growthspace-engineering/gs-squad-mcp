@@ -38,7 +38,7 @@ Test role body content.
 
     await writeFile(
       join(testTemplatesDir, 'run-agent.template'),
-      '-c echo "<%= prompt %>"'
+      'echo "<%= prompt %>"'
     );
 
     process.env.AGENTS_DIRECTORY_PATH = testAgentsDir;
@@ -46,7 +46,7 @@ Test role body content.
       testTemplatesDir,
       'run-agent.template'
     );
-    process.env.ENGINE_COMMAND = 'sh';
+    process.env.EXECUTION_MODE = 'parallel';
     process.env.STATE_MODE = 'stateless';
     process.env.PROCESS_TIMEOUT_MS = '5000';
 
@@ -71,7 +71,7 @@ Test role body content.
     }
     delete process.env.AGENTS_DIRECTORY_PATH;
     delete process.env.RUN_TEMPLATE_PATH;
-    delete process.env.ENGINE_COMMAND;
+    delete process.env.EXECUTION_MODE;
     delete process.env.STATE_MODE;
     delete process.env.PROCESS_TIMEOUT_MS;
   });
@@ -128,7 +128,7 @@ Test role body content.
 
     await writeFile(
       join(testTemplatesDir, 'create-chat.template'),
-      '-c "echo chat-123"'
+      'echo chat-123'
     );
 
     process.env.CREATE_CHAT_TEMPLATE_PATH = join(

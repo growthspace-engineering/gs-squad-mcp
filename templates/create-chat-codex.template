@@ -1,0 +1,9 @@
+codex exec --json --sandbox workspace-write "" \
+  | jq -rc '
+      if .type == "thread.started" then
+        "\(.thread_id)"
+      else
+        empty
+      end
+    '
+

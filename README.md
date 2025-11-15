@@ -73,11 +73,11 @@ Configure the MCP via environment variables:
 # State mode: 'stateless' or 'stateful'
 STATE_MODE=stateless
 
-# CLI engine command (e.g., 'cursor-agent', 'claude-code-cli')
-ENGINE_COMMAND=cursor-agent
+# Engine selection (one of: 'cursor-agent', 'claude', 'codex')
+ENGINE=cursor-agent
 
 # Template paths
-RUN_TEMPLATE_PATH=templates/run-agent.template
+RUN_TEMPLATE_PATH=templates/run-cursor-agent.template
 CREATE_CHAT_TEMPLATE_PATH=templates/create-chat.template  # Required for stateful mode
 
 # Agents directory
@@ -102,6 +102,33 @@ npm run build
 node dist/cli/main-stdio.js
 ```
 
+### Passing CLI flags via mcp.json
+
+You can select the engine, state mode, and execution mode using CLI flags in your MCP host configuration (for example Cursor’s `mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "gs-squad-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "ts-node",
+        "--require",
+        "tsconfig-paths/register",
+        "src/cli/main-stdio.ts",
+        "--state-mode",
+        "stateful",
+        "--engine",
+        "claude",
+        "--execution-mode",
+        "parallel"
+      ]
+    }
+  }
+}
+```
+
 ### MCP Tools
 
 The server exposes two tools:
@@ -122,6 +149,20 @@ Returns all available role definitions.
   ]
 }
 ```
+
+### Default template selection and execution mode
+
+If you do not provide `RUN_TEMPLATE_PATH`, a default template is selected based on `ENGINE`:
+- `ENGINE=cursor-agent` → `templates/run-cursor-agent.template`
+- `ENGINE=claude` → `templates/run-claude.template`
+- `ENGINE=codex` → `templates/run-codex.template`
+
+If you do provide `RUN_TEMPLATE_PATH`, you must also specify how members run:
+- Set `EXECUTION_MODE=sequential` or `EXECUTION_MODE=parallel`, or pass `--execution-mode`
+
+Inference when no custom template is provided:
+- `cursor-agent` runs sequentially
+- `claude` and `codex` run in parallel
 
 #### `start_squad_members`
 
@@ -208,11 +249,8 @@ Templates define how CLI agents are spawned. They use EJS-like syntax (`<% %>`) 
 ### Example Template
 
 ```bash
-# templates/run-agent.template
-<%= ENGINE_COMMAND %> \
-  --prompt "<%= prompt %>" \
-  --cwd "<%= cwd %>" \
-  <% if (chatId) { %>--chat-id "<%= chatId %>"<% } %>
+# templates/run-cursor-agent.template
+cursor-agent --approve-mcps --model=composer-1 --print agent "<%- prompt %>"
 ```
 
 ## Modes
