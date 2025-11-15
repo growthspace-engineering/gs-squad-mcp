@@ -18,7 +18,10 @@ import {
           entities: [ SessionEntity, SquadEntity, AgentEntity ],
           synchronize: true,
           migrationsRun: false,
-          migrations: []
+          migrations: [],
+          // Explicitly set database to read-write mode
+          readonly: false,
+          fileMustExist: false
         };
       }
     }),

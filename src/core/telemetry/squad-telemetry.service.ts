@@ -69,12 +69,14 @@ export class SquadTelemetryService {
   async createAgent(
     squadId: string,
     roleName: string,
+    task: string | undefined,
     prompt: string | undefined
   ): Promise<AgentEntity> {
     const agent = this.agentRepo.create({
       agentId: crypto.randomUUID(),
       squadId,
       roleName,
+      task,
       prompt,
       status: 'starting',
       startedAt: new Date().toISOString()
@@ -100,6 +102,7 @@ export class SquadTelemetryService {
     });
   }
 }
+
 
 
 

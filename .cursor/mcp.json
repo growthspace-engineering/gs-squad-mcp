@@ -13,6 +13,20 @@
         "--state-mode",
         "stateful"
       ]
+    },
+    "proxied-github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@growthspace-engineering/gs-mcp-proxy-pii-redactor",
+        "--config",
+        "./.cursor/config.json",
+        "--stdio-target",
+        "github",
+        "--group",
+        "${ SUBAGENT_ROLE }"
+      ],
+      "workingDirectory": "."
     }
   }
 }

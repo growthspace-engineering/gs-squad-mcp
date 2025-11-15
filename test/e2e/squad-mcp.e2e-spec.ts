@@ -220,6 +220,9 @@ describe('Squad MCP E2E', () => {
     testWorkspace = join(tmpdir(), `test-workspace-${Date.now()}`);
     runTemplatePath = join(testTemplatesDir, 'run-agent.template');
 
+    // Use in-memory database for tests to avoid polluting production DB
+    process.env.SQUAD_DB_PATH = ':memory:';
+
     await mkdir(testAgentsDir, { recursive: true });
     await mkdir(testTemplatesDir, { recursive: true });
     await mkdir(testWorkspace, { recursive: true });
@@ -272,6 +275,7 @@ Test role body content.
     delete process.env.PROCESS_RUNNER_SERIALIZE;
     delete process.env.CREATE_CHAT_TEMPLATE_PATH;
     delete process.env.PROCESS_RUNNER_DEBUG;
+    delete process.env.SQUAD_DB_PATH;
   });
 
   it(

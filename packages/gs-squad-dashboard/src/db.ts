@@ -22,6 +22,7 @@ export interface AgentDTO {
   agentId: string;
   squadId: string;
   roleName: string;
+  task?: string;
   prompt?: string;
   status: 'starting' | 'running' | 'done' | 'error';
   result?: string;
@@ -63,6 +64,7 @@ export function loadFullState(): {
     maxLastActivityAt: maxRow?.maxLastActivityAt ?? null
   };
 }
+
 
 
 

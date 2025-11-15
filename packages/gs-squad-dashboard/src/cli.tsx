@@ -33,16 +33,31 @@ function main(): void {
 
   const enterAltScreen = (): void => {
     try {
-      process.stdout.write('\x1b[?1049h'); // alternate screen buffer
-      process.stdout.write('\x1b[?25l');   // hide cursor
-      process.stdout.write('\x1b[2J\x1b[3J\x1b[H'); // clear + move home
-    } catch {}
+      // Enable alternate screen buffer
+      process.stdout.write('\x1b[?1049h');
+      // Hide cursor
+      process.stdout.write('\x1b[?25l');
+      // Clear screen and scrollback
+      process.stdout.write('\x1b[2J\x1b[3J\x1b[H');
+      // Disable line wrapping
+      process.stdout.write('\x1b[?7l');
+    } catch {
+      // Ignore errors
+    }
   };
   const exitAltScreen = (): void => {
     try {
-      process.stdout.write('\x1b[?25h');   // show cursor
-      process.stdout.write('\x1b[?1049l'); // restore main buffer
-    } catch {}
+      // Re-enable line wrapping
+      process.stdout.write('\x1b[?7h');
+      // Show cursor
+      process.stdout.write('\x1b[?25h');
+      // Restore main buffer
+      process.stdout.write('\x1b[?1049l');
+      // Clear any remaining output
+      process.stdout.write('\x1b[2J\x1b[H');
+    } catch {
+      // Ignore errors
+    }
   };
 
   if (!interactive) {
@@ -50,15 +65,27 @@ function main(): void {
     const ink = render(
       <TuiApp
         mode="view-only"
-        filters={{ originatorId: originatorFilter, workspaceId: workspaceFilter }}
+        filters={{
+          originatorId: originatorFilter,
+          workspaceId: workspaceFilter
+        }}
       />
     );
+    let cleanupCalled = false;
     const cleanup = (): void => {
-      try { ink.unmount(); } catch {}
+      if (cleanupCalled) return;
+      cleanupCalled = true;
+      try {
+        ink.unmount();
+      } catch {
+        // Ignore unmount errors
+      }
       exitAltScreen();
+      process.exit(0);
     };
     process.once('SIGINT', cleanup);
     process.once('SIGTERM', cleanup);
+    process.once('exit', exitAltScreen);
     ink.waitUntilExit().then(cleanup).catch(cleanup);
     return;
   }
@@ -110,16 +137,34 @@ function main(): void {
     <TuiApp
       mode="interactive"
       attachedOriginatorId={orchestratorChatId}
-      filters={{ originatorId: originatorFilter, workspaceId: workspaceFilter }}
+      filters={{
+        originatorId: originatorFilter,
+        workspaceId: workspaceFilter
+      }}
       pty={ptyAdapter}
     />
   );
+  let cleanupCalled = false;
   const cleanup = (): void => {
-    try { ink.unmount(); } catch {}
+    if (cleanupCalled) return;
+    cleanupCalled = true;
+    try {
+      child.kill();
+    } catch {
+      // Ignore kill errors
+    }
+    try {
+      ink.unmount();
+    } catch {
+      // Ignore unmount errors
+    }
     exitAltScreen();
+    process.exit(0);
   };
   process.once('SIGINT', cleanup);
   process.once('SIGTERM', cleanup);
+  process.once('exit', exitAltScreen);
+  child.onExit(() => cleanup());
   ink.waitUntilExit().then(cleanup).catch(cleanup);
 }
 

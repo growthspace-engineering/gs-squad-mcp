@@ -25,6 +25,9 @@ export class AgentEntity {
   roleName!: string;
 
   @Column('text', { nullable: true })
+  task?: string;
+
+  @Column('text', { nullable: true })
   prompt?: string;
 
   @Column()
@@ -42,6 +45,7 @@ export class AgentEntity {
   @Column({ nullable: true })
   finishedAt?: string;
 }
+
 
 
 

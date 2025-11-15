@@ -215,6 +215,7 @@ export class SquadService {
       const agent = await this.telemetry.createAgent(
         squadId,
         role.name,
+        memberInput.task,
         rawPrompt
       );
       agentIdForTelemetry = agent.agentId;
@@ -372,6 +373,7 @@ export class SquadService {
       const agent = await this.telemetry.createAgent(
         squadId,
         role.name,
+        memberInput.task,
         rawPrompt
       );
       agentIdForTelemetry = agent.agentId;
