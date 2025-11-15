@@ -134,15 +134,24 @@ jobs:
           REPO_OWNER="${{ github.repository_owner }}"
           REPO_NAME="${{ github.event.repository.name }}"
           
-          # Try to fetch base branch coverage from GitHub Pages
-          BASE_UNIT_URL="https://$REPO_OWNER.github.io/$REPO_NAME/tests/branch/$BASE_BRANCH/unit/coverage/coverage-summary.json"
-          BASE_E2E_URL="https://$REPO_OWNER.github.io/$REPO_NAME/tests/branch/$BASE_BRANCH/e2e/coverage/coverage-summary.json"
-          BASE_COMBINED_URL="https://$REPO_OWNER.github.io/$REPO_NAME/tests/branch/$BASE_BRANCH/combined-coverage/coverage-summary.json"
+          # For private repos, GitHub Pages URLs require auth and return HTML when fetched anonymously.
+          # Instead, read coverage JSON directly from the gh-pages branch via the GitHub API.
+          GH_API="https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contents"
+          
+          fetch_coverage() {
+            local path="$1"    # e.g. tests/branch/main/unit/coverage/coverage-summary.json
+            local out="$2"
+            curl -sf \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3.raw" \
+              "$GH_API/$path?ref=gh-pages" \
+              -o "$out" || echo "{}" > "$out"
+          }
           
           # Fetch base coverage (ignore errors if not found)
-          curl -sf "$BASE_UNIT_URL" -o base-unit-coverage.json || echo "{}" > base-unit-coverage.json
-          curl -sf "$BASE_E2E_URL" -o base-e2e-coverage.json || echo "{}" > base-e2e-coverage.json
-          curl -sf "$BASE_COMBINED_URL" -o base-combined-coverage.json || echo "{}" > base-combined-coverage.json
+          fetch_coverage "tests/branch/$BASE_BRANCH/unit/coverage/coverage-summary.json" base-unit-coverage.json
+          fetch_coverage "tests/branch/$BASE_BRANCH/e2e/coverage/coverage-summary.json" base-e2e-coverage.json
+          fetch_coverage "tests/branch/$BASE_BRANCH/combined-coverage/coverage-summary.json" base-combined-coverage.json
           
           # Extract percentages
           BASE_UNIT=$(node -e "try { const s=require('./base-unit-coverage.json'); console.log(s.total?.statements?.pct || 0); } catch { console.log(0); }")
