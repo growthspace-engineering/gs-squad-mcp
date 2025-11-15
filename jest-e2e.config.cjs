@@ -50,11 +50,16 @@ module.exports = {
   coverageDirectory: coverageDir,
   coverageReporters: [ 'json', 'text', 'lcov', 'clover', 'json-summary', 'html' ],
   modulePathIgnorePatterns: [ '<rootDir>/dist/' ],
+  // Prevent watch mode from retriggering on our own test-result artifacts
+  watchPathIgnorePatterns: [
+    '<rootDir>/test-results/',
+    '<rootDir>/coverage/'
+  ],
   maxWorkers: '75%',
   // Verbose output for better readability
   verbose: true,
-  // Mitigate occasional Node event-loop linger after reporters finish
-  detectOpenHandles: true,
+  // E2E uses nest-commander which holds a TTY handle; don't treat that as a leak
+  detectOpenHandles: false,
   forceExit: true,
   testEnvironment: 'node',
   // Reporters
