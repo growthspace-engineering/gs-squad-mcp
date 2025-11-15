@@ -79,7 +79,8 @@ describe('SquadService', () => {
       runTemplatePath: 'templates/run.template',
       createChatTemplatePath: 'templates/create-chat.template',
       agentsDirectoryPath: 'agents',
-      processTimeoutMs: 5000
+      processTimeoutMs: 5000,
+      sequentialDelayMs: 0
     });
   });
 
@@ -221,6 +222,50 @@ describe('SquadService', () => {
       expect(result.members[0].memberId).not.toBe(result.members[1].memberId);
       expect(result.members[0].memberId).toContain(result.squadId);
       expect(result.members[1].memberId).toContain(result.squadId);
+    });
+
+    it('serializes members when engine uses cursor-agent', async () => {
+      configService.getConfig.mockReturnValue({
+        stateMode: 'stateless',
+        engineCommand: 'cursor-agent',
+        runTemplatePath: 'templates/run.template',
+        createChatTemplatePath: 'templates/create-chat.template',
+        agentsDirectoryPath: 'agents',
+        processTimeoutMs: 5000,
+        sequentialDelayMs: 10
+      });
+
+      let concurrentExecutions = 0;
+      let maxConcurrentExecutions = 0;
+      processRunner.runProcess.mockImplementation(async () => {
+        concurrentExecutions += 1;
+        maxConcurrentExecutions = Math.max(
+          maxConcurrentExecutions,
+          concurrentExecutions
+        );
+        await new Promise((resolve) => setTimeout(resolve, 5));
+        concurrentExecutions -= 1;
+        return {
+          exitCode: 0,
+          stdout: 'output',
+          stderr: '',
+          timedOut: false
+        };
+      });
+
+      const payload = {
+        members: [
+          { roleId: 'test-role', task: 'Task 1' },
+          { roleId: 'test-role', task: 'Task 2' },
+          { roleId: 'test-role', task: 'Task 3' }
+        ]
+      };
+
+      await service.startSquadMembersStateless(payload);
+
+      expect(processRunner.runProcess).toHaveBeenCalledTimes(3);
+      expect(maxConcurrentExecutions).toBe(1);
+      expect(concurrentExecutions).toBe(0);
     });
 
     it('missing role error handling', async () => {

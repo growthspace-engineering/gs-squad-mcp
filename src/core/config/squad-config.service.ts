@@ -14,6 +14,11 @@ export class SquadConfigService {
       );
     }
 
+    const sequentialDelayRaw = parseInt(
+      process.env.SEQUENTIAL_DELAY_MS || '100',
+      10
+    );
+
     this.config = {
       stateMode,
       engineCommand: process.env.ENGINE_COMMAND || 'cursor-agent',
@@ -26,7 +31,10 @@ export class SquadConfigService {
       processTimeoutMs: parseInt(
         process.env.PROCESS_TIMEOUT_MS || '300000',
         10
-      )
+      ),
+      sequentialDelayMs: Number.isNaN(sequentialDelayRaw)
+        ? 1000
+        : Math.max(0, sequentialDelayRaw)
     };
 
     if (

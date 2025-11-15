@@ -229,9 +229,9 @@ export class McpCliCommand extends CommandRunner {
             error: {
               code: -32601,
               message: `Method not found: ${method}`
-            },
-            id
-          };
+          },
+          id
+        };
       }
 
       return { jsonrpc: '2.0', result, id };

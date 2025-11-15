@@ -50,10 +50,36 @@ export class SquadService {
     const config = this.configService.getConfig();
     const workspaceRoot = process.cwd();
 
-    const members = await Promise.all(
-      payload.members.map(async (memberInput, index) => {
+    const requiresSerial = this.requiresSerialExecution(config.engineCommand);
+    const members: IStartSquadMemberOutputBase[] = [];
+
+    if (requiresSerial) {
+      for (let index = 0; index < payload.members.length; index += 1) {
+        const memberInput = payload.members[index];
         const memberId = this.generateMemberId(squadId, index);
-        return this.executeStatelessMember(
+        const result = await this.executeStatelessMember(
+          memberInput,
+          memberId,
+          config,
+          workspaceRoot
+        );
+        members.push(result);
+
+        // If not last member, delay before next execution
+        if (
+          index < payload.members.length - 1 &&
+          config.sequentialDelayMs > 0
+        ) {
+          await new Promise((resolve) =>
+            setTimeout(resolve, config.sequentialDelayMs)
+          );
+        }
+      }
+    } else {
+      const parallelResults = await Promise.all(
+        payload.members.map(async (memberInput, index) => {
+          const memberId = this.generateMemberId(squadId, index);
+          return this.executeStatelessMember(
           memberInput,
           memberId,
           config,
@@ -61,6 +87,8 @@ export class SquadService {
         );
       })
     );
+      members.push(...parallelResults);
+    }
 
     return { squadId, members };
   }
@@ -72,10 +100,36 @@ export class SquadService {
     const config = this.configService.getConfig();
     const workspaceRoot = process.cwd();
 
-    const members = await Promise.all(
-      payload.members.map(async (memberInput, index) => {
+    const requiresSerial = this.requiresSerialExecution(config.engineCommand);
+    const members: IStartSquadMemberStatefulOutput[] = [];
+
+    if (requiresSerial) {
+      for (let index = 0; index < payload.members.length; index += 1) {
+        const memberInput = payload.members[index];
         const memberId = this.generateMemberId(squadId, index);
-        return this.executeStatefulMember(
+        const result = await this.executeStatefulMember(
+          memberInput,
+          memberId,
+          config,
+          workspaceRoot
+        );
+        members.push(result);
+
+        // If not last member, delay before next execution
+        if (
+          index < payload.members.length - 1 &&
+          config.sequentialDelayMs > 0
+        ) {
+          await new Promise((resolve) =>
+            setTimeout(resolve, config.sequentialDelayMs)
+          );
+        }
+      }
+    } else {
+      const parallelResults = await Promise.all(
+        payload.members.map(async (memberInput, index) => {
+          const memberId = this.generateMemberId(squadId, index);
+          return this.executeStatefulMember(
           memberInput,
           memberId,
           config,
@@ -83,6 +137,8 @@ export class SquadService {
         );
       })
     );
+      members.push(...parallelResults);
+    }
 
     return { squadId, members };
   }
@@ -310,6 +366,17 @@ export class SquadService {
       return 'completed';
     }
     return 'error';
+  }
+
+  private requiresSerialExecution(engineCommand: string): boolean {
+    const envOverride = process.env.PROCESS_RUNNER_SERIALIZE;
+    if (envOverride === 'true') {
+      return true;
+    }
+    if (envOverride === 'false') {
+      return false;
+    }
+    return /cursor-?agent/.test(engineCommand);
   }
 }
 

@@ -20,6 +20,7 @@ describe('SquadConfigService', () => {
     delete process.env.CREATE_CHAT_TEMPLATE_PATH;
     delete process.env.AGENTS_DIRECTORY_PATH;
     delete process.env.PROCESS_TIMEOUT_MS;
+    delete process.env.SEQUENTIAL_DELAY_MS;
 
     service = new SquadConfigService();
     const config = service.getConfig();
@@ -30,6 +31,7 @@ describe('SquadConfigService', () => {
     expect(config.createChatTemplatePath).toBeUndefined();
     expect(config.agentsDirectoryPath).toBe('agents');
     expect(config.processTimeoutMs).toBe(300000);
+    expect(config.sequentialDelayMs).toBe(100);
   });
 
   it('should override defaults with env vars when provided', () => {
@@ -39,6 +41,7 @@ describe('SquadConfigService', () => {
     process.env.CREATE_CHAT_TEMPLATE_PATH = 'custom/create-chat.template';
     process.env.AGENTS_DIRECTORY_PATH = 'custom-agents';
     process.env.PROCESS_TIMEOUT_MS = '60000';
+    process.env.SEQUENTIAL_DELAY_MS = '250';
 
     service = new SquadConfigService();
     const config = service.getConfig();
@@ -49,6 +52,7 @@ describe('SquadConfigService', () => {
     expect(config.createChatTemplatePath).toBe('custom/create-chat.template');
     expect(config.agentsDirectoryPath).toBe('custom-agents');
     expect(config.processTimeoutMs).toBe(60000);
+    expect(config.sequentialDelayMs).toBe(250);
   });
 
   it('should throw error for invalid STATE_MODE', () => {

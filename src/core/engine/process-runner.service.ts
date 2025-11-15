@@ -25,25 +25,42 @@ export class ProcessRunnerService {
 
       // Explicitly wrap in sh -c to ensure shell interpretation
       // This ensures pipes and other shell operators are properly interpreted
-      const process: ChildProcess = spawn('sh', [ '-c', shellCommand ], {
+      const childProcess: ChildProcess = spawn(
+        'sh',
+        [ '-c', shellCommand ],
+        {
         cwd,
         // We're explicitly invoking sh, so no need for shell: true
         shell: false,
         detached: false
-      });
+        }
+      );
+
+      if (process.env.PROCESS_RUNNER_DEBUG === 'true') {
+        // eslint-disable-next-line no-console
+        console.log(
+          `[ProcessRunner] spawn command="${shellCommand}" cwd="${cwd}"`
+        );
+      }
+
+      // Close stdin so commands expecting EOF when run without a TTY
+      // (like cursor-agent in non-interactive mode) can exit gracefully.
+      if (childProcess.stdin) {
+        childProcess.stdin.end();
+      }
 
       let stdout = '';
       let stderr = '';
       let timedOut = false;
 
-      if (process.stdout) {
-        process.stdout.on('data', (data) => {
+      if (childProcess.stdout) {
+        childProcess.stdout.on('data', (data) => {
           stdout += data.toString();
         });
       }
 
-      if (process.stderr) {
-        process.stderr.on('data', (data) => {
+      if (childProcess.stderr) {
+        childProcess.stderr.on('data', (data) => {
           stderr += data.toString();
         });
       }
@@ -52,12 +69,12 @@ export class ProcessRunnerService {
         timedOut = true;
         // Kill the process group to ensure all children are terminated
         try {
-          if (process.pid) {
-            process.kill('SIGTERM');
+          if (childProcess.pid) {
+            childProcess.kill('SIGTERM');
             // Give it a moment, then force kill
             setTimeout(() => {
-              if (!process.killed) {
-                process.kill('SIGKILL');
+              if (!childProcess.killed) {
+                childProcess.kill('SIGKILL');
               }
             }, 1000);
           }
@@ -72,7 +89,7 @@ export class ProcessRunnerService {
         });
       }, timeoutMs);
 
-      process.on('close', (code) => {
+      childProcess.on('close', (code) => {
         clearTimeout(timeout);
         resolve({
           exitCode: code,
@@ -82,7 +99,7 @@ export class ProcessRunnerService {
         });
       });
 
-      process.on('error', () => {
+      childProcess.on('error', () => {
         clearTimeout(timeout);
         resolve({
           exitCode: null,

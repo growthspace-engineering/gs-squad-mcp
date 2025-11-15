@@ -7,5 +7,6 @@ export interface ISquadConfig {
   createChatTemplatePath?: string;
   agentsDirectoryPath: string;
   processTimeoutMs: number;
+  sequentialDelayMs: number;
 }
 

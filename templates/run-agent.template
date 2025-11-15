@@ -1,1 +1,1 @@
-codex exec --json --sandbox workspace-write<% if (typeof chatId !== 'undefined' && chatId) { %> resume <%= chatId %><% } %> "<%- prompt %>" | jq -rc 'if .type == "item.completed" and .item.type == "agent_message" then .item.text else empty end'
+cursor-agent --approve-mcps --model=composer-1 --print agent "<%- prompt %>"
