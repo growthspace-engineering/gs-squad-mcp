@@ -22,6 +22,7 @@ import { PromptBuilderService } from '@gs-squad-mcp/core/prompt';
 import { TemplateRendererService } from '@gs-squad-mcp/core/engine';
 import { ProcessRunnerService } from '@gs-squad-mcp/core/engine';
 import { SquadConfigService } from '@gs-squad-mcp/core/config';
+import { SquadTelemetryService } from '../telemetry/squad-telemetry.service';
 
 @Injectable()
 export class SquadService {
@@ -30,7 +31,8 @@ export class SquadService {
     private readonly promptBuilder: PromptBuilderService,
     private readonly templateRenderer: TemplateRendererService,
     private readonly processRunner: ProcessRunnerService,
-    private readonly configService: SquadConfigService
+    private readonly configService: SquadConfigService,
+    private readonly telemetry: SquadTelemetryService
   ) {}
 
   async listRoles(): Promise<IListRolesResponse> {
@@ -47,7 +49,13 @@ export class SquadService {
   async startSquadMembersStateless(
     payload: IStartSquadMembersStatelessPayload
   ): Promise<IStartSquadMembersStatelessResponse> {
-    const squadId = this.generateSquadId();
+    const originatorId = await this.telemetry.ensureSession({
+      orchestratorChatId: payload.orchestratorChatId,
+      workspaceId: payload.workspaceId
+    });
+    const label = payload.members.map((m) => m.roleId).join(' + ');
+    const squad = await this.telemetry.createSquad(originatorId, label);
+    const squadId = squad.squadId;
     const config = this.configService.getConfig();
     const workspaceRoot = process.cwd();
 
@@ -64,6 +72,8 @@ export class SquadService {
         const result = await this.executeStatelessMember(
           memberInput,
           memberId,
+          squadId,
+          originatorId,
           config,
           workspaceRoot
         );
@@ -83,12 +93,15 @@ export class SquadService {
       const parallelResults = await Promise.all(
         payload.members.map(async (memberInput, index) => {
           const memberId = this.generateMemberId(squadId, index);
-          return this.executeStatelessMember(
+          const res = await this.executeStatelessMember(
           memberInput,
           memberId,
+          squadId,
+          originatorId,
           config,
           workspaceRoot
         );
+          return res;
       })
     );
       members.push(...parallelResults);
@@ -100,7 +113,13 @@ export class SquadService {
   async startSquadMembersStateful(
     payload: IStartSquadMembersStatefulPayload
   ): Promise<IStartSquadMembersStatefulResponse> {
-    const squadId = this.generateSquadId();
+    const originatorId = await this.telemetry.ensureSession({
+      orchestratorChatId: payload.orchestratorChatId,
+      workspaceId: payload.workspaceId
+    });
+    const label = payload.members.map((m) => m.roleId).join(' + ');
+    const squad = await this.telemetry.createSquad(originatorId, label);
+    const squadId = squad.squadId;
     const config = this.configService.getConfig();
     const workspaceRoot = process.cwd();
 
@@ -117,6 +136,8 @@ export class SquadService {
         const result = await this.executeStatefulMember(
           memberInput,
           memberId,
+          squadId,
+          originatorId,
           config,
           workspaceRoot
         );
@@ -136,12 +157,15 @@ export class SquadService {
       const parallelResults = await Promise.all(
         payload.members.map(async (memberInput, index) => {
           const memberId = this.generateMemberId(squadId, index);
-          return this.executeStatefulMember(
+          const res = await this.executeStatefulMember(
           memberInput,
           memberId,
+          squadId,
+          originatorId,
           config,
           workspaceRoot
         );
+          return res;
       })
     );
       members.push(...parallelResults);
@@ -171,6 +195,8 @@ export class SquadService {
       cwd?: string;
     },
     memberId: string,
+    squadId: string,
+    originatorId: string,
     config: ReturnType<typeof this.configService.getConfig>,
     workspaceRoot: string
   ): Promise<IStartSquadMemberOutputBase> {
@@ -184,6 +210,15 @@ export class SquadService {
       memberInput.task
     );
     const prompt = this.escapePromptForShell(rawPrompt);
+    let agentIdForTelemetry: string | null = null;
+    try {
+      const agent = await this.telemetry.createAgent(
+        squadId,
+        role.name,
+        rawPrompt
+      );
+      agentIdForTelemetry = agent.agentId;
+    } catch {}
 
     const resolvedCwd = memberInput.cwd
       ? resolve(workspaceRoot, memberInput.cwd)
@@ -222,6 +257,24 @@ export class SquadService {
       config.processTimeoutMs
     );
 
+    // Update telemetry
+    if (agentIdForTelemetry) {
+      const finishedIso = new Date().toISOString();
+      const statusNow = this.mapStatus(result.exitCode, result.timedOut);
+      try {
+        await this.telemetry.updateAgentStatus(
+          originatorId,
+          agentIdForTelemetry,
+          {
+            status: statusNow === 'completed' ? 'done' : 'error',
+            result: result.stdout,
+            error: result.stderr,
+            finishedAt: finishedIso
+          }
+        );
+      } catch {}
+    }
+
     return {
       memberId,
       roleId: memberInput.roleId,
@@ -240,6 +293,8 @@ export class SquadService {
       chatId?: string | null;
     },
     memberId: string,
+    squadId: string,
+    originatorId: string,
     config: ReturnType<typeof this.configService.getConfig>,
     workspaceRoot: string
   ): Promise<IStartSquadMemberStatefulOutput> {
@@ -312,6 +367,15 @@ export class SquadService {
       ? this.promptBuilder.buildPromptStatefulExistingChat(memberInput.task)
       : this.promptBuilder.buildPromptStatefulNewChat(role, memberInput.task);
     const prompt = this.escapePromptForShell(rawPrompt);
+    let agentIdForTelemetry: string | null = null;
+    try {
+      const agent = await this.telemetry.createAgent(
+        squadId,
+        role.name,
+        rawPrompt
+      );
+      agentIdForTelemetry = agent.agentId;
+    } catch {}
 
     const runTemplateContent = await readFile(config.runTemplatePath, 'utf-8');
     let renderedRunCommand: string;
@@ -344,6 +408,23 @@ export class SquadService {
       resolvedCwd,
       config.processTimeoutMs
     );
+
+    if (agentIdForTelemetry) {
+      const finishedIso = new Date().toISOString();
+      const statusNow = this.mapStatus(result.exitCode, result.timedOut);
+      try {
+        await this.telemetry.updateAgentStatus(
+          originatorId,
+          agentIdForTelemetry,
+          {
+            status: statusNow === 'completed' ? 'done' : 'error',
+            result: result.stdout,
+            error: result.stderr,
+            finishedAt: finishedIso
+          }
+        );
+      } catch {}
+    }
 
     return {
       memberId,

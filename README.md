@@ -305,6 +305,52 @@ npm test
 npm run test:e2e
 ```
 
+## Squad Telemetry & Dashboard (Phase 02)
+
+### Telemetry (SQLite)
+
+- Location: `SQUAD_DB_PATH` or `~/.gs-squad-mcp/squad.db`
+- Schema: `sessions`, `squads`, `agents` (auto-synced on first run)
+- Originator resolution:
+  - `orchestratorChatId` (if provided)
+  - else `workspaceId` (if provided)
+  - else `process.cwd()`
+
+`start_squad_members` accepts optional fields:
+
+```json
+{
+  "orchestratorChatId": "chat-42",
+  "workspaceId": "/path/to/workspace",
+  "members": [ /* ... */ ]
+}
+```
+
+### TUI Dashboard
+
+Installed as a separate CLI (`@growthspace-engineering/gs-squad-dashboard`).
+Reads the same SQLite DB in read-only mode and renders:
+- Rows = originator sessions
+- Columns = squads
+- Per-agent status and summary
+
+Usage:
+
+```bash
+gs-squad-dashboard
+# Options:
+#   --originator <id>  Filter by originatorId
+#   --workspace <path> Filter by workspaceId
+```
+
+Interactive mode (requires orchestrator commands):
+
+```bash
+export AGENT_CREATE_CHAT_CMD="cursor-agent create chat --print-id"
+export AGENT_INTERACTIVE_CMD="cursor-agent --approve-mcps --interactive"
+gs-squad-dashboard --interactive
+```
+
 ### Linting
 
 ```bash

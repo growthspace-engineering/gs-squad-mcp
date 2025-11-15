@@ -162,6 +162,8 @@ export class McpCliCommand extends CommandRunner {
                 inputSchema: {
                   type: 'object',
                   properties: {
+                    orchestratorChatId: { type: 'string' },
+                    workspaceId: { type: 'string' },
                     members: {
                       type: 'array',
                       items: {

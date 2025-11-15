@@ -6,9 +6,10 @@ import { TemplateRendererService } from '../core/engine';
 import { ProcessRunnerService } from '../core/engine';
 import { SquadService } from '../core/mcp';
 import { McpCliCommand } from '../cli';
+import { DbModule } from './db.module';
 
 @Module({
-  imports: [],
+  imports: [ DbModule ],
   controllers: [],
   providers: [
     SquadConfigService,

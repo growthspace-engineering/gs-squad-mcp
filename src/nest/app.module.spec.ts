@@ -11,6 +11,7 @@ import {
 import { SquadService } from '@gs-squad-mcp/core/mcp';
 import { McpCliCommand } from '@gs-squad-mcp/cli';
 import { AppModule } from './app.module';
+import { DbModule } from './db.module';
 
 jest.mock('@gs-squad-mcp/cli', () => {
   @Injectable()
@@ -62,14 +63,15 @@ describe('AppModule', () => {
     });
 
     it(
-      'should keep imports/controllers empty for an integration-only module',
+      'should keep controllers empty and only import DbModule',
       () => {
         const imports =
           Reflect.getMetadata(MODULE_METADATA.IMPORTS, AppModule) ?? [];
         const controllers =
           Reflect.getMetadata(MODULE_METADATA.CONTROLLERS, AppModule) ?? [];
 
-        expect(imports).toHaveLength(0);
+        expect(imports).toHaveLength(1);
+        expect(imports).toEqual([ DbModule ]);
         expect(controllers).toHaveLength(0);
       });
     }

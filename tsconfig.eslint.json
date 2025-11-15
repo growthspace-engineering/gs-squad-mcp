@@ -3,7 +3,11 @@
   "include": [
     "src/**/*.ts",
     "test/**/*.ts",
-    "jest.setup.ts"
+    "jest.setup.ts",
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "packages/gs-squad-dashboard/src/**/*.ts",
+    "packages/gs-squad-dashboard/src/**/*.tsx"
   ],
   "exclude": [
     "dist",

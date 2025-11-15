@@ -9,5 +9,7 @@ export interface IStartSquadMemberStatefulInput
 export interface IStartSquadMembersStatefulPayload {
   members: IStartSquadMemberStatefulInput[];
   metadata?: Record<string, unknown>;
+  orchestratorChatId?: string;
+  workspaceId?: string;
 }
 

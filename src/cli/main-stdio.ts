@@ -5,6 +5,8 @@ import { NestFactory } from '@nestjs/core';
 import { LoggerService } from '@nestjs/common';
 import { AppModule } from '../nest/app.module';
 import { McpCliCommand } from './mcp-cli.command';
+import { spawn } from 'child_process';
+import * as path from 'path';
 
 /**
  * Custom logger that writes all logs to stderr instead of stdout.
@@ -40,6 +42,32 @@ async function bootstrap(): Promise<void> {
   const app = await NestFactory.createApplicationContext(AppModule, {
     logger: new StderrLogger()
   });
+
+  // If invoked as "gs-squad-mcp dashboard" (or with --dashboard),
+  // initialize DB via Nest + TypeORM,
+  // then spawn the dashboard TUI process and exit when it exits.
+  const argv = process.argv.slice(2);
+  const wantsDashboard =
+    argv.includes('dashboard') || argv.includes('--dashboard');
+  if (wantsDashboard) {
+    const projectRoot = path.resolve(__dirname, '../../');
+    const dashboardEntry = path.join(
+      projectRoot,
+      'packages/gs-squad-dashboard/dist/cli.js'
+    );
+    const child = spawn(process.execPath, [ dashboardEntry ], {
+      stdio: 'inherit',
+      env: { ...process.env }
+    });
+    child.on('exit', async (code) => {
+      try {
+        await app.close();
+      } finally {
+        process.exit(code ?? 0);
+      }
+    });
+    return;
+  }
 
   const cliCommand = app.get(McpCliCommand);
   await cliCommand.run();

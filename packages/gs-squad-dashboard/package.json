@@ -1,0 +1,29 @@
+{
+  "name": "@growthspace-engineering/gs-squad-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "bin": {
+    "gs-squad-dashboard": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.6.0",
+    "ink": "^4.4.1",
+    "ink-spinner": "^5.0.0",
+    "node-pty": "^1.0.0",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.25",
+    "@types/react": "^18.3.11",
+    "@types/better-sqlite3": "^7.6.11",
+    "typescript": "^5.9.3"
+  }
+}
+
+

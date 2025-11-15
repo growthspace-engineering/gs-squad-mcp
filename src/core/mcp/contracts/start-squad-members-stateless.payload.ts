@@ -7,5 +7,7 @@ export interface IStartSquadMemberInputCommon {
 export interface IStartSquadMembersStatelessPayload {
   members: IStartSquadMemberInputCommon[];
   metadata?: Record<string, unknown>;
+  orchestratorChatId?: string;
+  workspaceId?: string;
 }
 

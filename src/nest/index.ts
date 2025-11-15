@@ -3,3 +3,7 @@
  */
 
 export * from './app.module';
+export * from './db.module';
+export * from './entities/agent.entity';
+export * from './entities/session.entity';
+export * from './entities/squad.entity';

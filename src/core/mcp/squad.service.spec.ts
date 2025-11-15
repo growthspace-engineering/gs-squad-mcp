@@ -6,6 +6,7 @@ import { TemplateRendererService } from '@gs-squad-mcp/core/engine';
 import { ProcessRunnerService } from '@gs-squad-mcp/core/engine';
 import { SquadConfigService } from '@gs-squad-mcp/core/config';
 import { IRoleDefinition } from '@gs-squad-mcp/core/roles';
+import { SquadTelemetryService } from '../telemetry/squad-telemetry.service';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { tmpdir } from 'os';
@@ -51,9 +52,43 @@ describe('SquadService', () => {
     mockEjsRender.mockClear();
     mockEjsRender.mockImplementation(defaultEjsRenderer);
 
+    const mockTelemetry: jest.Mocked<SquadTelemetryService> = {
+      ensureSession: jest.fn().mockResolvedValue('originator-1'),
+      createSquad: jest.fn().mockResolvedValue({
+        squadId: 'squad-test',
+        originatorId: 'originator-1',
+        label: 'test-squad',
+        createdAt: new Date().toISOString()
+      }),
+      createAgent: jest.fn().mockResolvedValue({
+        agentId: 'agent-1',
+        squadId: 'squad-test',
+        roleName: 'Test Role',
+        status: 'starting',
+        startedAt: new Date().toISOString()
+      } as any),
+      updateAgentStatus: jest.fn().mockResolvedValue(undefined)
+    } as any;
+
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        SquadService,
+        {
+          provide: SquadService,
+          useFactory: (
+            rr: RoleRepositoryService,
+            pb: PromptBuilderService,
+            tr: TemplateRendererService,
+            pr: ProcessRunnerService,
+            sc: SquadConfigService
+          ) => new SquadService(rr, pb, tr, pr, sc, mockTelemetry),
+          inject: [
+            RoleRepositoryService,
+            PromptBuilderService,
+            TemplateRendererService,
+            ProcessRunnerService,
+            SquadConfigService
+          ]
+        },
         {
           provide: RoleRepositoryService,
           useValue: {
