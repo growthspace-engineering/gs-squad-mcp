@@ -4,6 +4,9 @@ import { IRoleDefinition } from '@gs-squad-mcp/core/roles';
 
 describe('PromptBuilderService', () => {
   let service: PromptBuilderService;
+  const getFooter = (): string => (
+    service as unknown as { setupReportingFooter: string }
+  ).setupReportingFooter;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -90,6 +93,105 @@ describe('PromptBuilderService', () => {
     });
   });
 
+  describe('edge cases and formatting', () => {
+    it(
+      'should keep formatting separators even with surrounding whitespace',
+      () => {
+        const role: IRoleDefinition = {
+          id: 'format',
+          name: 'Formatting Role',
+          description: 'Ensures formatting',
+          body: 'Line one   \n\nLine two with spaces  '
+        };
+        const task = '   Task line  \nAnother line   ';
+
+        const prompt = service.buildPromptStateless(role, task);
+        const expectedPrefix = `# Role\n\n${role.body}\n\n---\n\n# Task\n\n`;
+
+        expect(prompt.startsWith(expectedPrefix)).toBe(true);
+        expect(prompt).toContain(role.body);
+        expect(prompt).toContain(task);
+      }
+    );
+
+    it('should preserve special characters in role body and task', () => {
+      const role: IRoleDefinition = {
+        id: 'special',
+        name: 'Specialist',
+        description: 'Handles special characters',
+        body: 'Special chars ~!@#$%^&*()_+[]{}|;:\'",.<>/?'
+      };
+      const task = 'Task needs to keep symbols ~!@#$%^&*()_+[]{}|;:\'",.<>/?';
+
+      const prompt = service.buildPromptStateless(role, task);
+
+      expect(prompt).toContain(role.body);
+      expect(prompt).toContain(task);
+    });
+
+    it('should handle empty role body and task inputs', () => {
+      const emptyRole: IRoleDefinition = {
+        id: 'empty',
+        name: 'Empty Role',
+        description: 'No body',
+        body: ''
+      };
+      const emptyTask = '';
+
+      const statelessPrompt = service.buildPromptStateless(
+        emptyRole,
+        emptyTask
+      );
+      expect(statelessPrompt).toContain('# Role');
+      expect(statelessPrompt).toContain('# Task');
+      expect(statelessPrompt).toContain('\n\n---\n\n');
+
+      const newChatPrompt = service.buildPromptStatefulNewChat(
+        emptyRole,
+        emptyTask
+      );
+      expect(newChatPrompt).toContain('# Initial Task');
+      expect(newChatPrompt.split('# Initial Task').length).toBe(2);
+
+      const existingPrompt =
+        service.buildPromptStatefulExistingChat(emptyTask);
+      expect(existingPrompt.startsWith('# Task')).toBe(true);
+    });
+
+    it(
+      'should include very long role and task values without truncation',
+      () => {
+        const longBody = 'Role detail '.repeat(500);
+        const longTask = 'Task detail '.repeat(600);
+        const role: IRoleDefinition = {
+          id: 'long',
+          name: 'Long Role',
+          description: 'Handles long text',
+          body: longBody
+        };
+
+        const prompt = service.buildPromptStateless(role, longTask);
+
+        expect(prompt).toContain(longBody);
+        expect(prompt).toContain(longTask);
+        expect(prompt.length)
+          .toBeGreaterThan(longBody.length + longTask.length);
+      }
+    );
+
+    it(
+      'should preserve explicit newlines within tasks for existing chats',
+      () => {
+        const task = 'Line 1\n- bullet\n\nLine 3';
+
+        const prompt = service.buildPromptStatefulExistingChat(task);
+        const footer = getFooter();
+
+        expect(prompt).toBe(`# Task\n\n${task}\n\n${footer}`);
+      });
+    }
+  );
+
   describe('buildPromptStatefulExistingChat', () => {
     it('should contain task only and footer', () => {
       const task = 'Update the previous implementation';
@@ -143,5 +245,34 @@ describe('PromptBuilderService', () => {
       expect(prompt).toContain('suggest specific steps');
       expect(prompt).toContain('Do not pretend the task succeeded');
     });
+
+    it(
+      'should append identical footer text exactly once to every prompt',
+      () => {
+        const role: IRoleDefinition = {
+          id: 'consistency',
+          name: 'Consistency Role',
+          description: 'Ensures footer consistency',
+          body: 'Remain consistent'
+        };
+        const task = 'Check footer';
+        const footer = getFooter();
+        const footerPattern = new RegExp(
+          footer.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+          'g'
+        );
+
+        const prompts = [
+          service.buildPromptStateless(role, task),
+          service.buildPromptStatefulNewChat(role, task),
+          service.buildPromptStatefulExistingChat(task)
+        ];
+
+        prompts.forEach((prompt) => {
+          expect(prompt.endsWith(footer)).toBe(true);
+          expect((prompt.match(footerPattern) ?? []).length).toBe(1);
+        });
+      }
+    );
   });
 });

@@ -105,5 +105,58 @@ describe('TemplateRendererService', () => {
       expect(args).toEqual([ 'arg1', 'arg2' ]);
       expect(args.every((arg) => arg.length > 0)).toBe(true);
     });
+
+    it('should handle nested quotes by alternating quote styles', () => {
+      const template =
+        'cmd "<%= doubleWrapped %>" --json \'<%= singleWrapped %>\'';
+      const context = {
+        doubleWrapped: 'value with \'single quotes\' nested',
+        singleWrapped: 'value with "double quotes" nested'
+      };
+
+      const args = service.render(template, context);
+
+      expect(args).toEqual([
+        'cmd',
+        'value with &#39;single quotes&#39; nested',
+        '--json',
+        'value with &#34;double quotes&#34; nested'
+      ]);
+    });
+
+    it(
+      'should preserve whitespace and special characters inside quoted args',
+      () => {
+        const template = 'cmd "<%= payload %>" --flag';
+        const context = {
+          payload: 'line1\nline 2\talpha&beta|gamma'
+        };
+
+        const args = service.render(template, context);
+
+        expect(args).toEqual([
+          'cmd',
+          'line1\nline 2\talpha&amp;beta|gamma',
+          '--flag'
+        ]);
+      }
+    );
+
+    it('should throw descriptive error details for malformed templates', () => {
+      const template = '<% if (true) { %> <%= missingClosingTag %>';
+
+      let thrownError: Error | undefined;
+      try {
+        service.render(template, {});
+      } catch (error) {
+        thrownError = error as Error;
+      }
+
+      expect(thrownError).toBeDefined();
+      expect(thrownError?.message).toContain('Template rendering failed');
+      expect(thrownError?.message).toContain(
+        template.substring(0, 100)
+      );
+    });
   });
 });
