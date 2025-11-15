@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { readFile } from 'fs/promises';
 import { resolve } from 'path';
 import { render } from 'ejs';
+import { randomUUID } from 'crypto';
 import { IListRolesResponse } from
   '@gs-squad-mcp/core/mcp/contracts';
 import { IStartSquadMembersStatelessPayload } from
@@ -50,7 +51,10 @@ export class SquadService {
     const config = this.configService.getConfig();
     const workspaceRoot = process.cwd();
 
-    const requiresSerial = this.requiresSerialExecution(config.engineCommand);
+    const requiresSerial = this.requiresSerialExecution(
+      config.engine,
+      config.executionMode
+    );
     const members: IStartSquadMemberOutputBase[] = [];
 
     if (requiresSerial) {
@@ -100,7 +104,10 @@ export class SquadService {
     const config = this.configService.getConfig();
     const workspaceRoot = process.cwd();
 
-    const requiresSerial = this.requiresSerialExecution(config.engineCommand);
+    const requiresSerial = this.requiresSerialExecution(
+      config.engine,
+      config.executionMode
+    );
     const members: IStartSquadMemberStatefulOutput[] = [];
 
     if (requiresSerial) {
@@ -255,9 +262,11 @@ export class SquadService {
       );
       let renderedCreateChatCommand: string;
       try {
+        const generatedUuid = randomUUID();
         renderedCreateChatCommand = render(createChatTemplate, {
           roleId: memberInput.roleId,
-          cwd: resolvedCwd
+          cwd: resolvedCwd,
+          generatedUuid
         }).trim();
       } catch (error) {
         throw new Error(
@@ -368,7 +377,10 @@ export class SquadService {
     return 'error';
   }
 
-  private requiresSerialExecution(engineCommand: string): boolean {
+  private requiresSerialExecution(
+    engine: 'cursor-agent' | 'claude' | 'codex',
+    executionMode?: 'sequential' | 'parallel'
+  ): boolean {
     const envOverride = process.env.PROCESS_RUNNER_SERIALIZE;
     if (envOverride === 'true') {
       return true;
@@ -376,7 +388,13 @@ export class SquadService {
     if (envOverride === 'false') {
       return false;
     }
-    return /cursor-?agent/.test(engineCommand);
+    if (executionMode === 'sequential') {
+      return true;
+    }
+    if (executionMode === 'parallel') {
+      return false;
+    }
+    return engine === 'cursor-agent';
   }
 }
 

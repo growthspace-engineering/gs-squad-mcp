@@ -7,7 +7,11 @@
         "ts-node",
         "--require",
         "tsconfig-paths/register",
-        "src/cli/main-stdio.ts"
+        "src/cli/main-stdio.ts",
+        "--engine",
+        "codex",
+        "--state-mode",
+        "stateful"
       ]
     }
   }

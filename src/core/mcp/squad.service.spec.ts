@@ -75,7 +75,8 @@ describe('SquadService', () => {
 
     configService.getConfig.mockReturnValue({
       stateMode: 'stateless',
-      engineCommand: 'test-engine',
+      engine: 'claude',
+      executionMode: undefined,
       runTemplatePath: 'templates/run.template',
       createChatTemplatePath: 'templates/create-chat.template',
       agentsDirectoryPath: 'agents',
@@ -225,9 +226,10 @@ describe('SquadService', () => {
     });
 
     it('serializes members when engine uses cursor-agent', async () => {
-      configService.getConfig.mockReturnValue({
+    configService.getConfig.mockReturnValue({
         stateMode: 'stateless',
-        engineCommand: 'cursor-agent',
+      engine: 'cursor-agent',
+      executionMode: undefined,
         runTemplatePath: 'templates/run.template',
         createChatTemplatePath: 'templates/create-chat.template',
         agentsDirectoryPath: 'agents',

@@ -22,8 +22,9 @@ describe('RoleRepositoryService', () => {
             getConfig: () => ({
               agentsDirectoryPath: testAgentsDir,
               stateMode: 'stateless' as const,
-              engineCommand: 'cursor-agent',
-              runTemplatePath: 'templates/run-agent.template',
+              engine: 'cursor-agent' as const,
+              executionMode: undefined,
+              runTemplatePath: 'templates/run-cursor-agent.template',
               processTimeoutMs: 300000
             })
           }

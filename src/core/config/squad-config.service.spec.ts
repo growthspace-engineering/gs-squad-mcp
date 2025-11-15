@@ -15,7 +15,7 @@ describe('SquadConfigService', () => {
 
   it('should provide default values when env vars are not set', () => {
     delete process.env.STATE_MODE;
-    delete process.env.ENGINE_COMMAND;
+    delete process.env.ENGINE;
     delete process.env.RUN_TEMPLATE_PATH;
     delete process.env.CREATE_CHAT_TEMPLATE_PATH;
     delete process.env.AGENTS_DIRECTORY_PATH;
@@ -26,8 +26,8 @@ describe('SquadConfigService', () => {
     const config = service.getConfig();
 
     expect(config.stateMode).toBe('stateless');
-    expect(config.engineCommand).toBe('cursor-agent');
-    expect(config.runTemplatePath).toBe('templates/run-agent.template');
+    expect(config.engine).toBe('cursor-agent');
+    expect(config.runTemplatePath).toBe('templates/run-cursor-agent.template');
     expect(config.createChatTemplatePath).toBeUndefined();
     expect(config.agentsDirectoryPath).toBe('agents');
     expect(config.processTimeoutMs).toBe(300000);
@@ -36,18 +36,19 @@ describe('SquadConfigService', () => {
 
   it('should override defaults with env vars when provided', () => {
     process.env.STATE_MODE = 'stateful';
-    process.env.ENGINE_COMMAND = 'custom-engine';
+    process.env.ENGINE = 'claude';
     process.env.RUN_TEMPLATE_PATH = 'custom/run.template';
     process.env.CREATE_CHAT_TEMPLATE_PATH = 'custom/create-chat.template';
     process.env.AGENTS_DIRECTORY_PATH = 'custom-agents';
     process.env.PROCESS_TIMEOUT_MS = '60000';
     process.env.SEQUENTIAL_DELAY_MS = '250';
+    process.env.EXECUTION_MODE = 'parallel';
 
     service = new SquadConfigService();
     const config = service.getConfig();
 
     expect(config.stateMode).toBe('stateful');
-    expect(config.engineCommand).toBe('custom-engine');
+    expect(config.engine).toBe('claude');
     expect(config.runTemplatePath).toBe('custom/run.template');
     expect(config.createChatTemplatePath).toBe('custom/create-chat.template');
     expect(config.agentsDirectoryPath).toBe('custom-agents');
@@ -65,19 +66,16 @@ describe('SquadConfigService', () => {
     );
   });
 
-  it(
-    'should throw error when stateful mode missing CREATE_CHAT_TEMPLATE_PATH',
-    () => {
-      process.env.STATE_MODE = 'stateful';
-      delete process.env.CREATE_CHAT_TEMPLATE_PATH;
+  it('should auto-select default create-chat template in stateful mode', () => {
+    process.env.STATE_MODE = 'stateful';
+    delete process.env.CREATE_CHAT_TEMPLATE_PATH;
+    delete process.env.ENGINE;
 
-      expect(() => {
-        service = new SquadConfigService();
-      }).toThrow(
-        'CREATE_CHAT_TEMPLATE_PATH is required when STATE_MODE=stateful'
-      );
-    }
-  );
+    service = new SquadConfigService();
+    const config = service.getConfig();
+    expect(config.createChatTemplatePath)
+      .toBe('templates/create-chat-cursor-agent.template');
+  });
 
   it('should return a copy of config', () => {
     service = new SquadConfigService();

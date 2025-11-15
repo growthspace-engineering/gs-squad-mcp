@@ -1,0 +1,9 @@
+codex exec --json<% if (typeof chatId !== undefined && chatId) { %> resume <%= chatId %><% } %> "<%= prompt %>" \
+  | jq -rc '
+      if .type == "item.completed" and .item.type == "agent_message" then 
+        .item.text
+      else
+        empty
+      end
+    '
+

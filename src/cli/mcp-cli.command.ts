@@ -1,4 +1,4 @@
-import { Command, CommandRunner } from 'nest-commander';
+import { Command, CommandRunner, Option } from 'nest-commander';
 import { SquadService } from '../core/mcp';
 import { SquadConfigService } from '../core/config';
 import * as readline from 'readline';
@@ -31,7 +31,48 @@ export class McpCliCommand extends CommandRunner {
     super();
   }
 
-  async run(): Promise<void> {
+  // Accept CLI options (nest-commander)
+  // Config also parses process.argv (options are optional).
+  @Option({
+    flags: '--engine <engine>',
+    description: 'Engine to use: cursor-agent | claude | codex'
+  })
+  parseEngine(value: string): string {
+    return value;
+  }
+
+  @Option({
+    flags: '--execution-mode <mode>',
+    description:
+      'Execution mode when using a custom template: ' +
+      'sequential | parallel'
+  })
+  parseExecutionMode(value: string): string {
+    return value;
+  }
+
+  @Option({
+    flags: '--sequential',
+    description:
+      'Shorthand to force sequential execution ' +
+      'when using a custom template'
+  })
+  parseSequential(): boolean {
+    return true;
+  }
+
+  @Option({
+    flags: '--state-mode <mode>',
+    description: 'State mode: stateless | stateful'
+  })
+  parseStateMode(value: string): string {
+    return value;
+  }
+
+  async run(
+    _passedParams?: string[],
+    _options?: Record<string, unknown>
+  ): Promise<void> {
     // Use stderr for readline output to
     // avoid interfering with JSON-RPC on stdout
     const rl = readline.createInterface({
