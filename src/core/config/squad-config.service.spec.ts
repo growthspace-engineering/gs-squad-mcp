@@ -33,7 +33,7 @@ describe('SquadConfigService', () => {
     expect(config.runTemplatePath).toBe('templates/run-cursor-agent.template');
     expect(config.createChatTemplatePath).toBeUndefined();
     expect(config.agentsDirectoryPath).toBe('agents');
-    expect(config.processTimeoutMs).toBe(300000);
+    expect(config.processTimeoutMs).toBe(600000);
     expect(config.sequentialDelayMs).toBe(100);
   });
 

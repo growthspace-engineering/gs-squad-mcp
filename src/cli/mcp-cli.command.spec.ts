@@ -70,7 +70,7 @@ describe('McpCliCommand', () => {
       runTemplatePath: 'templates/run.template',
       createChatTemplatePath: undefined,
       agentsDirectoryPath: 'agents',
-      processTimeoutMs: 300000,
+      processTimeoutMs: 600000,
       sequentialDelayMs: 100
     });
   });
@@ -272,7 +272,7 @@ describe('McpCliCommand', () => {
           runTemplatePath: 'templates/run.template',
           createChatTemplatePath: 'templates/create-chat.template',
           agentsDirectoryPath: 'agents',
-          processTimeoutMs: 300000,
+          processTimeoutMs: 600000,
           sequentialDelayMs: 100
         });
 
@@ -391,7 +391,7 @@ describe('McpCliCommand', () => {
         runTemplatePath: 'templates/run.template',
         createChatTemplatePath: 'templates/create-chat.template',
         agentsDirectoryPath: 'agents',
-        processTimeoutMs: 300000,
+        processTimeoutMs: 600000,
         sequentialDelayMs: 100
       });
 
