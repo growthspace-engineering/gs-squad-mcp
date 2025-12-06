@@ -1,0 +1,88 @@
+src/core/mcp/squad.service.spec.ts
+  d88f7b20751e4688 290,331
+src/core/mcp/squad.service.ts
+  d88f7b20751e4688 554-555
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.22",
+  "base_commit_sha": "a51322e20b18271cbe422b381b637b2f219c28a5",
+  "prompts": {
+    "d88f7b20751e4688": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "657bda28-e8c6-40f3-8be5-c90301398458",
+        "model": "composer-1"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [
+        {
+          "type": "user",
+          "text": "where in this repo do we set the default parallel or sequential for each engine option?",
+          "timestamp": "2025-12-06T11:47:19.686Z"
+        },
+        {
+          "type": "assistant",
+          "text": "Searching for where the default parallel/sequential behavior is set for each engine option.",
+          "timestamp": "2025-12-06T11:47:21.385Z"
+        },
+        {
+          "type": "tool_use",
+          "name": "codebase_search",
+          "input": {
+            "query": "Where are engine options configured with default parallel or sequential settings?",
+            "target_directories": []
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "grep",
+          "input": {
+            "-i": true,
+            "pattern": "parallel|sequential"
+          }
+        },
+        {
+          "type": "assistant",
+          "text": "Checking `squad.service.ts` for where the default parallel/sequential behavior is determined:",
+          "timestamp": "2025-12-06T11:47:22.566Z"
+        },
+        {
+          "type": "tool_use",
+          "name": "read_file",
+          "input": {
+            "target_file": "src/core/mcp/squad.service.ts"
+          }
+        },
+        {
+          "type": "assistant",
+          "text": "Default parallel/sequential behavior is set in `requiresSerialExecution` in `squad.service.ts`:",
+          "timestamp": "2025-12-06T11:47:23.692Z"
+        },
+        {
+          "type": "tool_use",
+          "name": "read_file",
+          "input": {
+            "limit": 20,
+            "offset": 537,
+            "target_file": "src/core/mcp/squad.service.ts"
+          }
+        },
+        {
+          "type": "assistant",
+          "text": "Default parallel/sequential behavior is set in `requiresSerialExecution` in `squad.service.ts`:\n\n```537:555:src/core/mcp/squad.service.ts\n  private requiresSerialExecution(\n    engine: 'cursor-agent' | 'claude' | 'codex',\n    executionMode?: 'sequential' | 'parallel'\n  ): boolean {\n    const envOverride = process.env.PROCESS_RUNNER_SERIALIZE;\n    if (envOverride === 'true') {\n      return true;\n    }\n    if (envOverride === 'false') {\n      return false;\n    }\n    if (executionMode === 'sequential') {\n      return true;\n    }\n    if (executionMode === 'parallel') {\n      return false;\n    }\n    return engine === 'cursor-agent';\n  }\n```\n\nDefaults:\n- `cursor-agent` → sequential (line 554: `return engine === 'cursor-agent';`)\n- `claude` → parallel (defaults to `false` when engine !== 'cursor-agent')\n- `codex` → parallel (defaults to `false` when engine !== 'cursor-agent')\n\nPrecedence:\n1. `PROCESS_RUNNER_SERIALIZE` env var (if set)\n2. Explicit `executionMode` (if provided)\n3. Engine-based default (line 554)\n\nThis method is called from `startSquadMembersStateless` and `startSquadMembersStateful` (lines 78-81 and 157-160) to decide whether to run members sequentially or in parallel.",
+          "timestamp": "2025-12-06T11:47:24.774Z"
+        },
+        {
+          "type": "user",
+          "text": "let's change the cursor-agent default to parallel as well please",
+          "timestamp": "2025-12-06T11:48:12.939Z"
+        }
+      ],
+      "total_additions": 6,
+      "total_deletions": 5,
+      "accepted_lines": 4,
+      "overriden_lines": 0
+    }
+  }
+}
