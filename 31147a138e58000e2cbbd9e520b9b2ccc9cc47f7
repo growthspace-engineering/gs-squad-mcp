@@ -1,0 +1,27 @@
+package.json
+  e53a3d0aefb60168 126-127,132-133,139,144-148
+eslint.config.cjs
+  e53a3d0aefb60168 1-90
+packages/gs-squad-vscode/package.json
+  e53a3d0aefb60168 143-144,148
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.22",
+  "base_commit_sha": "31147a138e58000e2cbbd9e520b9b2ccc9cc47f7",
+  "prompts": {
+    "e53a3d0aefb60168": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d832b2f7-08ff-4f95-ab4d-2ed76e67a130",
+        "model": "composer-1"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 136,
+      "total_deletions": 40,
+      "accepted_lines": 103,
+      "overriden_lines": 0
+    }
+  }
+}
