@@ -1,0 +1,62 @@
+src/core/roles/role-repository.service.ts
+  2fd372d1ffca14af 45-51,57-59
+src/core/config/model-resolver.ts
+  2fd372d1ffca14af 1-58
+src/core/roles/role-definition.interface.ts
+  2fd372d1ffca14af 7-8
+src/core/config/index.ts
+  2fd372d1ffca14af 7-8
+.cursor/mcp.example.json
+  2fd372d1ffca14af 1-15
+templates/run-codex.template
+  2fd372d1ffca14af 24
+src/core/config/model-mapping.ts
+  2fd372d1ffca14af 1-155
+src/core/config/squad-config.interface.ts
+  2fd372d1ffca14af 12-22
+src/core/mcp/squad.service.ts
+  2fd372d1ffca14af 25-27,268-272,282-283,467-471,480-481
+src/core/config/squad-config.service.ts
+  2fd372d1ffca14af 101-130,175-179
+templates/run-claude.template
+  2fd372d1ffca14af 1
+src/core/config/model-resolver.spec.ts
+  2fd372d1ffca14af 1-62
+README.md
+  2fd372d1ffca14af 91-100,180-185
+templates/run-cursor-agent.template
+  2fd372d1ffca14af 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.22",
+  "base_commit_sha": "92b833b8df05ae5425336dc13afc264e08c82a88",
+  "prompts": {
+    "2fd372d1ffca14af": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "03ae01ab-93d5-4291-b73e-8caac14da29d",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 434,
+      "total_deletions": 50,
+      "accepted_lines": 388,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 531,
+      "total_deletions": 0,
+      "accepted_lines": 531,
+      "overriden_lines": 0
+    }
+  }
+}
