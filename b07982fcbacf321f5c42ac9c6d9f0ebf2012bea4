@@ -1,0 +1,23 @@
+readme2.md
+  905e02917f0c6fad 1-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.22",
+  "base_commit_sha": "b07982fcbacf321f5c42ac9c6d9f0ebf2012bea4",
+  "prompts": {
+    "905e02917f0c6fad": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "36c4a007-b207-421e-877c-5af50d435773",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 32,
+      "total_deletions": 0,
+      "accepted_lines": 32,
+      "overriden_lines": 0
+    }
+  }
+}
