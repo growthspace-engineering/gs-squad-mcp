@@ -1,0 +1,75 @@
+src/core/mcp/squad.service.ts
+  28fdbf2902328d79 310-322,516-528
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.22",
+  "base_commit_sha": "ece6be010004abfa2ae07336824c1d0f6f2f0b98",
+  "prompts": {
+    "25a350f96c16b361": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "361e4151-252e-4efc-b250-36c94085a8f0",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 10,
+      "total_deletions": 1,
+      "accepted_lines": 10,
+      "overriden_lines": 0
+    },
+    "27e3a48fcad23e88": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "5e4f414a-16f4-4591-8fa3-bd2b71b558d3",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 61,
+      "total_deletions": 3,
+      "accepted_lines": 49,
+      "overriden_lines": 9
+    },
+    "28fdbf2902328d79": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7f397004-b3ea-4074-9037-92bc3b5f8025",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 18,
+      "total_deletions": 0,
+      "accepted_lines": 26,
+      "overriden_lines": 0
+    },
+    "2efb54fd4ca8cd5e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "03db8bfe-283e-4020-ab8d-3ea2f47c1485",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 126,
+      "total_deletions": 2,
+      "accepted_lines": 124,
+      "overriden_lines": 0
+    },
+    "905e02917f0c6fad": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "36c4a007-b207-421e-877c-5af50d435773",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 73,
+      "total_deletions": 0,
+      "accepted_lines": 72,
+      "overriden_lines": 1
+    }
+  }
+}
