@@ -1,0 +1,27 @@
+packages/gs-squad-vscode/src/webview/components/AgentCard.tsx
+  2fd372d1ffca14af 187-202
+packages/gs-squad-vscode/src/webview/types.ts
+  2fd372d1ffca14af 30-31
+packages/gs-squad-vscode/src/extension/db.ts
+  2fd372d1ffca14af 37-38,234-236
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.22",
+  "base_commit_sha": "252699bacf2fa7ff4ea6fd277d88cd9cc09a1c6f",
+  "prompts": {
+    "2fd372d1ffca14af": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "03ae01ab-93d5-4291-b73e-8caac14da29d",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 23,
+      "total_deletions": 0,
+      "accepted_lines": 23,
+      "overriden_lines": 0
+    }
+  }
+}
