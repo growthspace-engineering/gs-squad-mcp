@@ -1,0 +1,25 @@
+packages/gs-squad-dashboard-next/src/components/round/RoundListItem.tsx
+  fd528823e8d35d8e 3,31,35,89-100,111
+packages/gs-squad-dashboard-next/src/components/agent/AgentListItem.tsx
+  fd528823e8d35d8e 3,16,23-24,76-87,151
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "cea2ce50c2d424c28111405f98477746feb6e1b7",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 33,
+      "total_deletions": 5,
+      "accepted_lines": 33,
+      "overriden_lines": 0
+    }
+  }
+}
