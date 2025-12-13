@@ -1,0 +1,25 @@
+docs/tui-dashboard-v2-reimagination/06-component-specs.md
+  fd528823e8d35d8e 1-1905
+docs/tui-dashboard-v2-reimagination/05-component-architecture.md
+  fd528823e8d35d8e 1-1808
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "0dfbee17a164ad7a213bbde3cb227754e5839823",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 3713,
+      "total_deletions": 0,
+      "accepted_lines": 3713,
+      "overriden_lines": 0
+    }
+  }
+}
