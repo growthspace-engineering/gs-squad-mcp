@@ -1,0 +1,25 @@
+packages/gs-squad-dashboard-next/src/App.tsx
+  fd528823e8d35d8e 3,64-73,75,206-237,264-291,301-305,423-442
+packages/gs-squad-dashboard-next/src/components/shared/HelpOverlay.tsx
+  fd528823e8d35d8e 27-28,95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "78cfff7600c21f056aaa59f3b94ed41826b4c8fa",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 100,
+      "total_deletions": 3,
+      "accepted_lines": 100,
+      "overriden_lines": 0
+    }
+  }
+}
