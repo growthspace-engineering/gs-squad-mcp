@@ -1,0 +1,25 @@
+cursor-shared-history/js/parser.js
+  43f7f46ff5de57d0 103,106,135-138,157-159,169-175,241-256,261-286,325-328,335-340
+cursor-shared-history/js/script.js
+  43f7f46ff5de57d0 838
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "b77ef01f9e5f0abbb8d84ec63d5d5c646c3507c9",
+  "prompts": {
+    "43f7f46ff5de57d0": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c575e097-1dec-4706-b1f9-686842ccf4b9",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 72,
+      "total_deletions": 9,
+      "accepted_lines": 72,
+      "overriden_lines": 0
+    }
+  }
+}
