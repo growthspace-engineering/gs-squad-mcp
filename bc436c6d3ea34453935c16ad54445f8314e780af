@@ -1,0 +1,39 @@
+packages/gs-squad-dashboard-next/src/types/index.ts
+  fd528823e8d35d8e 1-45
+packages/gs-squad-dashboard-next/src/utils/markdown.ts
+  fd528823e8d35d8e 1-53,55-65
+packages/gs-squad-dashboard-next/src/db/types.ts
+  fd528823e8d35d8e 1-45
+packages/gs-squad-dashboard-next/src/db/index.ts
+  fd528823e8d35d8e 1-135
+packages/gs-squad-dashboard-next/src/types/app-state.ts
+  fd528823e8d35d8e 1-23
+packages/gs-squad-dashboard-next/src/utils/avatar.ts
+  fd528823e8d35d8e 1-30
+packages/gs-squad-dashboard-next/src/utils/chatReuse.ts
+  fd528823e8d35d8e 1-60
+packages/gs-squad-dashboard-next/src/types/randomart.d.ts
+  fd528823e8d35d8e 1-16
+packages/gs-squad-dashboard-next/src/utils/dateFormat.ts
+  fd528823e8d35d8e 1-37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "bc436c6d3ea34453935c16ad54445f8314e780af",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 566,
+      "total_deletions": 17,
+      "accepted_lines": 549,
+      "overriden_lines": 0
+    }
+  }
+}
