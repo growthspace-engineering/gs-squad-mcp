@@ -1,0 +1,35 @@
+shared-history/public/chats/2025-12-14_test-specstory-patterns.md
+  fd528823e8d35d8e 1-204
+shared-history/src/components/common/MarkdownRenderer.tsx
+  fd528823e8d35d8e 1-343
+shared-history/src/pages/ChatPage.tsx
+  fd528823e8d35d8e 4,235-236
+shared-history/docs/07-specstory-format.md
+  fd528823e8d35d8e 1-828
+shared-history/src/components/common/MarkdownRenderer.css
+  fd528823e8d35d8e 1-756
+shared-history/src/pages/ChatPage.css
+  fd528823e8d35d8e 140,146-149
+shared-history/public/chats.json
+  fd528823e8d35d8e 3-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "694e0a113629748f5f97e338608013ad7b2fb805",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 2206,
+      "total_deletions": 72,
+      "accepted_lines": 2143,
+      "overriden_lines": 0
+    }
+  }
+}
