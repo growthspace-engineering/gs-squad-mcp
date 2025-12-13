@@ -1,0 +1,40 @@
+packages/gs-squad-dashboard-next/src/App.tsx
+  474d90e1ffd80e85 79-81,244
+packages/gs-squad-dashboard-next/src/components/round/RoundDetail.tsx
+  474d90e1ffd80e85 88,91
+packages/gs-squad-dashboard-next/src/components/session/SessionHeader.tsx
+  474d90e1ffd80e85 19-20,42-43,76-81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "d030a82b08397bea00d18a15d7485fa35a78e8c8",
+  "prompts": {
+    "474d90e1ffd80e85": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b75ff7c2-309c-48aa-889f-57c6263a232b",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 28,
+      "total_deletions": 25,
+      "accepted_lines": 21,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 40,
+      "total_deletions": 2,
+      "accepted_lines": 24,
+      "overriden_lines": 0
+    }
+  }
+}
