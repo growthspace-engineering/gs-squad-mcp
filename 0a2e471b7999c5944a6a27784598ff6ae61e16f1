@@ -1,0 +1,23 @@
+src/cli/main-stdio.ts
+  a987ba4409c188fe 10,12-82,116-127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "0a2e471b7999c5944a6a27784598ff6ae61e16f1",
+  "prompts": {
+    "a987ba4409c188fe": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e1ea2b90-5c9c-4fb6-a12b-7674a8c5bcbe",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 85,
+      "total_deletions": 0,
+      "accepted_lines": 85,
+      "overriden_lines": 0
+    }
+  }
+}
