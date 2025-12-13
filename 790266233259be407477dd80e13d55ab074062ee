@@ -1,0 +1,72 @@
+shared-history/src/App.tsx
+  fd528823e8d35d8e 2-4,11-13,18-19,21-23
+shared-history/src/pages/HomePage.css
+  fd528823e8d35d8e 6,50,57-58,81,96,124-126,134,139-200,231-233
+shared-history/src/utils/avatars.ts
+  fd528823e8d35d8e 1-43
+shared-history/src/pages/ChatPage.tsx
+  a37a84c58e6b95e7 139-145,149
+  fd528823e8d35d8e 1-2,4-7,10-20,23-40,42-69,75-101,103-111,122-138,146-148,150-157,171-186,190,192-208,210-241
+shared-history/public/chats/2025-11-22_01-49Z-prepare-blog-post-for-open-source-repo.md
+  fd528823e8d35d8e 1-69
+shared-history/src/components/common/Notification.tsx
+  fd528823e8d35d8e 1-69
+shared-history/src/components/chat/ChatList.css
+  fd528823e8d35d8e 1-130
+shared-history/src/utils/parser.ts
+  a37a84c58e6b95e7 6-8,11,15-22,47,52-59,62,69-71,83-86,90-91,93-95,97-100,102,106,109
+  fd528823e8d35d8e 1-5,9-10,12-14,23-46,48-51,60-61,63-68,72-82,87-89,92,96,101,103-105,107-108,110-131
+shared-history/src/components/common/FileUpload.css
+  fd528823e8d35d8e 1-109
+shared-history/src/pages/HomePage.tsx
+  fd528823e8d35d8e 1-2,4-7,11-118,124,133,135,157-160,164,185-202,204-225,227,229,232,252-254,259
+shared-history/src/pages/ChatPage.css
+  fd528823e8d35d8e 4-82,85-107,109-167,172-175,178-190,193-194,198-248,251,261,291-294
+shared-history/src/contexts/NotificationContext.tsx
+  fd528823e8d35d8e 1-64
+shared-history/src/components/common/Notification.css
+  fd528823e8d35d8e 1-130
+shared-history/src/components/common/FileUpload.tsx
+  fd528823e8d35d8e 1-169
+shared-history/src/components/chat/ChatList.tsx
+  fd528823e8d35d8e 1-123
+shared-history/src/types/index.ts
+  fd528823e8d35d8e 1-53
+shared-history/public/chats.json
+  fd528823e8d35d8e 1-10
+shared-history/public/chats/2025-12-13_14-19Z-gs-squad-dashboard-tui-redesign.md
+  fd528823e8d35d8e 1-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "790266233259be407477dd80e13d55ab074062ee",
+  "prompts": {
+    "a37a84c58e6b95e7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d6512bd9-366a-413e-88c9-55b62c1ae846",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 59,
+      "total_deletions": 66,
+      "accepted_lines": 49,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1955,
+      "total_deletions": 154,
+      "accepted_lines": 1805,
+      "overriden_lines": 0
+    }
+  }
+}
