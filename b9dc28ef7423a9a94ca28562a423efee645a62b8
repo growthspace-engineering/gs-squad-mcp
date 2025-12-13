@@ -1,0 +1,23 @@
+docs/tui-dashboard-v2-reimagination/04-tui-feasibility.md
+  fd528823e8d35d8e 1-733
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "b9dc28ef7423a9a94ca28562a423efee645a62b8",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 733,
+      "total_deletions": 0,
+      "accepted_lines": 733,
+      "overriden_lines": 0
+    }
+  }
+}
