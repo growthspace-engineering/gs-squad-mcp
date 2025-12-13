@@ -1,0 +1,33 @@
+shared-history/docs/03-architecture.md
+  fd528823e8d35d8e 1-1913
+shared-history/docs/06-visual-specs.md
+  fd528823e8d35d8e 1-898
+shared-history/src/styles/variables.css
+  fd528823e8d35d8e 1-530
+shared-history/docs/05-design-system.md
+  fd528823e8d35d8e 1-975
+shared-history/docs/02-reusable-patterns.md
+  fd528823e8d35d8e 1-558
+shared-history/docs/04-component-specs.md
+  fd528823e8d35d8e 1-1121
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "b1abcd64c819c08ba8cb74a44d521e4ad817bb70",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 6532,
+      "total_deletions": 0,
+      "accepted_lines": 6532,
+      "overriden_lines": 0
+    }
+  }
+}
