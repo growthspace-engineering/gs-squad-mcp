@@ -1,0 +1,27 @@
+packages/gs-squad-dashboard-next/src/App.tsx
+  fd528823e8d35d8e 4,50-54
+packages/gs-squad-dashboard-next/src/components/session/SessionLabel.tsx
+  fd528823e8d35d8e 1-34
+packages/gs-squad-dashboard-next/src/components/session/SessionHeader.tsx
+  fd528823e8d35d8e 1-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "de976a3f9c9fe5b4bc34d77b8e7142a5bcb84725",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 81,
+      "total_deletions": 11,
+      "accepted_lines": 72,
+      "overriden_lines": 0
+    }
+  }
+}
