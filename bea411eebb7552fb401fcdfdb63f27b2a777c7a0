@@ -1,0 +1,23 @@
+docs/tui-dashboard-v2-reimagination/00-mission-plan.md
+  474d90e1ffd80e85 1-229
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "bea411eebb7552fb401fcdfdb63f27b2a777c7a0",
+  "prompts": {
+    "474d90e1ffd80e85": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b75ff7c2-309c-48aa-889f-57c6263a232b",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 229,
+      "total_deletions": 0,
+      "accepted_lines": 229,
+      "overriden_lines": 0
+    }
+  }
+}
