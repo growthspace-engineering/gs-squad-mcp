@@ -1,0 +1,35 @@
+packages/gs-squad-vscode/src/extension/html-generator.ts
+  22ce459465f3f62a 128,140,316-317
+packages/gs-squad-vscode/src/extension/SquadPanelProvider.ts
+  22ce459465f3f62a 108-109,207-208
+packages/gs-squad-vscode/src/extension/SquadViewProvider.ts
+  22ce459465f3f62a 56-57
+packages/gs-squad-vscode/src/webview/components/AgentCard.tsx
+  22ce459465f3f62a 22-23
+packages/gs-squad-vscode/package.json
+  22ce459465f3f62a 100,121
+packages/gs-squad-vscode/src/webview/utils/avatars.ts
+  22ce459465f3f62a 42,54
+packages/gs-squad-vscode/src/extension/AgentDetailsProvider.ts
+  22ce459465f3f62a 666-667,677
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "b44756d1631f09b3bb1a772a9223d50fb5be561e",
+  "prompts": {
+    "22ce459465f3f62a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "530805cb-3991-4c7e-90df-91aa3c192953",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 19,
+      "total_deletions": 19,
+      "accepted_lines": 19,
+      "overriden_lines": 0
+    }
+  }
+}
