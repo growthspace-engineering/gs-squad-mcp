@@ -1,0 +1,57 @@
+shared-history/vite.config.ts
+  fd528823e8d35d8e 1-31
+shared-history/tsconfig.json
+  fd528823e8d35d8e 1-30
+shared-history/index.html
+  fd528823e8d35d8e 1-15
+shared-history/src/App.tsx
+  fd528823e8d35d8e 1-19
+shared-history/src/components/layout/Header.css
+  fd528823e8d35d8e 1-114
+shared-history/src/pages/HomePage.tsx
+  fd528823e8d35d8e 1-127
+shared-history/src/App.css
+  fd528823e8d35d8e 1-22
+shared-history/src/styles/index.css
+  fd528823e8d35d8e 1-135
+shared-history/public/favicon.svg
+  fd528823e8d35d8e 1-10
+shared-history/tsconfig.node.json
+  fd528823e8d35d8e 1-23
+shared-history/package.json
+  fd528823e8d35d8e 1-28
+shared-history/src/main.tsx
+  fd528823e8d35d8e 1-13
+shared-history/src/components/layout/Header.tsx
+  fd528823e8d35d8e 1-108
+shared-history/src/pages/ChatPage.tsx
+  fd528823e8d35d8e 1-54
+shared-history/src/pages/ChatPage.css
+  fd528823e8d35d8e 1-93
+shared-history/src/contexts/ThemeContext.tsx
+  fd528823e8d35d8e 1-81
+shared-history/src/styles/reset.css
+  fd528823e8d35d8e 1-139
+shared-history/src/pages/HomePage.css
+  fd528823e8d35d8e 1-179
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "b8835a89fc8a7bbedf8c26a3c2845232c3f1e422",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1223,
+      "total_deletions": 2,
+      "accepted_lines": 1221,
+      "overriden_lines": 0
+    }
+  }
+}
