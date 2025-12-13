@@ -1,0 +1,42 @@
+src/cli/main-stdio.ts
+  fd528823e8d35d8e 67-70,73-75
+package.json
+  ccef933fe2754aeb 27,58
+packages/gs-squad-dashboard-next/package.json
+  fd528823e8d35d8e 1-29
+packages/gs-squad-dashboard-next/tsconfig.json
+  fd528823e8d35d8e 1-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "562b178d99149b1d14177ff4668fec960e537796",
+  "prompts": {
+    "ccef933fe2754aeb": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "3922161c-ce1a-44cd-862d-2c09188ee249",
+        "model": "gpt-5.1-codex-max"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 35,
+      "total_deletions": 5,
+      "accepted_lines": 35,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 4109,
+      "total_deletions": 1496,
+      "accepted_lines": 2375,
+      "overriden_lines": 1
+    }
+  }
+}
