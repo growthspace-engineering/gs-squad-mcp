@@ -1,0 +1,40 @@
+docs/tui-dashboard-v2-reimagination/01-gap-analysis.md
+  fd528823e8d35d8e 1-1002
+docs/tui-dashboard-v2-reimagination/03-design-inspiration.md
+  474d90e1ffd80e85 1-333
+docs/tui-dashboard-v2-reimagination/02-requirements-spec.md
+  fd528823e8d35d8e 1-794
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "d88579ac8e1f90c142b476c9731ebb68932319cf",
+  "prompts": {
+    "474d90e1ffd80e85": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b75ff7c2-309c-48aa-889f-57c6263a232b",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 333,
+      "total_deletions": 0,
+      "accepted_lines": 333,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1796,
+      "total_deletions": 0,
+      "accepted_lines": 1796,
+      "overriden_lines": 0
+    }
+  }
+}
