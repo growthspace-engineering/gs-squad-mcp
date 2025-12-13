@@ -1,0 +1,42 @@
+cursor-shared-history/docs/feature-cursor-shared-history-ui-improvements/frontend-analysis.md
+  fd528823e8d35d8e 1-1003
+cursor-shared-history/config.json
+  fd528823e8d35d8e 1-6
+cursor-shared-history/docs/feature-cursor-shared-history-ui-improvements/user-stories.md
+  fd528823e8d35d8e 1-361
+docs/feature-cursor-shared-history-ui-improvements/design-system.md
+  fd528823e8d35d8e 1-1288
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "0eabf284370eabc7523ac8980a657d5a3fc433d5",
+  "prompts": {
+    "a37a84c58e6b95e7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d6512bd9-366a-413e-88c9-55b62c1ae846",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 5,
+      "total_deletions": 3,
+      "accepted_lines": 5,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 3069,
+      "total_deletions": 45,
+      "accepted_lines": 3022,
+      "overriden_lines": 0
+    }
+  }
+}
