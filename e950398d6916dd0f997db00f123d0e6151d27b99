@@ -1,0 +1,40 @@
+shared-history/src/components/common/MarkdownRenderer.tsx
+  fd528823e8d35d8e 97-223,403-448
+shared-history/src/components/common/MarkdownRenderer.css
+  fd528823e8d35d8e 552-607
+shared-history/src/pages/ChatPage.css
+  a37a84c58e6b95e7 79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "e950398d6916dd0f997db00f123d0e6151d27b99",
+  "prompts": {
+    "a37a84c58e6b95e7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d6512bd9-366a-413e-88c9-55b62c1ae846",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 10,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 229,
+      "total_deletions": 0,
+      "accepted_lines": 229,
+      "overriden_lines": 0
+    }
+  }
+}
