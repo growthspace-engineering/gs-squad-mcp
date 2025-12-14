@@ -1,0 +1,23 @@
+shared-history/src/components/common/SquadMemberCard.tsx
+  a37a84c58e6b95e7 76-91,98-100
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "bf6a591abf0b590515ae2151fccbd8ac646da924",
+  "prompts": {
+    "a37a84c58e6b95e7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d6512bd9-366a-413e-88c9-55b62c1ae846",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 20,
+      "total_deletions": 1,
+      "accepted_lines": 20,
+      "overriden_lines": 0
+    }
+  }
+}
