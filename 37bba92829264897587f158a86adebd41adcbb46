@@ -1,0 +1,33 @@
+shared-history/src/utils/paths.ts
+  fd528823e8d35d8e 1-136
+shared-history/public/config.json
+  fd528823e8d35d8e 1-3,5
+shared-history/src/components/common/MarkdownRenderer.tsx
+  fd528823e8d35d8e 1,5,11-12,15-16,215,220,224-229,231,280-282,284,286-288,291-292,296-297,302-303,305-306,332,334-363,535,537-538,547-548,550-551,568,587,590,651,663-664,668-670,676-679,683-684
+shared-history/src/types/index.ts
+  fd528823e8d35d8e 54-65
+shared-history/src/components/common/MarkdownRenderer.css
+  fd528823e8d35d8e 352,355-356,359,363,368,373,378-380,384,394-397,400-402,407-409,412,416-418,422-424,427-429,432-433,437,439,441-448,451-458,461,474,494-500,576-577,580
+shared-history/src/pages/ChatPage.tsx
+  fd528823e8d35d8e 7,9,12-17,19-20,39,47-63,70,120-146,148-155,275,280,286,297
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "37bba92829264897587f158a86adebd41adcbb46",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 395,
+      "total_deletions": 195,
+      "accepted_lines": 381,
+      "overriden_lines": 1
+    }
+  }
+}
