@@ -1,0 +1,27 @@
+shared-history/src/components/common/RoleCard.css
+  fd528823e8d35d8e 24-27,49-50,52-57,61-72,81
+shared-history/src/components/common/RoleCard.tsx
+  fd528823e8d35d8e 20-23,25
+shared-history/src/components/common/RolesGallery.css
+  fd528823e8d35d8e 40-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "20011089893a2449e7371305fd9f3c413c91702c",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 38,
+      "total_deletions": 10,
+      "accepted_lines": 37,
+      "overriden_lines": 0
+    }
+  }
+}
