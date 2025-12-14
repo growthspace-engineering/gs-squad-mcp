@@ -1,0 +1,35 @@
+shared-history/src/components/common/SquadMemberCard.tsx
+  fd528823e8d35d8e 1-146
+shared-history/src/components/common/SquadRunVisualization.css
+  fd528823e8d35d8e 1-158
+shared-history/src/components/common/SquadMemberCard.css
+  fd528823e8d35d8e 1-350
+shared-history/src/utils/mcpIcons.ts
+  fd528823e8d35d8e 28-29,216-218
+shared-history/src/components/common/SquadRunVisualization.tsx
+  fd528823e8d35d8e 1-197
+shared-history/src/components/common/MarkdownRenderer.css
+  fd528823e8d35d8e 744-763
+shared-history/src/components/common/MarkdownRenderer.tsx
+  fd528823e8d35d8e 6,55-63,437-493,1038-1070,1084-1085,1095-1098,1123-1124,1126,1132-1133,1147-1154,1173,1193-1200,1226-1232
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "4ed187b5be40cdf3bef0e7d0b7f04b92ee816227",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1015,
+      "total_deletions": 12,
+      "accepted_lines": 1014,
+      "overriden_lines": 0
+    }
+  }
+}
