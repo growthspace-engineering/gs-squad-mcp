@@ -1,0 +1,53 @@
+.github/workflows/deploy-shared-history.yml
+  aa87729937442166 8-9,33-40,42-43,45,51-52,54-55,57,60-62,67-69
+shared-history/scripts/generate-chats-json.cjs
+  aa87729937442166 1-80
+shared-history/package.json
+  aa87729937442166 13-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "4ac55295a58918e8d99cd2200fc0b19bc8e04aae",
+  "prompts": {
+    "a37a84c58e6b95e7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d6512bd9-366a-413e-88c9-55b62c1ae846",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 9,
+      "total_deletions": 8,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    },
+    "aa87729937442166": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "33e073fd-e640-461d-a461-5ed881eff6a7",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 107,
+      "total_deletions": 11,
+      "accepted_lines": 107,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 441,
+      "total_deletions": 66,
+      "accepted_lines": 404,
+      "overriden_lines": 0
+    }
+  }
+}
