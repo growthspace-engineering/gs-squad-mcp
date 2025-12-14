@@ -1,0 +1,35 @@
+shared-history/src/components/common/RolesGallery.tsx
+  aa87729937442166 93-94,102
+shared-history/src/components/common/SquadRunVisualization.tsx
+  aa87729937442166 253-254
+shared-history/src/components/chat/ChatList.tsx
+  aa87729937442166 12-15,29
+shared-history/src/components/common/MarkdownRenderer.tsx
+  aa87729937442166 1109,1139
+shared-history/src/vite-env.d.ts
+  aa87729937442166 1
+shared-history/src/utils/mcpIcons.ts
+  aa87729937442166 130
+shared-history/src/pages/ChatPage.tsx
+  aa87729937442166 20,22-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "9fbbaf4acee407aeec8edecd5a7a2700711bb823",
+  "prompts": {
+    "aa87729937442166": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "33e073fd-e640-461d-a461-5ed881eff6a7",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 17,
+      "total_deletions": 26,
+      "accepted_lines": 17,
+      "overriden_lines": 0
+    }
+  }
+}
