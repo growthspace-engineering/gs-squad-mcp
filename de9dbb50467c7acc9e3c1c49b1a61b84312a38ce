@@ -1,0 +1,55 @@
+shared-history/src/components/common/MarkdownRenderer.css
+  fd528823e8d35d8e 576,589-590,596-600,602,606-607,612-615,724-748
+  a37a84c58e6b95e7 591
+shared-history/src/components/common/RoleCard.css
+  fd528823e8d35d8e 1-81
+shared-history/public/agents.json
+  fd528823e8d35d8e 1-384
+shared-history/src/components/common/RolesGallery.tsx
+  fd528823e8d35d8e 1-127
+shared-history/src/components/common/RoleCard.tsx
+  fd528823e8d35d8e 1-25
+shared-history/scripts/extract-agents.cjs
+  fd528823e8d35d8e 1-116
+shared-history/src/components/common/MarkdownRenderer.tsx
+  fd528823e8d35d8e 5,46-52,113,285-286,288-296,299,370-424,495-496,498,503,506,939-967,981-982,989,991-992,1017-1018,1020,1022-1023,1026-1027,1040-1041,1043,1045,1060,1063-1064,1072-1079,1092,1098-1102
+shared-history/package.json
+  fd528823e8d35d8e 12-13
+shared-history/src/components/common/RolesGallery.css
+  fd528823e8d35d8e 1-59
+shared-history/src/utils/mcpIcons.ts
+  fd528823e8d35d8e 26-28,208-209,212-214,264
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "de9dbb50467c7acc9e3c1c49b1a61b84312a38ce",
+  "prompts": {
+    "a37a84c58e6b95e7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d6512bd9-366a-413e-88c9-55b62c1ae846",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1024,
+      "total_deletions": 86,
+      "accepted_lines": 994,
+      "overriden_lines": 0
+    }
+  }
+}
