@@ -1,0 +1,47 @@
+shared-history/src/types/index.ts
+  fd528823e8d35d8e 63-64
+shared-history/src/pages/ChatPage.tsx
+  fd528823e8d35d8e 16,299-300
+shared-history/src/components/common/MarkdownRenderer.css
+  fd528823e8d35d8e 694,705,708-734,737-759
+shared-history/src/utils/github.ts
+  fd528823e8d35d8e 1-106,112-172
+  a37a84c58e6b95e7 107-111
+shared-history/src/components/common/MarkdownRenderer.tsx
+  fd528823e8d35d8e 6,14-17,20-26,352,501-545,547-567,570-614,619-623,830,863,882,885,946,958,979
+shared-history/public/config.json
+  fd528823e8d35d8e 3-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "7982ef0cbe32473a0bf4e19d0e5f1eea08cde8ad",
+  "prompts": {
+    "a37a84c58e6b95e7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d6512bd9-366a-413e-88c9-55b62c1ae846",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 5,
+      "total_deletions": 1,
+      "accepted_lines": 5,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 379,
+      "total_deletions": 34,
+      "accepted_lines": 367,
+      "overriden_lines": 0
+    }
+  }
+}
