@@ -1,0 +1,23 @@
+src/shared/member-name-generator.spec.ts
+  f1e9c56b42f10717 81-87
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "f125eb006d9dd147f7a5670f8f60d8d9cb3288d9",
+  "prompts": {
+    "f1e9c56b42f10717": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e79fecf3-fc6e-4dc7-a32f-bfe43383872a",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 7,
+      "total_deletions": 3,
+      "accepted_lines": 7,
+      "overriden_lines": 0
+    }
+  }
+}
