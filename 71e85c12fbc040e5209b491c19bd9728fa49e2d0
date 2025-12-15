@@ -1,0 +1,23 @@
+packages/storybook-ink/src/components/InkPreview.tsx
+  946a4f46a4bc3032 72,96,109-111,119-121,123-124
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "71e85c12fbc040e5209b491c19bd9728fa49e2d0",
+  "prompts": {
+    "946a4f46a4bc3032": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a6715d20-fd60-42de-85ef-bc5aa6164155",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 11,
+      "total_deletions": 4,
+      "accepted_lines": 11,
+      "overriden_lines": 0
+    }
+  }
+}
