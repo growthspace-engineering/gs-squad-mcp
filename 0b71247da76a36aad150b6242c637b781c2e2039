@@ -1,0 +1,43 @@
+packages/gs-squad-dashboard-next/src/components/shared/GradientText.tsx
+  fd528823e8d35d8e 1-59
+packages/gs-squad-dashboard-next/src/components/round/RoundListItem.tsx
+  fd528823e8d35d8e 99,120
+packages/gs-squad-dashboard-next/src/App.tsx
+  fd528823e8d35d8e 456-460,462-464,467-487,492-495,498-504,508-531
+  f20c844abc86a4c1 496-497
+packages/gs-squad-dashboard-next/src/components/round/RoundDetail.tsx
+  fd528823e8d35d8e 5,175-177
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "0b71247da76a36aad150b6242c637b781c2e2039",
+  "prompts": {
+    "f20c844abc86a4c1": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ac26956f-f5a9-4c7b-8141-1a43e258ebff",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 4,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 136,
+      "total_deletions": 19,
+      "accepted_lines": 129,
+      "overriden_lines": 0
+    }
+  }
+}
