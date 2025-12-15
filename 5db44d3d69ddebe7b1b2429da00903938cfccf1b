@@ -1,0 +1,57 @@
+packages/gs-squad-dashboard-next/src/components/session/SessionHeader.tsx
+  f20c844abc86a4c1 26-29,50-55,62-64,74-80,90-91,93-95,99-106,109-120,130-132
+  fd528823e8d35d8e 8,97-98
+packages/gs-squad-dashboard-next/src/theme/types.ts
+  fd528823e8d35d8e 33-42,48
+packages/gs-squad-dashboard-next/src/theme/resolve.ts
+  fd528823e8d35d8e 6,13-15,18,72-124,129-130,138,145
+packages/gs-squad-dashboard-next/src/components/shared/GradientText.tsx
+  fd528823e8d35d8e 3,5,7-8,25-27,35-36,41,43-44,46-47
+packages/gs-squad-dashboard-next/src/components/header/AppTitle.tsx
+  fd528823e8d35d8e 13,24-25,27-28,39
+packages/gs-squad-dashboard-next/src/theme/palettes.ts
+  f20c844abc86a4c1 18-19
+packages/gs-squad-dashboard-next/src/App.tsx
+  f20c844abc86a4c1 95-99,103-108,112,114-115,120-121,259,267-274,286,567-568
+packages/gs-squad-dashboard-next/src/theme/index.ts
+  fd528823e8d35d8e 28-30
+packages/gs-squad-dashboard-next/src/components/agent/AgentListItem.tsx
+  fd528823e8d35d8e 13,161,163
+packages/gs-squad-dashboard-next/src/components/session/SessionLabel.tsx
+  fd528823e8d35d8e 3,30,32
+packages/gs-squad-dashboard-next/src/utils/gradient.ts
+  fd528823e8d35d8e 9-62,75-76,82
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "5db44d3d69ddebe7b1b2429da00903938cfccf1b",
+  "prompts": {
+    "f20c844abc86a4c1": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ac26956f-f5a9-4c7b-8141-1a43e258ebff",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 96,
+      "total_deletions": 75,
+      "accepted_lines": 81,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 183,
+      "total_deletions": 43,
+      "accepted_lines": 164,
+      "overriden_lines": 0
+    }
+  }
+}
