@@ -1,0 +1,53 @@
+packages/gs-squad-dashboard-next/src/components/session/SessionHeader.tsx
+  fd528823e8d35d8e 73-74,88
+packages/gs-squad-dashboard-next/src/components/shared/RunSummaryDetail.tsx
+  fd528823e8d35d8e 4,40-41,46,53,58
+packages/gs-squad-dashboard-next/src/components/shared/EmptyState.tsx
+  fd528823e8d35d8e 3,13-14,22-23
+packages/gs-squad-dashboard-next/src/components/agent/ResultTab.tsx
+  fd528823e8d35d8e 4,56-57,62,72,83
+packages/gs-squad-dashboard-next/src/components/agent/InfoTab.tsx
+  fd528823e8d35d8e 4,78,86,88
+packages/gs-squad-dashboard-next/src/components/shared/HelpOverlay.tsx
+  fd528823e8d35d8e 154,168
+packages/gs-squad-dashboard-next/src/components/agent/TaskTab.tsx
+  fd528823e8d35d8e 4,44,50
+packages/gs-squad-dashboard-next/src/components/agent/AgentListItem.tsx
+  fd528823e8d35d8e 160,168
+packages/gs-squad-dashboard-next/src/components/round/RoundDetail.tsx
+  fd528823e8d35d8e 175,181,188,195
+packages/gs-squad-dashboard-next/src/components/agent/TabBar.tsx
+  fd528823e8d35d8e 3,47-48,57,65-66,69-70
+packages/gs-squad-dashboard-next/src/components/session/SessionMetadata.tsx
+  fd528823e8d35d8e 4,30,35
+packages/gs-squad-dashboard-next/src/components/session/SessionLabel.tsx
+  fd528823e8d35d8e 4,26,32
+packages/gs-squad-dashboard-next/src/components/round/RoundsList.tsx
+  fd528823e8d35d8e 143
+packages/gs-squad-dashboard-next/src/components/round/RoundListItem.tsx
+  fd528823e8d35d8e 135
+packages/gs-squad-dashboard-next/src/components/round/SummaryListItem.tsx
+  fd528823e8d35d8e 3,31-32,59,65
+packages/gs-squad-dashboard-next/src/App.tsx
+  fd528823e8d35d8e 508,552
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "32cfd85c6d77b64f1ff1e37bef30b70bab30e73d",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 61,
+      "total_deletions": 38,
+      "accepted_lines": 58,
+      "overriden_lines": 0
+    }
+  }
+}
