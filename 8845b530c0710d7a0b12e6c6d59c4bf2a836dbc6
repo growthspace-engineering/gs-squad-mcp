@@ -1,0 +1,23 @@
+packages/gs-squad-dashboard-next/src/components/header/AppTitle.tsx
+  fd528823e8d35d8e 3,9-14,17-18,21-24,26-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "8845b530c0710d7a0b12e6c6d59c4bf2a836dbc6",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 15,
+      "total_deletions": 10,
+      "accepted_lines": 15,
+      "overriden_lines": 0
+    }
+  }
+}
