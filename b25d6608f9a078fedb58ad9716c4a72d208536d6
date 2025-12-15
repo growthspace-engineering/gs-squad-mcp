@@ -1,0 +1,38 @@
+package.json
+  f6b7745a02c538ab 97,107
+eslint.config.cjs
+  f1e9c56b42f10717 28-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "b25d6608f9a078fedb58ad9716c4a72d208536d6",
+  "prompts": {
+    "f1e9c56b42f10717": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e79fecf3-fc6e-4dc7-a32f-bfe43383872a",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 4,
+      "total_deletions": 2,
+      "accepted_lines": 3,
+      "overriden_lines": 0
+    },
+    "f6b7745a02c538ab": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "f1331779-f49c-4d74-a54b-3d4354b87602",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 3,
+      "total_deletions": 1,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}
