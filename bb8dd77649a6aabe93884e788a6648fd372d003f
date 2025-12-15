@@ -1,0 +1,25 @@
+packages/gs-squad-dashboard-next/src/components/agent/ChatReuseBadge.tsx
+  f20c844abc86a4c1 3,8,17-18
+packages/gs-squad-dashboard-next/src/components/round/SquadRound.tsx
+  f20c844abc86a4c1 5,24,30,34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "bb8dd77649a6aabe93884e788a6648fd372d003f",
+  "prompts": {
+    "f20c844abc86a4c1": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ac26956f-f5a9-4c7b-8141-1a43e258ebff",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 8,
+      "total_deletions": 4,
+      "accepted_lines": 8,
+      "overriden_lines": 0
+    }
+  }
+}
