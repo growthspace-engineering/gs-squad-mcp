@@ -1,0 +1,25 @@
+packages/gs-squad-dashboard-next/src/components/shared/GradientText.stories.tsx
+  946a4f46a4bc3032 50,203-204,206,209,215
+packages/storybook-ink/src/capture/cli.ts
+  946a4f46a4bc3032 39,46-47,54-55,62-63,69-71,78-79,86-87,90,92,94-96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "52e32146b4c37601b7a646165a4939b3738d32a5",
+  "prompts": {
+    "946a4f46a4bc3032": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a6715d20-fd60-42de-85ef-bc5aa6164155",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 25,
+      "total_deletions": 24,
+      "accepted_lines": 25,
+      "overriden_lines": 0
+    }
+  }
+}
