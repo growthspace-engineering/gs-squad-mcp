@@ -1,0 +1,25 @@
+.github/workflows/release.yml
+  9094e5038ba2241e 10-25,29,35,47,50,54,60,93,160
+.github/workflows/pr-tests.yml
+  9094e5038ba2241e 11-24,28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "8cc1738e46c1f84186c21b4ff8fff32a365f2f5a",
+  "prompts": {
+    "9094e5038ba2241e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "762253a4-cd34-4710-a232-eb56e219e9ce",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 39,
+      "total_deletions": 12,
+      "accepted_lines": 39,
+      "overriden_lines": 0
+    }
+  }
+}
