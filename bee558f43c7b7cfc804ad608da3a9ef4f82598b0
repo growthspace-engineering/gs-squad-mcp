@@ -1,0 +1,31 @@
+packages/gs-squad-dashboard-next/src/theme/types.ts
+  6a7a09603ed83f20 42,47
+packages/gs-squad-dashboard-next/src/components/round/RoundListItem.tsx
+  6a7a09603ed83f20 112,114,116-118,120-122
+packages/gs-squad-dashboard-next/src/theme/resolve.ts
+  6a7a09603ed83f20 90,115-118,144-146
+packages/gs-squad-dashboard-next/src/components/round/RoundDetail.tsx
+  6a7a09603ed83f20 165-171,176,182
+packages/gs-squad-dashboard-next/src/components/agent/AgentListItem.tsx
+  6a7a09603ed83f20 161
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "bee558f43c7b7cfc804ad608da3a9ef4f82598b0",
+  "prompts": {
+    "6a7a09603ed83f20": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e4efe40e-7826-402a-9e63-b228f69fdf50",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 35,
+      "total_deletions": 9,
+      "accepted_lines": 29,
+      "overriden_lines": 0
+    }
+  }
+}
