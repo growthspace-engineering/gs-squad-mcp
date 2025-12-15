@@ -1,0 +1,27 @@
+packages/gs-squad-dashboard-next/src/components/shared/RunSummaryDetail.tsx
+  6a7a09603ed83f20 117-119,123-124,126,133-138,142-143,145
+packages/gs-squad-dashboard-next/src/components/round/RoundDetail.tsx
+  6a7a09603ed83f20 202-204,208-209,211,227-232,236-237,239
+packages/gs-squad-dashboard-next/src/components/round/RoundsList.tsx
+  6a7a09603ed83f20 179-181,185-186,188,193-198,202-203,205
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "8ffcaa8d4acf3fe8ea6b2f2ebc71d37be59aaf85",
+  "prompts": {
+    "6a7a09603ed83f20": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e4efe40e-7826-402a-9e63-b228f69fdf50",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 57,
+      "total_deletions": 36,
+      "accepted_lines": 45,
+      "overriden_lines": 0
+    }
+  }
+}
