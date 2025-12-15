@@ -1,0 +1,35 @@
+packages/storybook-ink/.storybook/main.ts
+  946a4f46a4bc3032 5,8-9
+packages/storybook-ink/vite.config.ts
+  946a4f46a4bc3032 1-15
+packages/gs-squad-dashboard-next/src/components/shared/GradientText.stories.tsx
+  946a4f46a4bc3032 1-237
+packages/storybook-ink/src/capture/cli.ts
+  946a4f46a4bc3032 119-120,123-128,131-132,134-135,142
+packages/storybook-ink/package.json
+  946a4f46a4bc3032 6-11
+packages/storybook-ink/src/index.ts
+  946a4f46a4bc3032 1-27
+packages/storybook-ink/src/browser.ts
+  946a4f46a4bc3032 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "2446d3c9ad78f3f7870db6c16806501e644d82eb",
+  "prompts": {
+    "946a4f46a4bc3032": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a6715d20-fd60-42de-85ef-bc5aa6164155",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 326,
+      "total_deletions": 13,
+      "accepted_lines": 313,
+      "overriden_lines": 0
+    }
+  }
+}
