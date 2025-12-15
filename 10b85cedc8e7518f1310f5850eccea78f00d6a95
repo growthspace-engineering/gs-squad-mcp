@@ -1,0 +1,27 @@
+packages/gs-squad-dashboard-next/src/theme/palettes.ts
+  fd528823e8d35d8e 4-16,18-21,27,29-33,36-44,48-73,76-78,86-87,89,93,95,103-104,106
+packages/gs-squad-dashboard-next/src/utils/gradient.ts
+  fd528823e8d35d8e 1-51
+packages/gs-squad-dashboard-next/src/components/header/AppTitle.tsx
+  fd528823e8d35d8e 4-5,11-14,16-18,23,25-30,34-35,39-42,44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "10b85cedc8e7518f1310f5850eccea78f00d6a95",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 162,
+      "total_deletions": 56,
+      "accepted_lines": 147,
+      "overriden_lines": 0
+    }
+  }
+}
