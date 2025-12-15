@@ -1,0 +1,37 @@
+packages/storybook-ink/src/capture/realTheme.ts
+  fd528823e8d35d8e 1-66
+packages/storybook-ink/src/capture/theme.ts
+  fd528823e8d35d8e 2,4-5,7-11
+packages/storybook-ink/package.json
+  fd528823e8d35d8e 12
+packages/storybook-ink/src/stories/GradientText.stories.tsx
+  fd528823e8d35d8e 9-11,15-17
+packages/storybook-ink/src/capture/components/GradientText.tsx
+  fd528823e8d35d8e 2,4-12,73-77
+packages/gs-squad-dashboard-next/tsconfig.json
+  fd528823e8d35d8e 7-8
+packages/storybook-ink/src/capture/components/index.ts
+  fd528823e8d35d8e 4-7,10-16
+packages/storybook-ink/src/capture/cli.ts
+  fd528823e8d35d8e 24,26-30,106-111,131-133,135-139
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "cb5f5f8ef05728f5fcee604b7643d083ccbf15a0",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 132,
+      "total_deletions": 30,
+      "accepted_lines": 130,
+      "overriden_lines": 0
+    }
+  }
+}
