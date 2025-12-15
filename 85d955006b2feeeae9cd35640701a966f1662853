@@ -1,0 +1,39 @@
+packages/gs-squad-dashboard-next/docs/THEMING_ARCHITECTURE.md
+  fd528823e8d35d8e 1-1005
+packages/gs-squad-dashboard-next/docs/THEMING_QUICK_START.md
+  fd528823e8d35d8e 1-119
+packages/gs-squad-dashboard-next/src/theme/palettes.ts
+  fd528823e8d35d8e 1-67
+packages/gs-squad-dashboard-next/docs/THEMING_SUMMARY.md
+  fd528823e8d35d8e 1-127
+packages/gs-squad-dashboard-next/docs/THEMING_IMPLEMENTATION_CHECKLIST.md
+  fd528823e8d35d8e 1-214
+packages/gs-squad-dashboard-next/src/theme/types.ts
+  fd528823e8d35d8e 1-38
+packages/gs-squad-dashboard-next/src/theme/resolve.ts
+  fd528823e8d35d8e 1-82
+packages/gs-squad-dashboard-next/src/theme/index.ts
+  fd528823e8d35d8e 1-94
+packages/gs-squad-dashboard-next/src/cli.tsx
+  fd528823e8d35d8e 5,11-15,20-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "85d955006b2feeeae9cd35640701a966f1662853",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1813,
+      "total_deletions": 54,
+      "accepted_lines": 1759,
+      "overriden_lines": 0
+    }
+  }
+}
