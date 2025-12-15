@@ -1,0 +1,23 @@
+eslint.config.cjs
+  96ac0332cda0ffb2 39-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "91bf7ae5342ff65ace9bfcff803a96a75bb0458a",
+  "prompts": {
+    "96ac0332cda0ffb2": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "3a5e4af6-571f-4eef-b150-e5b64ae615e7",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 6,
+      "total_deletions": 5,
+      "accepted_lines": 3,
+      "overriden_lines": 0
+    }
+  }
+}
