@@ -1,0 +1,23 @@
+.github/actions/setup-monorepo-deps/action.yml
+  9094e5038ba2241e 84,86-138
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "4da2a647da8ad0399e39fbe3bdb7307c01d62dea",
+  "prompts": {
+    "9094e5038ba2241e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "762253a4-cd34-4710-a232-eb56e219e9ce",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 54,
+      "total_deletions": 18,
+      "accepted_lines": 54,
+      "overriden_lines": 0
+    }
+  }
+}
