@@ -1,0 +1,31 @@
+packages/gs-squad-dashboard-next/src/components/agent/AgentListItem.tsx
+  6a7a09603ed83f20 11,59,68,112-113,134-135
+packages/gs-squad-dashboard-next/src/components/agent/DetailsTab.tsx
+  6a7a09603ed83f20 1-94
+packages/gs-squad-dashboard-next/src/components/agent/TabBar.tsx
+  6a7a09603ed83f20 8,32,41
+packages/gs-squad-dashboard-next/src/types/index.ts
+  6a7a09603ed83f20 36
+packages/gs-squad-dashboard-next/src/components/shared/HelpOverlay.tsx
+  6a7a09603ed83f20 36,103
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "dcadd008efb5b9cfd8a2c41ea8c0e662825d9223",
+  "prompts": {
+    "6a7a09603ed83f20": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e4efe40e-7826-402a-9e63-b228f69fdf50",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 107,
+      "total_deletions": 13,
+      "accepted_lines": 107,
+      "overriden_lines": 0
+    }
+  }
+}
