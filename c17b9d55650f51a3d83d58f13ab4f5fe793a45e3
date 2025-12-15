@@ -1,0 +1,35 @@
+packages/gs-squad-dashboard-next/src/components/round/RoundDetail.tsx
+  fd528823e8d35d8e 1,84-85,87,233
+packages/gs-squad-dashboard-next/src/App.tsx
+  fd528823e8d35d8e 1,11,24-86,140,142,146-152
+packages/gs-squad-dashboard-next/src/components/round/RoundListItem.tsx
+  fd528823e8d35d8e 1,55-60,138
+packages/gs-squad-dashboard-next/src/components/round/RoundsList.tsx
+  fd528823e8d35d8e 1,95-96,98,198
+packages/gs-squad-dashboard-next/src/components/agent/AgentListItem.tsx
+  fd528823e8d35d8e 1,69-71,73,189
+packages/gs-squad-dashboard-next/src/components/round/SummaryListItem.tsx
+  fd528823e8d35d8e 1,23-24,26,67
+packages/gs-squad-dashboard-next/src/cli.tsx
+  fd528823e8d35d8e 9-12,19-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "c17b9d55650f51a3d83d58f13ab4f5fe793a45e3",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 112,
+      "total_deletions": 19,
+      "accepted_lines": 112,
+      "overriden_lines": 0
+    }
+  }
+}
