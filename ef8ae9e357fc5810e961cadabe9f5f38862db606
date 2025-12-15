@@ -1,0 +1,29 @@
+.github/actions/setup-monorepo-deps/action.yml
+  9094e5038ba2241e 1-87
+.github/workflows/deploy-shared-history.yml
+  9094e5038ba2241e 32-33,35-42,45
+.github/workflows/pr-tests.yml
+  9094e5038ba2241e 24-26,55-56,59,97-98,101
+.github/workflows/release.yml
+  9094e5038ba2241e 22-24,60-61,64,105-107
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "ef8ae9e357fc5810e961cadabe9f5f38862db606",
+  "prompts": {
+    "9094e5038ba2241e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "762253a4-cd34-4710-a232-eb56e219e9ce",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 117,
+      "total_deletions": 156,
+      "accepted_lines": 117,
+      "overriden_lines": 0
+    }
+  }
+}
