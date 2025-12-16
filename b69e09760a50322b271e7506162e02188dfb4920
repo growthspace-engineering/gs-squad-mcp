@@ -1,0 +1,33 @@
+packages/gs-squad-dashboard-next/src/components/shared/HelpOverlay.tsx
+  946a4f46a4bc3032 11-28,134-138,142,144-147,151,157-158,161-162,164,166-167,170,172-175,177,180,182-185,188,192-200,202-210,212,222
+packages/storybook-ink/src/capture/cli.ts
+  946a4f46a4bc3032 62-64
+packages/storybook-ink/src/components/InkPreview.tsx
+  946a4f46a4bc3032 82,132
+packages/gs-squad-dashboard-next/src/components/session/SessionHeader.stories.tsx
+  946a4f46a4bc3032 122,141,160
+packages/gs-squad-dashboard-next/src/components/shared/HelpOverlay.stories.tsx
+  946a4f46a4bc3032 114-115
+packages/gs-squad-dashboard-next/src/components/agent/TabBar.stories.tsx
+  946a4f46a4bc3032 98,117,136,155
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "b69e09760a50322b271e7506162e02188dfb4920",
+  "prompts": {
+    "946a4f46a4bc3032": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a6715d20-fd60-42de-85ef-bc5aa6164155",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 119,
+      "total_deletions": 72,
+      "accepted_lines": 93,
+      "overriden_lines": 0
+    }
+  }
+}
