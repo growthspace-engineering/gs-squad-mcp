@@ -1,0 +1,76 @@
+packages/gs-squad-dashboard-next/src/components/shared/EmptyState.stories.tsx
+  fd528823e8d35d8e 1-100
+packages/gs-squad-dashboard-next/src/components/agent/ChatReuseBadge.frames.json
+  fd528823e8d35d8e 1-8
+packages/gs-squad-dashboard-next/tsconfig.json
+  fd528823e8d35d8e 15-16
+packages/gs-squad-dashboard-next/src/components/agent/ChatReuseBadge.stories.tsx
+  fd528823e8d35d8e 1-102
+packages/gs-squad-dashboard-next/src/components/session/SessionHeader.stories.tsx
+  fd528823e8d35d8e 1-5,7,11,13-127,129-146,148-179,181-189
+  946a4f46a4bc3032 6,8-10,12,128,147,180
+packages/gs-squad-dashboard-next/src/components/session/SessionHeader.frames.json
+  946a4f46a4bc3032 5,8-9,13
+  fd528823e8d35d8e 1-4,6-7,10-12,14-16
+packages/gs-squad-dashboard-next/src/components/agent/TabBar.frames.json
+  fd528823e8d35d8e 1-16
+packages/gs-squad-dashboard-next/src/components/session/SessionLabel.frames.json
+  fd528823e8d35d8e 1-16
+packages/gs-squad-dashboard-next/package.json
+  946a4f46a4bc3032 27-29
+packages/gs-squad-dashboard-next/src/components/shared/EmptyState.frames.json
+  fd528823e8d35d8e 1-8
+packages/gs-squad-dashboard-next/src/components/session/SessionLabel.stories.tsx
+  946a4f46a4bc3032 114,133
+  fd528823e8d35d8e 1-113,115-132,134-155
+packages/gs-squad-dashboard-next/src/components/shared/HelpOverlay.stories.tsx
+  fd528823e8d35d8e 1-126
+packages/gs-squad-dashboard-next/src/components/agent/Avatar.frames.json
+  fd528823e8d35d8e 1-4,6-8,10-12,14-16,18-20,22-24
+  946a4f46a4bc3032 5,9,13,17,21
+packages/gs-squad-dashboard-next/src/components/agent/Avatar.stories.tsx
+  fd528823e8d35d8e 1-197
+packages/gs-squad-dashboard-next/src/components/shared/HelpOverlay.frames.json
+  fd528823e8d35d8e 1-4,6-8
+  946a4f46a4bc3032 5
+packages/gs-squad-dashboard-next/src/components/agent/TabBar.stories.tsx
+  fd528823e8d35d8e 1-165
+packages/storybook-ink/package.json
+  946a4f46a4bc3032 12-15,19-20,26-28
+packages/storybook-ink/src/capture/cli.ts
+  946a4f46a4bc3032 32-33,37,46,58,61,64-65,71,135,172,174-179,181-211,218,221,225,229,233,237,246,258,301,304,319,321,325,329,346,349-352,367,371,375
+  fd528823e8d35d8e 29,31,34-36,43-45,47-57,59-60,62-63,132-134,136-171,173,180,212-217,219-220,222-224,226-228,230-232,234-236,238-245,247-257,259-280,298-300,302-303,324,326-328,330-345,347-348,353-366,368-370,372-374,376-377,383-386
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "dbfa53168db84e5cfcebbdec2dea891c5980edbc",
+  "prompts": {
+    "946a4f46a4bc3032": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a6715d20-fd60-42de-85ef-bc5aa6164155",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 224,
+      "total_deletions": 385,
+      "accepted_lines": 103,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1662,
+      "total_deletions": 120,
+      "accepted_lines": 1294,
+      "overriden_lines": 0
+    }
+  }
+}
