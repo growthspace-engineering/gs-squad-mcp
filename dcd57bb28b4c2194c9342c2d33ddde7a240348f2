@@ -1,0 +1,27 @@
+projects/simcity-browser-game/src/ui/DemandMeters.tsx
+  fd528823e8d35d8e 4-10,13,24,33-34,36-37,43,45,51,53,68-70,79,84,89
+projects/simcity-browser-game/src/store/gameStore.ts
+  fd528823e8d35d8e 63-86,91-102,120-125,175-176,306-312,326-332,994,1001-1002,1017-1039,1060-1061,1063-1068,1073-1082,1084,1087-1141
+projects/simcity-browser-game/src/ui/DemandMeters.css
+  fd528823e8d35d8e 3-5,57-58,61,66,68-71,74,78-81,87-90,96-99,108-127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "dcd57bb28b4c2194c9342c2d33ddde7a240348f2",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 234,
+      "total_deletions": 63,
+      "accepted_lines": 227,
+      "overriden_lines": 0
+    }
+  }
+}
