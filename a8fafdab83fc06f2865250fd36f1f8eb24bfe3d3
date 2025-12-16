@@ -1,0 +1,49 @@
+projects/simcity-browser-game/src/ui/Toolbar.tsx
+  fd528823e8d35d8e 1-121
+projects/simcity-browser-game/src/ui/GameHUD.tsx
+  fd528823e8d35d8e 1-34
+projects/simcity-browser-game/src/ui/InfoPanel.css
+  fd528823e8d35d8e 1-162
+projects/simcity-browser-game/src/ui/InfoPanel.tsx
+  fd528823e8d35d8e 1-123
+projects/simcity-browser-game/src/ui/DemandMeters.tsx
+  fd528823e8d35d8e 1-100
+projects/simcity-browser-game/src/ui/SpeedControls.css
+  fd528823e8d35d8e 1-107
+projects/simcity-browser-game/src/store/index.ts
+  fd528823e8d35d8e 6-17
+projects/simcity-browser-game/src/ui/index.ts
+  fd528823e8d35d8e 1-9
+projects/simcity-browser-game/src/App.tsx
+  fd528823e8d35d8e 2,12
+projects/simcity-browser-game/src/ui/GameHUD.css
+  fd528823e8d35d8e 1-116
+projects/simcity-browser-game/src/ui/Toolbar.css
+  fd528823e8d35d8e 1-177
+projects/simcity-browser-game/src/ui/DemandMeters.css
+  fd528823e8d35d8e 1-146
+projects/simcity-browser-game/src/store/uiStore.ts
+  fd528823e8d35d8e 1-227
+projects/simcity-browser-game/src/ui/SpeedControls.tsx
+  fd528823e8d35d8e 1-132
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "a8fafdab83fc06f2865250fd36f1f8eb24bfe3d3",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1469,
+      "total_deletions": 1,
+      "accepted_lines": 1468,
+      "overriden_lines": 0
+    }
+  }
+}
