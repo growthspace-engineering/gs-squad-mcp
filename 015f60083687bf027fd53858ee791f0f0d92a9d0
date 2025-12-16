@@ -1,0 +1,27 @@
+docs/simcity-browser-game/design-system.md
+  fd528823e8d35d8e 1-869
+projects/simcity-browser-game/src/types/index.ts
+  fd528823e8d35d8e 146-149,154-155,159-174,177,180-182,184-305
+projects/simcity-browser-game/src/index.css
+  fd528823e8d35d8e 103-104,108-123,127,129-137,141-163,165-168,170-177,179-182,184-208,210-218,220-228,230-274,276,280-288,292-295,297,301-313
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "015f60083687bf027fd53858ee791f0f0d92a9d0",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 1204,
+      "total_deletions": 37,
+      "accepted_lines": 1202,
+      "overriden_lines": 0
+    }
+  }
+}
