@@ -1,0 +1,35 @@
+projects/simcity-browser-game/src/ui/Toolbar.tsx
+  fd528823e8d35d8e 10,20-21,25,27,32-33,36-37,39,44-46,50,63,66,73-75,79-81,84-85,92,107-113,122,135-144,150,163,167-171,174,181,188,195
+projects/simcity-browser-game/src/store/gameStore.ts
+  fd528823e8d35d8e 6,16,19-20,56,59-62,65-66,68,71-75,125-132,158-159,168,170,230,351-353,375-377,389-390,412-419,426,430,434-436,441,450,1098-1100,1102-1105,1107,1109-1112,1114,1116-1119,1121,1210-1220
+projects/simcity-browser-game/src/store/uiStore.ts
+  fd528823e8d35d8e 18-20,38,40-43,50,58,67,76-110
+projects/simcity-browser-game/src/types/index.ts
+  fd528823e8d35d8e 20-23,41-42
+projects/simcity-browser-game/src/rendering/TileRenderer.ts
+  fd528823e8d35d8e 318-336,402-479,481-499
+projects/simcity-browser-game/src/Game.tsx
+  fd528823e8d35d8e 6,214,225-226,332,336-343,433-436,545-546,554-562,769,799-800
+projects/simcity-browser-game/src/ui/Toolbar.css
+  fd528823e8d35d8e 86-114,132-141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "4ec138044b1e546f70ea0437815524f1739107a5",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 400,
+      "total_deletions": 65,
+      "accepted_lines": 386,
+      "overriden_lines": 0
+    }
+  }
+}
