@@ -1,0 +1,35 @@
+projects/simcity-browser-game/src/ui/PausedOverlay.tsx
+  fd528823e8d35d8e 1-33
+projects/simcity-browser-game/src/ui/PausedOverlay.css
+  fd528823e8d35d8e 1-119
+projects/simcity-browser-game/src/ui/SpeedControls.tsx
+  fd528823e8d35d8e 32,36,39,112
+projects/simcity-browser-game/src/ui/SpeedControls.css
+  fd528823e8d35d8e 22,41-45,52-63
+projects/simcity-browser-game/src/ui/index.ts
+  fd528823e8d35d8e 13
+projects/simcity-browser-game/src/store/uiStore.ts
+  fd528823e8d35d8e 254-255,312,328-330,333-339,341,345,347-348,350-352
+projects/simcity-browser-game/src/App.tsx
+  fd528823e8d35d8e 2,15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "fa693df705ea082b4052783b1ca67c6be6d3f1fa",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 202,
+      "total_deletions": 15,
+      "accepted_lines": 199,
+      "overriden_lines": 0
+    }
+  }
+}
