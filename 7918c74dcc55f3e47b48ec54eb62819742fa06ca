@@ -1,0 +1,52 @@
+docs/simcity-browser-game/user-stories.md
+  fd528823e8d35d8e 1-682
+docs/simcity-browser-game/rendering-spec.md
+  fd528823e8d35d8e 1-2286
+docs/simcity-browser-game/architecture.md
+  fd528823e8d35d8e 1-2000
+docs/simcity-browser-game/simulation-spec.md
+  fd528823e8d35d8e 1-1438
+docs/simcity-browser-game/technical-feasibility.md
+  fd528823e8d35d8e 1-1737
+docs/simcity-browser-game/ui-spec.md
+  fd528823e8d35d8e 1-2099
+docs/simcity-browser-game/sprint-plan.md
+  fd528823e8d35d8e 1-1165
+docs/simcity-browser-game/game-mechanics-analysis.md
+  fd528823e8d35d8e 1-677
+docs/simcity-browser-game/requirements.md
+  fd528823e8d35d8e 1-627
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "7918c74dcc55f3e47b48ec54eb62819742fa06ca",
+  "prompts": {
+    "c08fa5e9efd7e451": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ace6d14f-f68e-48d2-b791-53fc258d8206",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 46,
+      "total_deletions": 0,
+      "accepted_lines": 46,
+      "overriden_lines": 0
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 14846,
+      "total_deletions": 660,
+      "accepted_lines": 14171,
+      "overriden_lines": 0
+    }
+  }
+}
