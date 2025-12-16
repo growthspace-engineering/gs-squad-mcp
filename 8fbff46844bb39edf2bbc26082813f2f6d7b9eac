@@ -1,0 +1,31 @@
+projects/simcity-browser-game/src/types/index.ts
+  fd528823e8d35d8e 48-53
+projects/simcity-browser-game/src/ui/InfoPanel.tsx
+  fd528823e8d35d8e 5,15-17,30,81,92,94-96,104
+projects/simcity-browser-game/src/store/gameStore.ts
+  fd528823e8d35d8e 47-61,77-82,128-131,155-157,258-260,270-273,922-988
+projects/simcity-browser-game/src/Game.tsx
+  fd528823e8d35d8e 3,10-17,68-70,716-746
+projects/simcity-browser-game/src/rendering/TileRenderer.ts
+  fd528823e8d35d8e 216-218,224-226,228-262,264-265,269,279-380
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "8fbff46844bb39edf2bbc26082813f2f6d7b9eac",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 318,
+      "total_deletions": 35,
+      "accepted_lines": 312,
+      "overriden_lines": 0
+    }
+  }
+}
