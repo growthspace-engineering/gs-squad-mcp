@@ -1,0 +1,23 @@
+.github/workflows/pr-storybook-preview.yml
+  11086a3fd544b18d 1-166
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "2a2a18a0f61f1822704dd7e94ee45c0aeb53a9be",
+  "prompts": {
+    "11086a3fd544b18d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7209ea83-b710-4977-9ea8-a2fa4f8e9e2e",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 166,
+      "total_deletions": 0,
+      "accepted_lines": 166,
+      "overriden_lines": 0
+    }
+  }
+}
