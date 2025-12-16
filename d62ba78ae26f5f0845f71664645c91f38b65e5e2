@@ -1,0 +1,25 @@
+projects/simcity-browser-game/src/ui/InfoPanel.tsx
+  fd528823e8d35d8e 5,8,12,16,111-115
+projects/simcity-browser-game/src/store/gameStore.ts
+  fd528823e8d35d8e 325-329
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "d62ba78ae26f5f0845f71664645c91f38b65e5e2",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 14,
+      "total_deletions": 7,
+      "accepted_lines": 14,
+      "overriden_lines": 0
+    }
+  }
+}
