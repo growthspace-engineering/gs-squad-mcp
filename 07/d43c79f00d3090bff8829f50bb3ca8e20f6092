@@ -1,0 +1,33 @@
+projects/simcity-browser-game/src/rendering/TrafficRenderer.ts
+  fd528823e8d35d8e 295-300
+projects/simcity-browser-game/src/ui/LoadDialog.tsx
+  fd528823e8d35d8e 63,65
+projects/simcity-browser-game/src/ui/LoadDialog.css
+  fd528823e8d35d8e 18
+projects/simcity-browser-game/src/ui/SettingsDialog.css
+  fd528823e8d35d8e 18
+projects/simcity-browser-game/src/ui/SplashScreen.tsx
+  fd528823e8d35d8e 25,28-29,64,68
+projects/simcity-browser-game/src/utils/AudioManager.ts
+  fd528823e8d35d8e 28,30,42,44-45,98,104-108,154-184,233-239,284-288
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "07d43c79f00d3090bff8829f50bb3ca8e20f6092",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 71,
+      "total_deletions": 12,
+      "accepted_lines": 71,
+      "overriden_lines": 0
+    }
+  }
+}
