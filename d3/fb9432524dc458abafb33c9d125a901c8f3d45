@@ -1,0 +1,43 @@
+projects/simcity-browser-game/src/Game.tsx
+  fd528823e8d35d8e 6,229,231-235,255,257-261,281,283-286,298-300,312-314,334,336-339,359,361-365
+projects/simcity-browser-game/src/ui/index.ts
+  fd528823e8d35d8e 17
+projects/simcity-browser-game/src/utils/index.ts
+  fd528823e8d35d8e 25-26
+projects/simcity-browser-game/src/ui/SplashScreen.tsx
+  fd528823e8d35d8e 11,19-26,34,37,40-45,87
+projects/simcity-browser-game/src/ui/Notification.tsx
+  fd528823e8d35d8e 8,10,47-49,66-68,73-82,91
+projects/simcity-browser-game/src/ui/Toolbar.tsx
+  fd528823e8d35d8e 11,29,223-226,236-239
+projects/simcity-browser-game/src/ui/MuteButton.css
+  fd528823e8d35d8e 1-47
+projects/simcity-browser-game/src/ui/GameHUD.tsx
+  fd528823e8d35d8e 5,13,31,34
+projects/simcity-browser-game/src/ui/SpeedControls.tsx
+  fd528823e8d35d8e 12,35-39,43
+projects/simcity-browser-game/src/ui/MuteButton.tsx
+  fd528823e8d35d8e 1-70
+projects/simcity-browser-game/src/utils/AudioManager.ts
+  fd528823e8d35d8e 1-266
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "d3fb9432524dc458abafb33c9d125a901c8f3d45",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 482,
+      "total_deletions": 11,
+      "accepted_lines": 481,
+      "overriden_lines": 0
+    }
+  }
+}
