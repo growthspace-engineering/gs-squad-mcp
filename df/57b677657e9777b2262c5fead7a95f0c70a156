@@ -1,0 +1,23 @@
+projects/simcity-browser-game/src/ui/SplashScreen.tsx
+  c08fa5e9efd7e451 64-65,70-85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "df57b677657e9777b2262c5fead7a95f0c70a156",
+  "prompts": {
+    "c08fa5e9efd7e451": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ace6d14f-f68e-48d2-b791-53fc258d8206",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 18,
+      "total_deletions": 2,
+      "accepted_lines": 18,
+      "overriden_lines": 0
+    }
+  }
+}
