@@ -1,0 +1,27 @@
+projects/simcity-browser-game/src/index.css
+  c08fa5e9efd7e451 449-467,471
+projects/simcity-browser-game/src/Game.tsx
+  c08fa5e9efd7e451 923,929
+projects/simcity-browser-game/src/utils/AudioManager.ts
+  c08fa5e9efd7e451 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "b579e019432cfeb10df948aaf732b88d1fb8aa8b",
+  "prompts": {
+    "c08fa5e9efd7e451": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ace6d14f-f68e-48d2-b791-53fc258d8206",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 23,
+      "total_deletions": 13,
+      "accepted_lines": 23,
+      "overriden_lines": 0
+    }
+  }
+}
