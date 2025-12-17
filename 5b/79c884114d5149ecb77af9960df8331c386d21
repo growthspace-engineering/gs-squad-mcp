@@ -1,0 +1,23 @@
+projects/simcity-browser-game/src/store/gameStore.ts
+  c08fa5e9efd7e451 1770-1791
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "5b79c884114d5149ecb77af9960df8331c386d21",
+  "prompts": {
+    "c08fa5e9efd7e451": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ace6d14f-f68e-48d2-b791-53fc258d8206",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 22,
+      "total_deletions": 0,
+      "accepted_lines": 22,
+      "overriden_lines": 0
+    }
+  }
+}
