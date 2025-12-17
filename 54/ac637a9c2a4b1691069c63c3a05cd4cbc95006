@@ -1,0 +1,44 @@
+projects/simcity-browser-game/src/App.tsx
+  fd528823e8d35d8e 2-3,10-11,14-19,26-28
+projects/simcity-browser-game/src/ui/SplashScreen.tsx
+  fd528823e8d35d8e 1-93
+projects/simcity-browser-game/src/ui/SplashScreen.css
+  fd528823e8d35d8e 1-486
+projects/simcity-browser-game/src/ui/index.ts
+  fd528823e8d35d8e 16
+projects/simcity-browser-game/src/store/uiStore.ts
+  fd528823e8d35d8e 248-249,271-272,325,337-340
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "54ac637a9c2a4b1691069c63c3a05cd4cbc95006",
+  "prompts": {
+    "3c9a474f97485f1d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "2ee32bf4-3c7f-4d55-9c44-e02948f75f02",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 317,
+      "total_deletions": 0,
+      "accepted_lines": 316,
+      "overriden_lines": 1
+    },
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 608,
+      "total_deletions": 8,
+      "accepted_lines": 602,
+      "overriden_lines": 0
+    }
+  }
+}
