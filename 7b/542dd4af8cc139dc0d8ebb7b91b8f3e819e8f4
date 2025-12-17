@@ -1,0 +1,45 @@
+projects/simcity-browser-game/src/Game.tsx
+  fd528823e8d35d8e 80-83,91-93,95-126,129-130
+projects/simcity-browser-game/src/types/index.ts
+  fd528823e8d35d8e 143,177-178
+projects/simcity-browser-game/src/ui/SettingsDialog.tsx
+  fd528823e8d35d8e 1-183
+projects/simcity-browser-game/src/ui/GameHUD.tsx
+  fd528823e8d35d8e 5,30
+projects/simcity-browser-game/src/ui/SplashScreen.css
+  fd528823e8d35d8e 204,207,209,213-219,223-238,240,249-261,274-287,305-308,310-311,314-317,319,323-342,345-346,350,459-467,499-507,510-514,517,545-546,558,565
+projects/simcity-browser-game/src/ui/Toolbar.tsx
+  fd528823e8d35d8e 126,248-260
+projects/simcity-browser-game/src/App.tsx
+  fd528823e8d35d8e 2,28-31
+projects/simcity-browser-game/src/ui/LoadDialog.tsx
+  fd528823e8d35d8e 14,26-27,62-67,75
+projects/simcity-browser-game/src/ui/SettingsDialog.css
+  fd528823e8d35d8e 1-415
+projects/simcity-browser-game/src/store/uiStore.ts
+  fd528823e8d35d8e 268-269,299-302,341,430-437
+projects/simcity-browser-game/src/ui/SplashScreen.tsx
+  fd528823e8d35d8e 5-6,10,12,18-19,21-22,33-47,63,67,108-132,139-149
+projects/simcity-browser-game/src/ui/index.ts
+  fd528823e8d35d8e 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "7b542dd4af8cc139dc0d8ebb7b91b8f3e819e8f4",
+  "prompts": {
+    "fd528823e8d35d8e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "",
+        "model": "unknown"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 889,
+      "total_deletions": 78,
+      "accepted_lines": 871,
+      "overriden_lines": 0
+    }
+  }
+}
