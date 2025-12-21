@@ -1,0 +1,25 @@
+src/core/config/model-resolver.ts
+  7dc85deecca1167e 8,83-91,93-94
+src/core/config/model-mapping.ts
+  7dc85deecca1167e 16-17,20-21,24-25,27,29-30,90-91,208-242
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "4c905d118a31fb6906a08319f3676e9b6511a589",
+  "prompts": {
+    "7dc85deecca1167e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "282a075a-c7b1-4b5c-be82-8e583d461a85",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 92,
+      "total_deletions": 16,
+      "accepted_lines": 82,
+      "overriden_lines": 0
+    }
+  }
+}
