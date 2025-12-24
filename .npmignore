@@ -52,3 +52,19 @@ node_modules/
 coverage/
 .nyc_output/
 
+# Generated during CI/local development
+test-results/
+deploy-root/
+shared-history/
+projects/
+packages/
+
+# Cursor IDE
+.cursor/
+
+# Specstory chat history
+.specstory/
+
+# Docs (optional - keep if you want them in the package)
+docs/
+
