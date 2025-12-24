@@ -1,0 +1,23 @@
+.npmignore
+  dd2f1600c0fa774b 55-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.24",
+  "base_commit_sha": "00261d0071a59de3dc993d9bc315d6725f88ddfc",
+  "prompts": {
+    "dd2f1600c0fa774b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "5369c3a6-ea04-4423-b917-519995a8495e",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "thatkookooguy <Neilkalman@gmail.com>",
+      "messages": [],
+      "total_additions": 16,
+      "total_deletions": 0,
+      "accepted_lines": 16,
+      "overriden_lines": 0
+    }
+  }
+}
