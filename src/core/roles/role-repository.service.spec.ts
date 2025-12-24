@@ -25,7 +25,7 @@ describe('RoleRepositoryService', () => {
               engine: 'cursor-agent' as const,
               executionMode: undefined,
               runTemplatePath: 'templates/run-cursor-agent.template',
-              processTimeoutMs: 300000
+              processTimeoutMs: 600000
             })
           }
         }

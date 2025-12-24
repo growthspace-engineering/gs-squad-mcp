@@ -122,7 +122,7 @@ export class SquadConfigService {
       agentsDirectoryPath:
         process.env.AGENTS_DIRECTORY_PATH || 'agents',
       processTimeoutMs: parseInt(
-        process.env.PROCESS_TIMEOUT_MS || '300000',
+        process.env.PROCESS_TIMEOUT_MS || '600000',
         10
       ),
       sequentialDelayMs: Number.isNaN(sequentialDelayRaw)

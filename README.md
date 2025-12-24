@@ -87,7 +87,7 @@ CREATE_CHAT_TEMPLATE_PATH=templates/create-chat.template  # Required for statefu
 AGENTS_DIRECTORY_PATH=agents
 
 # Process timeout (milliseconds)
-PROCESS_TIMEOUT_MS=300000
+PROCESS_TIMEOUT_MS=600000
 ```
 
 ### Running as MCP Server
