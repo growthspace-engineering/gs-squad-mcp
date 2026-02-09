@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor AI Chat Viewer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z" fill="#111827"/>
+                    <path d="M22.5 12.5L12.5 20L22.5 27.5V12.5Z" fill="white"/>
+                    <path d="M27.5 12.5L17.5 20L27.5 27.5V12.5Z" fill="#6366F1"/>
+                </svg>
+                <h1>Cursor AI Chat Viewer</h1>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" type="button" aria-label="Toggle dark/light theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section id="input-section">
+                <h2>Load Chat History</h2>
+                <p>Choose one of the following methods to view a Cursor AI chat:</p>
+                
+                <div class="notification-container" id="notification-container">
+                    <!-- Notifications will be placed here -->
+                </div>
+                
+                <div class="input-options">
+                    <div class="input-option">
+                        <h3>1. Upload MD File</h3>
+                        <input type="file" id="file-upload" accept=".md" class="file-input">
+                        <label for="file-upload" class="file-input-label">Choose File</label>
+                    </div>
+                    
+                    <div class="input-option">
+                        <h3>2. Paste MD Content</h3>
+                        <button id="paste-btn" class="action-button" type="button">Paste Content</button>
+                    </div>
+                    
+                    <div class="input-option">
+                        <h3>3. Select Shared Chat</h3>
+                        <select id="shared-chats" class="select-input">
+                            <option value="">Choose a shared chat</option>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="paste-section" class="hidden">
+                <h2>Paste Markdown Content</h2>
+                <textarea id="markdown-content" placeholder="Paste your Cursor AI chat markdown here..."></textarea>
+                <div class="button-group">
+                    <button id="process-paste-btn" class="action-button" type="button">Process Content</button>
+                    <button id="cancel-paste-btn" class="cancel-button" type="button">Cancel</button>
+                </div>
+            </section>
+            
+            <section id="chat-section" class="hidden">
+                <div class="chat-header">
+                    <h2 id="chat-title">Chat Title</h2>
+                    <div class="metadata" id="chat-date">Date</div>
+                    <button id="back-btn" class="back-button" type="button">← Back to options</button>
+                </div>
+                
+                <div class="chat-container" id="chat-container">
+                    <!-- Chat messages will be inserted here by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+    
+    <footer>
+        <div class="container">
+            <p>Built with <a href="https://cursor.sh" target="_blank">Cursor AI</a> • Powered by Claude 3.7 Sonnet</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="js/parser.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 
