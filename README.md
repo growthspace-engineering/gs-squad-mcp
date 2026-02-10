@@ -20,6 +20,9 @@
     <img src="https://img.shields.io/endpoint?url=https://growthspace-engineering.github.io/gs-squad-mcp/tests/branch/beta/combined-coverage/badge.json&label=coverage&style=flat-square">
   </a>
   <a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg"></a>
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<a href="#contributors-"><img src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square" alt="All Contributors"></a>
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
 
 <p align="center">
@@ -383,6 +386,36 @@ This project is licensed under the [MIT License](./LICENSE).
 ## Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+This project follows the [Contributor Covenant Code of Conduct](./CODE_OF_CONDUCT.md).
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://thatkookooguy.kibibit.io/"><img src="https://avatars.githubusercontent.com/u/10427304?v=4?s=100" width="100px;" alt="Neil Kalman"/><br /><sub><b>Neil Kalman</b></sub></a><br /><a href="https://github.com/growthspace-engineering/gs-squad-mcp/commits?author=thatkookooguy" title="Code">💻</a> <a href="#ideas-thatkookooguy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-thatkookooguy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-thatkookooguy" title="Maintenance">🚧</a> <a href="https://github.com/growthspace-engineering/gs-squad-mcp/commits?author=thatkookooguy" title="Documentation">📖</a> <a href="#research-thatkookooguy" title="Research">🔬</a> <a href="#question-thatkookooguy" title="Answering Questions">💬</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+You can add contributors using:
+
+```bash
+npm run contributors:add
+```
 
 ## Support
 

@@ -35,6 +35,9 @@
     "test:all:cov": "concurrently --success all -n unit,e2e -c blue,magenta \"npm run test:unit:cov\" \"npm run test:e2e:cov\" && npm run coverage:merge",
     "start:dev": "npm run barrels && nest start --watch",
     "commit": "cz",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "contributors:check": "all-contributors check",
     "prepare": "husky",
     "release": "semantic-release"
   },
@@ -94,6 +97,7 @@
     "@types/node": "^20.19.25",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
+    "all-contributors-cli": "^6.26.1",
     "barrelsby": "^2.8.1",
     "commitizen": "^4.3.1",
     "concurrently": "^9.2.1",
