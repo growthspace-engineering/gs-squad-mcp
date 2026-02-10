@@ -13,11 +13,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/growthspace-engineering/gs-squad-mcp/tags">
-    <img src="https://img.shields.io/github/v/tag/growthspace-engineering/gs-squad-mcp?filter=*-beta*&label=beta&logo=npm&color=CB3837&style=flat-square">
-  </a>
-  <a href="https://growthspace-engineering.github.io/gs-squad-mcp/tests/branch/beta/combined-coverage/">
-    <img src="https://img.shields.io/endpoint?url=https://growthspace-engineering.github.io/gs-squad-mcp/tests/branch/beta/combined-coverage/badge.json&label=coverage&style=flat-square">
+  <a href="https://growthspace-engineering.github.io/gs-squad-mcp/tests/branch/main/combined-coverage/">
+    <img src="https://img.shields.io/endpoint?url=https://growthspace-engineering.github.io/gs-squad-mcp/tests/branch/main/combined-coverage/badge.json&label=coverage&style=flat-square">
   </a>
   <a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg"></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
