@@ -155,12 +155,8 @@ jobs:
       - name: Release
         id: semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-          GIT_AUTHOR_NAME: gr0wth-b0t
-          GIT_AUTHOR_EMAIL: gsBot@growthspace.com
-          GIT_COMMITTER_NAME: gr0wth-b0t
-          GIT_COMMITTER_EMAIL: gsBot@growthspace.com
-          NPM_TOKEN: ${{ secrets.BOT_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run release
 
