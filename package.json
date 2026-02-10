@@ -1,6 +1,6 @@
 {
   "name": "@growthspace-engineering/gs-squad-mcp",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A TypeScript / NestJS MCP that spawns role-specialized CLI agents using stdio",
   "main": "dist/cli/main-stdio.js",
   "types": "dist/cli/main-stdio.d.ts",
