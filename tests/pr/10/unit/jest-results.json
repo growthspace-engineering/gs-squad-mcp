@@ -1,0 +1,2569 @@
+{
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 9,
+  "numPassedTests": 120,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 4,
+  "numTotalTestSuites": 9,
+  "numTotalTests": 124,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1770662406687,
+  "success": false,
+  "testResults": [
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 29,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770662411727,
+        "loadTestEnvironmentEnd": 1770662406753,
+        "loadTestEnvironmentStart": 1770662406711,
+        "runtime": 4971,
+        "setupAfterEnvEnd": 1770662409256,
+        "setupAfterEnvStart": 1770662406875,
+        "setupFilesEnd": 1770662406756,
+        "setupFilesStart": 1770662406756,
+        "slow": false,
+        "start": 1770662406756
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/mcp/squad.service.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "listRoles"
+          ],
+          "duration": 13,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService listRoles should return expected shape",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411521,
+          "status": "passed",
+          "title": "should return expected shape"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "listRoles"
+          ],
+          "duration": 4,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService listRoles should reflect updated agents",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662411535,
+          "status": "passed",
+          "title": "should reflect updated agents"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 14,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless single member happy path",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1770662411539,
+          "status": "passed",
+          "title": "single member happy path"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 5,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless multiple members in one call",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770662411553,
+          "status": "passed",
+          "title": "multiple members in one call"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 40,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless serializes members when engine uses cursor-agent",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662411558,
+          "status": "passed",
+          "title": "serializes members when engine uses cursor-agent"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 36,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless missing role error handling",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411598,
+          "status": "passed",
+          "title": "missing role error handling"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 5,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless status mapping (exitCode/timeouts)",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662411634,
+          "status": "passed",
+          "title": "status mapping (exitCode/timeouts)"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 5,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless escapes prompts with shell metacharacters",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1770662411639,
+          "status": "passed",
+          "title": "escapes prompts with shell metacharacters"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless throws when run template rendering fails",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411644,
+          "status": "passed",
+          "title": "throws when run template rendering fails"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless throws when run template renders to empty command",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411647,
+          "status": "passed",
+          "title": "throws when run template renders to empty command"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 17,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless forces sequential execution when PROCESS_RUNNER_SERIALIZE=true",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411650,
+          "status": "passed",
+          "title": "forces sequential execution when PROCESS_RUNNER_SERIALIZE=true"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 7,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless forces parallel execution when PROCESS_RUNNER_SERIALIZE=false",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411667,
+          "status": "passed",
+          "title": "forces parallel execution when PROCESS_RUNNER_SERIALIZE=false"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless propagates process runner errors",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411674,
+          "status": "passed",
+          "title": "propagates process runner errors"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateless"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateless prefers timeout status even if exit code is zero",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411677,
+          "status": "passed",
+          "title": "prefers timeout status even if exit code is zero"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 4,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful new chat returns chatId",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662411678,
+          "status": "passed",
+          "title": "new chat returns chatId"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful errors when create-chat template renders empty command",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411682,
+          "status": "passed",
+          "title": "errors when create-chat template renders empty command"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful existing chat reuses chatId",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662411684,
+          "status": "passed",
+          "title": "existing chat reuses chatId"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful failure in create-chat handled gracefully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411685,
+          "status": "passed",
+          "title": "failure in create-chat handled gracefully"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful role not found throws error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411687,
+          "status": "passed",
+          "title": "role not found throws error"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful empty chatId from create-chat throws error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411689,
+          "status": "passed",
+          "title": "empty chatId from create-chat throws error"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 7,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful throws when create-chat template rendering fails",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411691,
+          "status": "passed",
+          "title": "throws when create-chat template rendering fails"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful throws when run template renders empty string",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411698,
+          "status": "passed",
+          "title": "throws when run template renders empty string"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful treats empty chatId input as request for new chat",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770662411700,
+          "status": "passed",
+          "title": "treats empty chatId input as request for new chat"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful throws when run template rendering fails",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411702,
+          "status": "passed",
+          "title": "throws when run template rendering fails"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful propagates errors from run command execution",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411704,
+          "status": "passed",
+          "title": "propagates errors from run command execution"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful sets timeout status even when exit code indicates success",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411706,
+          "status": "passed",
+          "title": "sets timeout status even when exit code indicates success"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 11,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful serializes stateful members when executionMode requests sequential",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411707,
+          "status": "passed",
+          "title": "serializes stateful members when executionMode requests sequential"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "startSquadMembersStateful"
+          ],
+          "duration": 4,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService startSquadMembersStateful runs stateful members in parallel when executionMode=parallel",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411719,
+          "status": "passed",
+          "title": "runs stateful members in parallel when executionMode=parallel"
+        },
+        {
+          "ancestorTitles": [
+            "SquadService",
+            "escapePromptForShell"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadService escapePromptForShell handles various whitespace and control characters",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662411724,
+          "status": "passed",
+          "title": "handles various whitespace and control characters"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "unit"
+      },
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 27,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770662412530,
+        "loadTestEnvironmentEnd": 1770662411786,
+        "loadTestEnvironmentStart": 1770662411781,
+        "runtime": 744,
+        "setupAfterEnvEnd": 1770662411813,
+        "setupAfterEnvStart": 1770662411810,
+        "setupFilesEnd": 1770662411786,
+        "setupFilesStart": 1770662411786,
+        "slow": false,
+        "start": 1770662411786
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/cli/mcp-cli.command.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "run"
+          ],
+          "duration": 5,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand run should create readline interface with correct options",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412461,
+          "status": "passed",
+          "title": "should create readline interface with correct options"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "run"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand run should register line event handler",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412467,
+          "status": "passed",
+          "title": "should register line event handler"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "run"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand run should register close event handler",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412470,
+          "status": "passed",
+          "title": "should register close event handler"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "run"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand run should exit process on close event",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412472,
+          "status": "passed",
+          "title": "should exit process on close event"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - initialize"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - initialize should return correct initialize response",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412476,
+          "status": "passed",
+          "title": "should return correct initialize response"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - initialize"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - initialize should handle initialize without id",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412479,
+          "status": "passed",
+          "title": "should handle initialize without id"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - tools/list"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - tools/list should return correct tools list",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 5,
+          "retryReasons": [],
+          "startAt": 1770662412482,
+          "status": "passed",
+          "title": "should return correct tools list"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - tools/call"
+          ],
+          "duration": 5,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - tools/call should handle list_roles tool call",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412485,
+          "status": "passed",
+          "title": "should handle list_roles tool call"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - tools/call"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - tools/call should handle start_squad_members tool call in stateless mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662412490,
+          "status": "passed",
+          "title": "should handle start_squad_members tool call in stateless mode"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - tools/call"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - tools/call should handle start_squad_members tool call in stateful mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412494,
+          "status": "passed",
+          "title": "should handle start_squad_members tool call in stateful mode"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - tools/call"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - tools/call should return error for unknown tool",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412496,
+          "status": "passed",
+          "title": "should return error for unknown tool"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - list_roles"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - list_roles should call squadService.listRoles",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412498,
+          "status": "passed",
+          "title": "should call squadService.listRoles"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - start_squad_members"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - start_squad_members should call startSquadMembersStateless in stateless mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412499,
+          "status": "passed",
+          "title": "should call startSquadMembersStateless in stateless mode"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - start_squad_members"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - start_squad_members should call startSquadMembersStateful in stateful mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412501,
+          "status": "passed",
+          "title": "should call startSquadMembersStateful in stateful mode"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - error handling"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - error handling should return error for unknown method",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412502,
+          "status": "passed",
+          "title": "should return error for unknown method"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - error handling"
+          ],
+          "duration": 7,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - error handling should catch and return internal errors",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412504,
+          "status": "passed",
+          "title": "should catch and return internal errors"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "handleRequest - error handling"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand handleRequest - error handling should handle non-Error exceptions",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412511,
+          "status": "passed",
+          "title": "should handle non-Error exceptions"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "sendResponse"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand sendResponse should write JSON response to stdout",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412513,
+          "status": "passed",
+          "title": "should write JSON response to stdout"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "sendResponse"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand sendResponse should handle responses without id",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412515,
+          "status": "passed",
+          "title": "should handle responses without id"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "line event handler"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand line event handler should parse valid JSON request and send response",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412516,
+          "status": "passed",
+          "title": "should parse valid JSON request and send response"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "line event handler"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand line event handler should handle invalid JSON gracefully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412518,
+          "status": "passed",
+          "title": "should handle invalid JSON gracefully"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "line event handler"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand line event handler should not send response for notifications (no id)",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412519,
+          "status": "passed",
+          "title": "should not send response for notifications (no id)"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "line event handler"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand line event handler should extract id from malformed JSON for error response",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1770662412521,
+          "status": "passed",
+          "title": "should extract id from malformed JSON for error response"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "CLI option parsing"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand CLI option parsing should parse engine option",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412522,
+          "status": "passed",
+          "title": "should parse engine option"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "CLI option parsing"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand CLI option parsing should parse execution mode option",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412524,
+          "status": "passed",
+          "title": "should parse execution mode option"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "CLI option parsing"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand CLI option parsing should parse sequential flag",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412526,
+          "status": "passed",
+          "title": "should parse sequential flag"
+        },
+        {
+          "ancestorTitles": [
+            "McpCliCommand",
+            "CLI option parsing"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "McpCliCommand CLI option parsing should parse state mode option",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412528,
+          "status": "passed",
+          "title": "should parse state mode option"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "unit"
+      },
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 9,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770662412833,
+        "loadTestEnvironmentEnd": 1770662412575,
+        "loadTestEnvironmentStart": 1770662412572,
+        "runtime": 257,
+        "setupAfterEnvEnd": 1770662412606,
+        "setupAfterEnvStart": 1770662412603,
+        "setupFilesEnd": 1770662412576,
+        "setupFilesStart": 1770662412576,
+        "slow": false,
+        "start": 1770662412576
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/engine/process-runner.service.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "ProcessRunnerService"
+          ],
+          "duration": 5,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ProcessRunnerService should spawn shell command with args and capture IO",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662412807,
+          "status": "passed",
+          "title": "should spawn shell command with args and capture IO"
+        },
+        {
+          "ancestorTitles": [
+            "ProcessRunnerService"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ProcessRunnerService should resolve with collected stderr when process emits an error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412812,
+          "status": "passed",
+          "title": "should resolve with collected stderr when process emits an error"
+        },
+        {
+          "ancestorTitles": [
+            "ProcessRunnerService"
+          ],
+          "duration": 4,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ProcessRunnerService should mark execution as timed out and send termination signals",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662412814,
+          "status": "passed",
+          "title": "should mark execution as timed out and send termination signals"
+        },
+        {
+          "ancestorTitles": [
+            "ProcessRunnerService"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ProcessRunnerService should clear the timeout when the process closes before the deadline",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412818,
+          "status": "passed",
+          "title": "should clear the timeout when the process closes before the deadline"
+        },
+        {
+          "ancestorTitles": [
+            "ProcessRunnerService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ProcessRunnerService should run multiple processes concurrently without leaking output",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 5,
+          "retryReasons": [],
+          "startAt": 1770662412820,
+          "status": "passed",
+          "title": "should run multiple processes concurrently without leaking output"
+        },
+        {
+          "ancestorTitles": [
+            "ProcessRunnerService"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ProcessRunnerService should log spawn details when debug flag is enabled",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412823,
+          "status": "passed",
+          "title": "should log spawn details when debug flag is enabled"
+        },
+        {
+          "ancestorTitles": [
+            "ProcessRunnerService"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ProcessRunnerService should skip stdin closing when a stream is not provided",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662412826,
+          "status": "passed",
+          "title": "should skip stdin closing when a stream is not provided"
+        },
+        {
+          "ancestorTitles": [
+            "ProcessRunnerService"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ProcessRunnerService should tolerate processes without stdout or stderr streams",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412828,
+          "status": "passed",
+          "title": "should tolerate processes without stdout or stderr streams"
+        },
+        {
+          "ancestorTitles": [
+            "ProcessRunnerService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "ProcessRunnerService should not attempt to send signals when the child lacks a pid",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662412830,
+          "status": "passed",
+          "title": "should not attempt to send signals when the child lacks a pid"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "unit"
+      },
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 14,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770662413017,
+        "loadTestEnvironmentEnd": 1770662412850,
+        "loadTestEnvironmentStart": 1770662412847,
+        "runtime": 167,
+        "setupAfterEnvEnd": 1770662412883,
+        "setupAfterEnvStart": 1770662412881,
+        "setupFilesEnd": 1770662412850,
+        "setupFilesStart": 1770662412850,
+        "slow": false,
+        "start": 1770662412850
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/prompt/prompt-builder.service.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "buildPromptStateless"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService buildPromptStateless should contain role body, task, and footer",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1770662412990,
+          "status": "passed",
+          "title": "should contain role body, task, and footer"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "buildPromptStateless"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService buildPromptStateless should format prompt correctly with separators",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770662412994,
+          "status": "passed",
+          "title": "should format prompt correctly with separators"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "buildPromptStatefulNewChat"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService buildPromptStatefulNewChat should contain role body, initial task, and footer",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1770662412995,
+          "status": "passed",
+          "title": "should contain role body, initial task, and footer"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "buildPromptStatefulNewChat"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService buildPromptStatefulNewChat should use \"Initial Task\" instead of \"Task\"",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662412997,
+          "status": "passed",
+          "title": "should use \"Initial Task\" instead of \"Task\""
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "edge cases and formatting"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService edge cases and formatting should keep formatting separators even with surrounding whitespace",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662412998,
+          "status": "passed",
+          "title": "should keep formatting separators even with surrounding whitespace"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "edge cases and formatting"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService edge cases and formatting should preserve special characters in role body and task",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662413000,
+          "status": "passed",
+          "title": "should preserve special characters in role body and task"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "edge cases and formatting"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService edge cases and formatting should handle empty role body and task inputs",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1770662413002,
+          "status": "passed",
+          "title": "should handle empty role body and task inputs"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "edge cases and formatting"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService edge cases and formatting should include very long role and task values without truncation",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662413005,
+          "status": "passed",
+          "title": "should include very long role and task values without truncation"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "edge cases and formatting"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService edge cases and formatting should preserve explicit newlines within tasks for existing chats",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413007,
+          "status": "passed",
+          "title": "should preserve explicit newlines within tasks for existing chats"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "buildPromptStatefulExistingChat"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService buildPromptStatefulExistingChat should contain task only and footer",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 5,
+          "retryReasons": [],
+          "startAt": 1770662413008,
+          "status": "passed",
+          "title": "should contain task only and footer"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "buildPromptStatefulExistingChat"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService buildPromptStatefulExistingChat should not include role information",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662413010,
+          "status": "passed",
+          "title": "should not include role information"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "setupReportingFooter"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService setupReportingFooter should append footer to all prompt types",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662413011,
+          "status": "passed",
+          "title": "should append footer to all prompt types"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "setupReportingFooter"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService setupReportingFooter should include instructions about reporting issues",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662413013,
+          "status": "passed",
+          "title": "should include instructions about reporting issues"
+        },
+        {
+          "ancestorTitles": [
+            "PromptBuilderService",
+            "setupReportingFooter"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "PromptBuilderService setupReportingFooter should append identical footer text exactly once to every prompt",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1770662413015,
+          "status": "passed",
+          "title": "should append identical footer text exactly once to every prompt"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "unit"
+      },
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 15,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770662413348,
+        "loadTestEnvironmentEnd": 1770662413045,
+        "loadTestEnvironmentStart": 1770662413040,
+        "runtime": 303,
+        "setupAfterEnvEnd": 1770662413090,
+        "setupAfterEnvStart": 1770662413083,
+        "setupFilesEnd": 1770662413045,
+        "setupFilesStart": 1770662413045,
+        "slow": false,
+        "start": 1770662413045
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/config/squad-config.service.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 7,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should provide default values when env vars are not set",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1770662413275,
+          "status": "passed",
+          "title": "should provide default values when env vars are not set"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should override defaults with env vars when provided",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1770662413283,
+          "status": "passed",
+          "title": "should override defaults with env vars when provided"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 35,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should throw error for invalid STATE_MODE",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413286,
+          "status": "passed",
+          "title": "should throw error for invalid STATE_MODE"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should auto-select default create-chat template in stateful mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413321,
+          "status": "passed",
+          "title": "should auto-select default create-chat template in stateful mode"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should resolve create-chat template based on engine when stateful",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413324,
+          "status": "passed",
+          "title": "should resolve create-chat template based on engine when stateful"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should return a copy of config",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662413327,
+          "status": "passed",
+          "title": "should return a copy of config"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should throw error for invalid ENGINE values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413328,
+          "status": "passed",
+          "title": "should throw error for invalid ENGINE values"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should throw error for invalid execution modes provided via CLI",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413332,
+          "status": "passed",
+          "title": "should throw error for invalid execution modes provided via CLI"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should prioritize CLI args over env vars for state mode, engine, and execution mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662413337,
+          "status": "passed",
+          "title": "should prioritize CLI args over env vars for state mode, engine, and execution mode"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should respect --sequential flag and override env execution mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413338,
+          "status": "passed",
+          "title": "should respect --sequential flag and override env execution mode"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should throw when RUN_TEMPLATE_PATH is provided without execution mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413341,
+          "status": "passed",
+          "title": "should throw when RUN_TEMPLATE_PATH is provided without execution mode"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should clamp negative sequential delay values to zero",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413343,
+          "status": "passed",
+          "title": "should clamp negative sequential delay values to zero"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should fallback to 1000ms when sequential delay env var is not a number",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413344,
+          "status": "passed",
+          "title": "should fallback to 1000ms when sequential delay env var is not a number"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should throw for invalid engine specified via CLI",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413345,
+          "status": "passed",
+          "title": "should throw for invalid engine specified via CLI"
+        },
+        {
+          "ancestorTitles": [
+            "SquadConfigService"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadConfigService should parse CLI equals syntax for state mode and engine",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662413347,
+          "status": "passed",
+          "title": "should parse CLI equals syntax for state mode and engine"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "unit"
+      },
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 11,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770662413550,
+        "loadTestEnvironmentEnd": 1770662413371,
+        "loadTestEnvironmentStart": 1770662413367,
+        "runtime": 179,
+        "setupAfterEnvEnd": 1770662413395,
+        "setupAfterEnvStart": 1770662413393,
+        "setupFilesEnd": 1770662413371,
+        "setupFilesStart": 1770662413371,
+        "slow": false,
+        "start": 1770662413371
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/roles/role-repository.service.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 9,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should load roles from agents directory",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 5,
+          "retryReasons": [],
+          "startAt": 1770662413497,
+          "status": "passed",
+          "title": "should load roles from agents directory"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should parse frontmatter correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770662413507,
+          "status": "passed",
+          "title": "should parse frontmatter correctly"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should fallback to roleId when name is missing",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662413510,
+          "status": "passed",
+          "title": "should fallback to roleId when name is missing"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should default metadata when markdown lacks frontmatter entirely",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770662413513,
+          "status": "passed",
+          "title": "should default metadata when markdown lacks frontmatter entirely"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should treat blank frontmatter fields as missing and trim the body",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770662413516,
+          "status": "passed",
+          "title": "should treat blank frontmatter fields as missing and trim the body"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should return null for unknown role",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413519,
+          "status": "passed",
+          "title": "should return null for unknown role"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should cache roles after first load",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662413521,
+          "status": "passed",
+          "title": "should cache roles after first load"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 4,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should reload roles when cache is invalidated",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662413524,
+          "status": "passed",
+          "title": "should reload roles when cache is invalidated"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 13,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should throw a descriptive error when the agents directory is unreadable",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413528,
+          "status": "passed",
+          "title": "should throw a descriptive error when the agents directory is unreadable"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 5,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should throw a descriptive error when markdown parsing fails",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413541,
+          "status": "passed",
+          "title": "should throw a descriptive error when markdown parsing fails"
+        },
+        {
+          "ancestorTitles": [
+            "RoleRepositoryService"
+          ],
+          "duration": 4,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "RoleRepositoryService should return consistent data when accessed concurrently",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770662413546,
+          "status": "passed",
+          "title": "should return consistent data when accessed concurrently"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "unit"
+      },
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 9,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770662413710,
+        "loadTestEnvironmentEnd": 1770662413574,
+        "loadTestEnvironmentStart": 1770662413571,
+        "runtime": 136,
+        "setupAfterEnvEnd": 1770662413605,
+        "setupAfterEnvStart": 1770662413603,
+        "setupFilesEnd": 1770662413574,
+        "setupFilesStart": 1770662413574,
+        "slow": false,
+        "start": 1770662413574
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/engine/template-renderer.service.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "TemplateRendererService",
+            "render"
+          ],
+          "duration": 4,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "TemplateRendererService render should handle template without chatId",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1770662413692,
+          "status": "passed",
+          "title": "should handle template without chatId"
+        },
+        {
+          "ancestorTitles": [
+            "TemplateRendererService",
+            "render"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "TemplateRendererService render should handle template with chatId",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662413697,
+          "status": "passed",
+          "title": "should handle template with chatId"
+        },
+        {
+          "ancestorTitles": [
+            "TemplateRendererService",
+            "render"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "TemplateRendererService render should trim and split args correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413699,
+          "status": "passed",
+          "title": "should trim and split args correctly"
+        },
+        {
+          "ancestorTitles": [
+            "TemplateRendererService",
+            "render"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "TemplateRendererService render should handle single quotes in template",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413700,
+          "status": "passed",
+          "title": "should handle single quotes in template"
+        },
+        {
+          "ancestorTitles": [
+            "TemplateRendererService",
+            "render"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "TemplateRendererService render should handle complex template with multiple variables",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 8,
+          "retryReasons": [],
+          "startAt": 1770662413702,
+          "status": "passed",
+          "title": "should handle complex template with multiple variables"
+        },
+        {
+          "ancestorTitles": [
+            "TemplateRendererService",
+            "render"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "TemplateRendererService render should filter out empty args",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662413704,
+          "status": "passed",
+          "title": "should filter out empty args"
+        },
+        {
+          "ancestorTitles": [
+            "TemplateRendererService",
+            "render"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "TemplateRendererService render should handle nested quotes by alternating quote styles",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413705,
+          "status": "passed",
+          "title": "should handle nested quotes by alternating quote styles"
+        },
+        {
+          "ancestorTitles": [
+            "TemplateRendererService",
+            "render"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "TemplateRendererService render should preserve whitespace and special characters inside quoted args",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662413707,
+          "status": "passed",
+          "title": "should preserve whitespace and special characters inside quoted args"
+        },
+        {
+          "ancestorTitles": [
+            "TemplateRendererService",
+            "render"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "TemplateRendererService render should throw descriptive error details for malformed templates",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662413708,
+          "status": "passed",
+          "title": "should throw descriptive error details for malformed templates"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "unit"
+      },
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 6,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770662414152,
+        "loadTestEnvironmentEnd": 1770662413732,
+        "loadTestEnvironmentStart": 1770662413728,
+        "runtime": 420,
+        "setupAfterEnvEnd": 1770662413770,
+        "setupAfterEnvStart": 1770662413765,
+        "setupFilesEnd": 1770662413732,
+        "setupFilesStart": 1770662413732,
+        "slow": false,
+        "start": 1770662413732
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/nest/app.module.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "AppModule",
+            "metadata definition"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "AppModule metadata definition should register all expected providers",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662414067,
+          "status": "passed",
+          "title": "should register all expected providers"
+        },
+        {
+          "ancestorTitles": [
+            "AppModule",
+            "metadata definition"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "AppModule metadata definition should export SquadService for downstream modules",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662414068,
+          "status": "passed",
+          "title": "should export SquadService for downstream modules"
+        },
+        {
+          "ancestorTitles": [
+            "AppModule",
+            "metadata definition"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "AppModule metadata definition should keep controllers empty and only import DbModule",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770662414069,
+          "status": "passed",
+          "title": "should keep controllers empty and only import DbModule"
+        },
+        {
+          "ancestorTitles": [
+            "AppModule",
+            "dependency injection"
+          ],
+          "duration": 50,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "AppModule dependency injection should resolve every registered provider instance",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1770662414070,
+          "status": "passed",
+          "title": "should resolve every registered provider instance"
+        },
+        {
+          "ancestorTitles": [
+            "AppModule",
+            "dependency injection"
+          ],
+          "duration": 14,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "AppModule dependency injection should inject the same SquadService and config instances into the CLI command",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770662414121,
+          "status": "passed",
+          "title": "should inject the same SquadService and config instances into the CLI command"
+        },
+        {
+          "ancestorTitles": [
+            "AppModule",
+            "dependency injection"
+          ],
+          "duration": 17,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "AppModule dependency injection should expose the exported SquadService to importing modules",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770662414135,
+          "status": "passed",
+          "title": "should expose the exported SquadService to importing modules"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "unit"
+      },
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 4,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770662414227,
+        "loadTestEnvironmentEnd": 1770662414200,
+        "loadTestEnvironmentStart": 1770662414197,
+        "runtime": 26,
+        "setupAfterEnvEnd": 1770662414222,
+        "setupAfterEnvStart": 1770662414220,
+        "setupFilesEnd": 1770662414201,
+        "setupFilesStart": 1770662414201,
+        "slow": false,
+        "start": 1770662414201
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/telemetry/squad-telemetry.service.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "SquadTelemetryService"
+          ],
+          "duration": null,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadTelemetryService ensures session and updates lastActivityAt",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1770662414226,
+          "status": "todo",
+          "title": "ensures session and updates lastActivityAt"
+        },
+        {
+          "ancestorTitles": [
+            "SquadTelemetryService"
+          ],
+          "duration": null,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadTelemetryService creates squad with label and originatorId FK",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1770662414226,
+          "status": "todo",
+          "title": "creates squad with label and originatorId FK"
+        },
+        {
+          "ancestorTitles": [
+            "SquadTelemetryService"
+          ],
+          "duration": null,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadTelemetryService creates agent with starting status and prompt",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1770662414226,
+          "status": "todo",
+          "title": "creates agent with starting status and prompt"
+        },
+        {
+          "ancestorTitles": [
+            "SquadTelemetryService"
+          ],
+          "duration": null,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "SquadTelemetryService updates agent status to done/error with timestamps",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "startAt": 1770662414226,
+          "status": "todo",
+          "title": "updates agent status to done/error with timestamps"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "unit"
+      },
+      "failureMessage": null
+    }
+  ],
+  "wasInterrupted": false
+}

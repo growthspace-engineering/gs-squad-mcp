@@ -1,0 +1,1390 @@
+{
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 1,
+  "numPassedTests": 74,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 1,
+  "numTotalTests": 74,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1770465679773,
+  "success": false,
+  "testResults": [
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 74,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1770465690700,
+        "loadTestEnvironmentEnd": 1770465679839,
+        "loadTestEnvironmentStart": 1770465679801,
+        "runtime": 10858,
+        "setupAfterEnvEnd": 1770465682460,
+        "setupAfterEnvStart": 1770465679973,
+        "setupFilesEnd": 1770465679842,
+        "setupFilesStart": 1770465679842,
+        "slow": true,
+        "start": 1770465679842
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/runner/work/gs-squad-mcp/gs-squad-mcp/test/e2e/squad-mcp.e2e-spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 66,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E should create testing module and call SquadService directly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465686973,
+          "status": "passed",
+          "title": "should create testing module and call SquadService directly"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 23,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E listRoles returns something non-empty",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1770465687040,
+          "status": "passed",
+          "title": "listRoles returns something non-empty"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 47,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E stateless call spawns fake engine and returns output",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1770465687064,
+          "status": "passed",
+          "title": "stateless call spawns fake engine and returns output"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 344,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E stateless sequential execution honors configured delay between members",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770465687112,
+          "status": "passed",
+          "title": "stateless sequential execution honors configured delay between members"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 366,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E stateless members run in parallel by default",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 5,
+          "retryReasons": [],
+          "startAt": 1770465687456,
+          "status": "passed",
+          "title": "stateless members run in parallel by default"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 482,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E env override forces serialization regardless of configured execution mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770465687822,
+          "status": "passed",
+          "title": "env override forces serialization regardless of configured execution mode"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 22,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E resolves relative cwd paths under the workspace root",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465688304,
+          "status": "passed",
+          "title": "resolves relative cwd paths under the workspace root"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 60,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E validates missing roles before stateless execution",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465688326,
+          "status": "passed",
+          "title": "validates missing roles before stateless execution"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 44,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E escapes prompts with special characters before templating",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1770465688386,
+          "status": "passed",
+          "title": "escapes prompts with special characters before templating"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 12,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E surfacing run template render errors for stateless members",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465688431,
+          "status": "passed",
+          "title": "surfacing run template render errors for stateless members"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 12,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E throws when the run template renders an empty command",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465688444,
+          "status": "passed",
+          "title": "throws when the run template renders an empty command"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 227,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E marks member as timeout when process exceeds configured limit",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465688456,
+          "status": "passed",
+          "title": "marks member as timeout when process exceeds configured limit"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 50,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E captures stderr when the run command exits with non-zero code",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465688683,
+          "status": "passed",
+          "title": "captures stderr when the run command exits with non-zero code"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService behaviors"
+          ],
+          "duration": 45,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService behaviors executes commands with explicit arguments",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465688733,
+          "status": "passed",
+          "title": "executes commands with explicit arguments"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService behaviors"
+          ],
+          "duration": 21,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService behaviors logs debug output when PROCESS_RUNNER_DEBUG is enabled",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465688779,
+          "status": "passed",
+          "title": "logs debug output when PROCESS_RUNNER_DEBUG is enabled"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService behaviors"
+          ],
+          "duration": 45,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService behaviors collects stdout and stderr output separately",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465688800,
+          "status": "passed",
+          "title": "collects stdout and stderr output separately"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService behaviors"
+          ],
+          "duration": 130,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService behaviors terminates commands that exceed the configured timeout",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465688845,
+          "status": "passed",
+          "title": "terminates commands that exceed the configured timeout"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService behaviors"
+          ],
+          "duration": 21,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService behaviors handles child process error events as member errors",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465688976,
+          "status": "passed",
+          "title": "handles child process error events as member errors"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService behaviors"
+          ],
+          "duration": 44,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService behaviors reports non-zero exit codes even when stdout is present",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465688998,
+          "status": "passed",
+          "title": "reports non-zero exit codes even when stdout is present"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService behaviors"
+          ],
+          "duration": 44,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService behaviors closes stdin so commands waiting for EOF can complete",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465689042,
+          "status": "passed",
+          "title": "closes stdin so commands waiting for EOF can complete"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService behaviors"
+          ],
+          "duration": 43,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService behaviors captures large stdout output without truncation",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465689086,
+          "status": "passed",
+          "title": "captures large stdout output without truncation"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E"
+          ],
+          "duration": 47,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E stateful call creates and reuses chatId",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465689129,
+          "status": "passed",
+          "title": "stateful call creates and reuses chatId"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 39,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful member creates chat with UUID substitution",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465689176,
+          "status": "passed",
+          "title": "stateful member creates chat with UUID substitution"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 18,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful create-chat render failure surfaces template error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689215,
+          "status": "passed",
+          "title": "stateful create-chat render failure surfaces template error"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 46,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful create-chat empty output rejects cleanly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689233,
+          "status": "passed",
+          "title": "stateful create-chat empty output rejects cleanly"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 47,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful create-chat process failure propagates stderr",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689279,
+          "status": "passed",
+          "title": "stateful create-chat process failure propagates stderr"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 53,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful create-chat handles stdout without newline terminators",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465689326,
+          "status": "passed",
+          "title": "stateful create-chat handles stdout without newline terminators"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 25,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful existing chat skips create-chat execution",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465689379,
+          "status": "passed",
+          "title": "stateful existing chat skips create-chat execution"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 28,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful run template error bubbles descriptive message",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689404,
+          "status": "passed",
+          "title": "stateful run template error bubbles descriptive message"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 24,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful run template empty output rejects early",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689433,
+          "status": "passed",
+          "title": "stateful run template empty output rejects early"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 342,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful sequential execution honors configured delay",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465689458,
+          "status": "passed",
+          "title": "stateful sequential execution honors configured delay"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution edge cases"
+          ],
+          "duration": 21,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution edge cases stateful process runner errors bubble to caller",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689800,
+          "status": "passed",
+          "title": "stateful process runner errors bubble to caller"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 38,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should execute members sequentially when EXECUTION_MODE is sequential",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465689821,
+          "status": "passed",
+          "title": "should execute members sequentially when EXECUTION_MODE is sequential"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 33,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should execute members in parallel by default",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465689859,
+          "status": "passed",
+          "title": "should execute members in parallel by default"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 33,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should force serialization when PROCESS_RUNNER_SERIALIZE is true",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689892,
+          "status": "passed",
+          "title": "should force serialization when PROCESS_RUNNER_SERIALIZE is true"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 20,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should resolve relative cwd correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689925,
+          "status": "passed",
+          "title": "should resolve relative cwd correctly"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 10,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should throw error when role is not found",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689945,
+          "status": "passed",
+          "title": "should throw error when role is not found"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 18,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should escape special characters in prompt",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465689955,
+          "status": "passed",
+          "title": "should escape special characters in prompt"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 10,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should throw error when template rendering fails",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689973,
+          "status": "passed",
+          "title": "should throw error when template rendering fails"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 13,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should throw error when template renders to empty string",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689984,
+          "status": "passed",
+          "title": "should throw error when template renders to empty string"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 124,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should handle process timeout correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465689997,
+          "status": "passed",
+          "title": "should handle process timeout correctly"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateless execution"
+          ],
+          "duration": 18,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateless execution should handle non-zero exit code correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690122,
+          "status": "passed",
+          "title": "should handle non-zero exit code correctly"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution"
+          ],
+          "duration": 33,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution should create chat with UUID substitution",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465690140,
+          "status": "passed",
+          "title": "should create chat with UUID substitution"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution"
+          ],
+          "duration": 18,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution should throw error when create-chat template rendering fails",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690173,
+          "status": "passed",
+          "title": "should throw error when create-chat template rendering fails"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution"
+          ],
+          "duration": 29,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution should throw error when create-chat renders to empty string",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690191,
+          "status": "passed",
+          "title": "should throw error when create-chat renders to empty string"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution"
+          ],
+          "duration": 22,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution should throw error when create-chat process fails",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690221,
+          "status": "passed",
+          "title": "should throw error when create-chat process fails"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution"
+          ],
+          "duration": 28,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution should handle create-chat output without newline",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690243,
+          "status": "passed",
+          "title": "should handle create-chat output without newline"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution"
+          ],
+          "duration": 23,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution should skip chat creation when chatId is provided",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690271,
+          "status": "passed",
+          "title": "should skip chat creation when chatId is provided"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution"
+          ],
+          "duration": 25,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution should throw error when stateful run template rendering fails",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690294,
+          "status": "passed",
+          "title": "should throw error when stateful run template rendering fails"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution"
+          ],
+          "duration": 22,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution should throw error when stateful run template renders to empty",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690319,
+          "status": "passed",
+          "title": "should throw error when stateful run template renders to empty"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "SquadService stateful execution"
+          ],
+          "duration": 48,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E SquadService stateful execution should execute stateful members sequentially with delay",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465690341,
+          "status": "passed",
+          "title": "should execute stateful members sequentially with delay"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService edge cases"
+          ],
+          "duration": 17,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService edge cases should handle commands with arguments",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690389,
+          "status": "passed",
+          "title": "should handle commands with arguments"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService edge cases"
+          ],
+          "duration": 22,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService edge cases should collect both stdout and stderr",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465690406,
+          "status": "passed",
+          "title": "should collect both stdout and stderr"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService edge cases"
+          ],
+          "duration": 17,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService edge cases should handle process errors gracefully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690428,
+          "status": "passed",
+          "title": "should handle process errors gracefully"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "ProcessRunnerService edge cases"
+          ],
+          "duration": 27,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E ProcessRunnerService edge cases should handle large output",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465690445,
+          "status": "passed",
+          "title": "should handle large output"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "TemplateRendererService edge cases"
+          ],
+          "duration": 9,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E TemplateRendererService edge cases splits args for a basic rendered template",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690472,
+          "status": "passed",
+          "title": "splits args for a basic rendered template"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "TemplateRendererService edge cases"
+          ],
+          "duration": 12,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E TemplateRendererService edge cases preserves quoted argument content",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690481,
+          "status": "passed",
+          "title": "preserves quoted argument content"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "TemplateRendererService edge cases"
+          ],
+          "duration": 9,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E TemplateRendererService edge cases handles single quotes and nested quoting",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690493,
+          "status": "passed",
+          "title": "handles single quotes and nested quoting"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "TemplateRendererService edge cases"
+          ],
+          "duration": 7,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E TemplateRendererService edge cases trims trailing whitespace from the template output",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690503,
+          "status": "passed",
+          "title": "trims trailing whitespace from the template output"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "TemplateRendererService edge cases"
+          ],
+          "duration": 10,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E TemplateRendererService edge cases removes empty args produced by template gaps",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465690510,
+          "status": "passed",
+          "title": "removes empty args produced by template gaps"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "TemplateRendererService edge cases"
+          ],
+          "duration": 8,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E TemplateRendererService edge cases surfaces template failures with a helpful snippet",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465690521,
+          "status": "passed",
+          "title": "surfaces template failures with a helpful snippet"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "TemplateRendererService edge cases"
+          ],
+          "duration": 11,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E TemplateRendererService edge cases injects stateful context like chatId when present",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690529,
+          "status": "passed",
+          "title": "injects stateful context like chatId when present"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "TemplateRendererService edge cases"
+          ],
+          "duration": 8,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E TemplateRendererService edge cases splits unicode and newline sequences correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465690540,
+          "status": "passed",
+          "title": "splits unicode and newline sequences correctly"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 9,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration performs initialize handshake over stdio",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465690548,
+          "status": "passed",
+          "title": "performs initialize handshake over stdio"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 9,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration responds with available tools for tools/list requests",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465690557,
+          "status": "passed",
+          "title": "responds with available tools for tools/list requests"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 8,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration serializes list_roles results via tools/call",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465690566,
+          "status": "passed",
+          "title": "serializes list_roles results via tools/call"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 19,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration executes start_squad_members via tools/call in stateless mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465690574,
+          "status": "passed",
+          "title": "executes start_squad_members via tools/call in stateless mode"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 31,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration executes start_squad_members via tools/call in stateful mode",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465690593,
+          "status": "passed",
+          "title": "executes start_squad_members via tools/call in stateful mode"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 17,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration supports direct start_squad_members method invocation",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465690624,
+          "status": "passed",
+          "title": "supports direct start_squad_members method invocation"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 10,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration returns errors for unknown tools and methods",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1770465690642,
+          "status": "passed",
+          "title": "returns errors for unknown tools and methods"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 7,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration propagates parse errors and preserves request id",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1770465690652,
+          "status": "passed",
+          "title": "propagates parse errors and preserves request id"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 10,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration ignores notifications that omit an id",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690660,
+          "status": "passed",
+          "title": "ignores notifications that omit an id"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 16,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration surfaces internal errors from SquadService executions",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1770465690670,
+          "status": "passed",
+          "title": "surfaces internal errors from SquadService executions"
+        },
+        {
+          "ancestorTitles": [
+            "Squad MCP E2E",
+            "MCP CLI stdio integration"
+          ],
+          "duration": 11,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Squad MCP E2E MCP CLI stdio integration exits gracefully when readline closes",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1770465690687,
+          "status": "passed",
+          "title": "exits gracefully when readline closes"
+        }
+      ],
+      "displayName": {
+        "color": "white",
+        "name": "e2e"
+      },
+      "failureMessage": null
+    }
+  ],
+  "wasInterrupted": false
+}
