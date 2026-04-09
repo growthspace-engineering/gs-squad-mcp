@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="gs-squad-mcp Unit Tests" tests="120" failures="0" errors="0" time="7.5">
+  <testsuite name="SquadService" errors="0" failures="0" skipped="0" timestamp="2025-12-24T01:21:32" time="4.919" tests="29">
+    <testcase classname="SquadService › listRoles" name="should return expected shape" time="0.013">
+    </testcase>
+    <testcase classname="SquadService › listRoles" name="should reflect updated agents" time="0.004">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="single member happy path" time="0.007">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="multiple members in one call" time="0.007">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="serializes members when engine uses cursor-agent" time="0.048">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="missing role error handling" time="0.158">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="status mapping (exitCode/timeouts)" time="0.01">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="escapes prompts with shell metacharacters" time="0.007">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="throws when run template rendering fails" time="0.009">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="throws when run template renders to empty command" time="0.006">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="forces sequential execution when PROCESS_RUNNER_SERIALIZE=true" time="0.018">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="forces parallel execution when PROCESS_RUNNER_SERIALIZE=false" time="0.007">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="propagates process runner errors" time="0.002">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateless" name="prefers timeout status even if exit code is zero" time="0.001">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="new chat returns chatId" time="0.004">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="errors when create-chat template renders empty command" time="0.001">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="existing chat reuses chatId" time="0.001">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="failure in create-chat handled gracefully" time="0.002">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="role not found throws error" time="0.001">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="empty chatId from create-chat throws error" time="0.001">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="throws when create-chat template rendering fails" time="0.001">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="throws when run template renders empty string" time="0.002">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="treats empty chatId input as request for new chat" time="0.002">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="throws when run template rendering fails" time="0.002">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="propagates errors from run command execution" time="0.002">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="sets timeout status even when exit code indicates success" time="0.002">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="serializes stateful members when executionMode requests sequential" time="0.011">
+    </testcase>
+    <testcase classname="SquadService › startSquadMembersStateful" name="runs stateful members in parallel when executionMode=parallel" time="0.006">
+    </testcase>
+    <testcase classname="SquadService › escapePromptForShell" name="handles various whitespace and control characters" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="McpCliCommand" errors="0" failures="0" skipped="0" timestamp="2025-12-24T01:21:37" time="0.734" tests="27">
+    <testcase classname="McpCliCommand › run" name="should create readline interface with correct options" time="0.006">
+    </testcase>
+    <testcase classname="McpCliCommand › run" name="should register line event handler" time="0.003">
+    </testcase>
+    <testcase classname="McpCliCommand › run" name="should register close event handler" time="0.009">
+    </testcase>
+    <testcase classname="McpCliCommand › run" name="should exit process on close event" time="0.003">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - initialize" name="should return correct initialize response" time="0.005">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - initialize" name="should handle initialize without id" time="0.002">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - tools/list" name="should return correct tools list" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - tools/call" name="should handle list_roles tool call" time="0.002">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - tools/call" name="should handle start_squad_members tool call in stateless mode" time="0.003">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - tools/call" name="should handle start_squad_members tool call in stateful mode" time="0.003">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - tools/call" name="should return error for unknown tool" time="0.002">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - list_roles" name="should call squadService.listRoles" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - start_squad_members" name="should call startSquadMembersStateless in stateless mode" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - start_squad_members" name="should call startSquadMembersStateful in stateful mode" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - error handling" name="should return error for unknown method" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - error handling" name="should catch and return internal errors" time="0.002">
+    </testcase>
+    <testcase classname="McpCliCommand › handleRequest - error handling" name="should handle non-Error exceptions" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › sendResponse" name="should write JSON response to stdout" time="0.002">
+    </testcase>
+    <testcase classname="McpCliCommand › sendResponse" name="should handle responses without id" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › line event handler" name="should parse valid JSON request and send response" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › line event handler" name="should handle invalid JSON gracefully" time="0.002">
+    </testcase>
+    <testcase classname="McpCliCommand › line event handler" name="should not send response for notifications (no id)" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › line event handler" name="should extract id from malformed JSON for error response" time="0.006">
+    </testcase>
+    <testcase classname="McpCliCommand › CLI option parsing" name="should parse engine option" time="0.002">
+    </testcase>
+    <testcase classname="McpCliCommand › CLI option parsing" name="should parse execution mode option" time="0.002">
+    </testcase>
+    <testcase classname="McpCliCommand › CLI option parsing" name="should parse sequential flag" time="0.001">
+    </testcase>
+    <testcase classname="McpCliCommand › CLI option parsing" name="should parse state mode option" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProcessRunnerService" errors="0" failures="0" skipped="0" timestamp="2025-12-24T01:21:37" time="0.279" tests="9">
+    <testcase classname="ProcessRunnerService" name="should spawn shell command with args and capture IO" time="0.007">
+    </testcase>
+    <testcase classname="ProcessRunnerService" name="should resolve with collected stderr when process emits an error" time="0.009">
+    </testcase>
+    <testcase classname="ProcessRunnerService" name="should mark execution as timed out and send termination signals" time="0.004">
+    </testcase>
+    <testcase classname="ProcessRunnerService" name="should clear the timeout when the process closes before the deadline" time="0.002">
+    </testcase>
+    <testcase classname="ProcessRunnerService" name="should run multiple processes concurrently without leaking output" time="0.004">
+    </testcase>
+    <testcase classname="ProcessRunnerService" name="should log spawn details when debug flag is enabled" time="0.002">
+    </testcase>
+    <testcase classname="ProcessRunnerService" name="should skip stdin closing when a stream is not provided" time="0.002">
+    </testcase>
+    <testcase classname="ProcessRunnerService" name="should tolerate processes without stdout or stderr streams" time="0.002">
+    </testcase>
+    <testcase classname="ProcessRunnerService" name="should not attempt to send signals when the child lacks a pid" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="PromptBuilderService" errors="0" failures="0" skipped="0" timestamp="2025-12-24T01:21:38" time="0.168" tests="14">
+    <testcase classname="PromptBuilderService › buildPromptStateless" name="should contain role body, task, and footer" time="0.003">
+    </testcase>
+    <testcase classname="PromptBuilderService › buildPromptStateless" name="should format prompt correctly with separators" time="0.002">
+    </testcase>
+    <testcase classname="PromptBuilderService › buildPromptStatefulNewChat" name="should contain role body, initial task, and footer" time="0.001">
+    </testcase>
+    <testcase classname="PromptBuilderService › buildPromptStatefulNewChat" name="should use &quot;Initial Task&quot; instead of &quot;Task&quot;" time="0.001">
+    </testcase>
+    <testcase classname="PromptBuilderService › edge cases and formatting" name="should keep formatting separators even with surrounding whitespace" time="0.002">
+    </testcase>
+    <testcase classname="PromptBuilderService › edge cases and formatting" name="should preserve special characters in role body and task" time="0.002">
+    </testcase>
+    <testcase classname="PromptBuilderService › edge cases and formatting" name="should handle empty role body and task inputs" time="0.003">
+    </testcase>
+    <testcase classname="PromptBuilderService › edge cases and formatting" name="should include very long role and task values without truncation" time="0.002">
+    </testcase>
+    <testcase classname="PromptBuilderService › edge cases and formatting" name="should preserve explicit newlines within tasks for existing chats" time="0.001">
+    </testcase>
+    <testcase classname="PromptBuilderService › buildPromptStatefulExistingChat" name="should contain task only and footer" time="0.001">
+    </testcase>
+    <testcase classname="PromptBuilderService › buildPromptStatefulExistingChat" name="should not include role information" time="0.001">
+    </testcase>
+    <testcase classname="PromptBuilderService › setupReportingFooter" name="should append footer to all prompt types" time="0.002">
+    </testcase>
+    <testcase classname="PromptBuilderService › setupReportingFooter" name="should include instructions about reporting issues" time="0.002">
+    </testcase>
+    <testcase classname="PromptBuilderService › setupReportingFooter" name="should append identical footer text exactly once to every prompt" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="SquadConfigService" errors="0" failures="0" skipped="0" timestamp="2025-12-24T01:21:38" time="0.147" tests="15">
+    <testcase classname="SquadConfigService" name="should provide default values when env vars are not set" time="0.002">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should override defaults with env vars when provided" time="0.001">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should throw error for invalid STATE_MODE" time="0.016">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should auto-select default create-chat template in stateful mode" time="0">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should resolve create-chat template based on engine when stateful" time="0">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should return a copy of config" time="0.001">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should throw error for invalid ENGINE values" time="0.001">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should throw error for invalid execution modes provided via CLI" time="0.001">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should prioritize CLI args over env vars for state mode, engine, and execution mode" time="0.001">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should respect --sequential flag and override env execution mode" time="0.001">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should throw when RUN_TEMPLATE_PATH is provided without execution mode" time="0.001">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should clamp negative sequential delay values to zero" time="0.001">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should fallback to 1000ms when sequential delay env var is not a number" time="0">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should throw for invalid engine specified via CLI" time="0">
+    </testcase>
+    <testcase classname="SquadConfigService" name="should parse CLI equals syntax for state mode and engine" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="RoleRepositoryService" errors="0" failures="0" skipped="0" timestamp="2025-12-24T01:21:38" time="0.183" tests="11">
+    <testcase classname="RoleRepositoryService" name="should load roles from agents directory" time="0.015">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should parse frontmatter correctly" time="0.003">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should fallback to roleId when name is missing" time="0.002">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should default metadata when markdown lacks frontmatter entirely" time="0.002">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should treat blank frontmatter fields as missing and trim the body" time="0.003">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should return null for unknown role" time="0.002">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should cache roles after first load" time="0.003">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should reload roles when cache is invalidated" time="0.004">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should throw a descriptive error when the agents directory is unreadable" time="0.012">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should throw a descriptive error when markdown parsing fails" time="0.004">
+    </testcase>
+    <testcase classname="RoleRepositoryService" name="should return consistent data when accessed concurrently" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="TemplateRendererService" errors="0" failures="0" skipped="0" timestamp="2025-12-24T01:21:38" time="0.142" tests="9">
+    <testcase classname="TemplateRendererService › render" name="should handle template without chatId" time="0.005">
+    </testcase>
+    <testcase classname="TemplateRendererService › render" name="should handle template with chatId" time="0.002">
+    </testcase>
+    <testcase classname="TemplateRendererService › render" name="should trim and split args correctly" time="0.001">
+    </testcase>
+    <testcase classname="TemplateRendererService › render" name="should handle single quotes in template" time="0.001">
+    </testcase>
+    <testcase classname="TemplateRendererService › render" name="should handle complex template with multiple variables" time="0.002">
+    </testcase>
+    <testcase classname="TemplateRendererService › render" name="should filter out empty args" time="0.002">
+    </testcase>
+    <testcase classname="TemplateRendererService › render" name="should handle nested quotes by alternating quote styles" time="0.001">
+    </testcase>
+    <testcase classname="TemplateRendererService › render" name="should preserve whitespace and special characters inside quoted args" time="0.001">
+    </testcase>
+    <testcase classname="TemplateRendererService › render" name="should throw descriptive error details for malformed templates" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="AppModule" errors="0" failures="0" skipped="0" timestamp="2025-12-24T01:21:38" time="0.566" tests="6">
+    <testcase classname="AppModule › metadata definition" name="should register all expected providers" time="0.001">
+    </testcase>
+    <testcase classname="AppModule › metadata definition" name="should export SquadService for downstream modules" time="0.001">
+    </testcase>
+    <testcase classname="AppModule › metadata definition" name="should keep controllers empty and only import DbModule" time="0.001">
+    </testcase>
+    <testcase classname="AppModule › dependency injection" name="should resolve every registered provider instance" time="0.053">
+    </testcase>
+    <testcase classname="AppModule › dependency injection" name="should inject the same SquadService and config instances into the CLI command" time="0.009">
+    </testcase>
+    <testcase classname="AppModule › dependency injection" name="should expose the exported SquadService to importing modules" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="SquadTelemetryService" errors="0" failures="0" skipped="0" timestamp="2025-12-24T01:21:39" time="0.027" tests="0">
+    <testcase classname="SquadTelemetryService" name="ensures session and updates lastActivityAt" time="0">
+    </testcase>
+    <testcase classname="SquadTelemetryService" name="creates squad with label and originatorId FK" time="0">
+    </testcase>
+    <testcase classname="SquadTelemetryService" name="creates agent with starting status and prompt" time="0">
+    </testcase>
+    <testcase classname="SquadTelemetryService" name="updates agent status to done/error with timestamps" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>

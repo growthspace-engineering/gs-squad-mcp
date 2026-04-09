@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1766539299662" clover="3.2.0">
+  <project timestamp="1766539299662" name="All files">
+    <metrics statements="464" coveredstatements="404" conditionals="240" coveredconditionals="188" methods="71" coveredmethods="57" elements="775" coveredelements="649" complexity="0" loc="464" ncloc="464" packages="9" files="13" classes="13"/>
+    <package name="cli">
+      <metrics statements="97" coveredstatements="61" conditionals="40" coveredconditionals="20" methods="19" coveredmethods="11"/>
+      <file name="main-stdio.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/cli/main-stdio.ts">
+        <metrics statements="33" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="52" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="77" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="84" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+      </file>
+      <file name="mcp-cli.command.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/cli/mcp-cli.command.ts">
+        <metrics statements="64" coveredstatements="61" conditionals="24" coveredconditionals="20" methods="11" coveredmethods="11"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="27" type="stmt"/>
+        <line num="29" count="27" type="stmt"/>
+        <line num="31" count="27" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="78" count="8" type="stmt"/>
+        <line num="84" count="8" type="stmt"/>
+        <line num="85" count="4" type="stmt"/>
+        <line num="86" count="4" type="stmt"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="89" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
+        <line num="103" count="2" type="stmt"/>
+        <line num="104" count="2" type="stmt"/>
+        <line num="105" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="115" count="8" type="stmt"/>
+        <line num="116" count="1" type="stmt"/>
+        <line num="120" count="8" type="stmt"/>
+        <line num="126" count="15" type="cond" truecount="1" falsecount="0"/>
+        <line num="128" count="15" type="stmt"/>
+        <line num="131" count="15" type="cond" truecount="6" falsecount="0"/>
+        <line num="134" count="3" type="stmt"/>
+        <line num="144" count="3" type="stmt"/>
+        <line num="148" count="1" type="stmt"/>
+        <line num="186" count="1" type="stmt"/>
+        <line num="190" count="4" type="stmt"/>
+        <line num="192" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="195" count="4" type="cond" truecount="3" falsecount="0"/>
+        <line num="197" count="1" type="stmt"/>
+        <line num="205" count="1" type="stmt"/>
+        <line num="208" count="2" type="stmt"/>
+        <line num="210" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="211" count="1" type="stmt"/>
+        <line num="217" count="1" type="stmt"/>
+        <line num="223" count="2" type="stmt"/>
+        <line num="231" count="2" type="stmt"/>
+        <line num="235" count="1" type="stmt"/>
+        <line num="244" count="3" type="stmt"/>
+        <line num="248" count="4" type="stmt"/>
+        <line num="249" count="2" type="stmt"/>
+        <line num="252" count="2" type="stmt"/>
+        <line num="253" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="254" count="1" type="stmt"/>
+        <line num="260" count="1" type="stmt"/>
+        <line num="266" count="2" type="stmt"/>
+        <line num="270" count="1" type="stmt"/>
+        <line num="280" count="11" type="stmt"/>
+        <line num="282" count="2" type="stmt"/>
+        <line num="295" count="3" type="stmt"/>
+        <line num="296" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="core.config">
+      <metrics statements="36" coveredstatements="36" conditionals="56" coveredconditionals="54" methods="4" coveredmethods="4"/>
+      <file name="squad-config.service.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/config/squad-config.service.ts">
+        <metrics statements="36" coveredstatements="36" conditionals="56" coveredconditionals="54" methods="4" coveredmethods="4"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="9" count="19" type="stmt"/>
+        <line num="10" count="53" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="53" type="stmt"/>
+        <line num="12" count="247" type="stmt"/>
+        <line num="13" count="247" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="244" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="20" count="46" type="stmt"/>
+        <line num="23" count="19" type="stmt"/>
+        <line num="24" count="16" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="16" type="stmt"/>
+        <line num="29" count="19" type="stmt"/>
+        <line num="31" count="19" type="cond" truecount="3" falsecount="0"/>
+        <line num="33" count="19" type="cond" truecount="4" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="41" count="18" type="stmt"/>
+        <line num="46" count="18" type="stmt"/>
+        <line num="51" count="18" type="cond" truecount="3" falsecount="0"/>
+        <line num="52" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="61" count="16" type="stmt"/>
+        <line num="65" count="16" type="stmt"/>
+        <line num="66" count="16" type="stmt"/>
+        <line num="71" count="16" type="cond" truecount="3" falsecount="0"/>
+        <line num="74" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="86" count="15" type="stmt"/>
+        <line num="91" count="15" type="stmt"/>
+        <line num="93" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="101" count="15" type="cond" truecount="4" falsecount="0"/>
+        <line num="102" count="1" type="stmt"/>
+        <line num="108" count="14" type="stmt"/>
+        <line num="137" count="11" type="stmt"/>
+      </file>
+    </package>
+    <package name="core.engine">
+      <metrics statements="68" coveredstatements="67" conditionals="39" coveredconditionals="33" methods="12" coveredmethods="12"/>
+      <file name="process-runner.service.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/engine/process-runner.service.ts">
+        <metrics statements="34" coveredstatements="34" conditionals="14" coveredconditionals="13" methods="8" coveredmethods="8"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="22" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="39" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="48" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="9" type="stmt"/>
+        <line num="52" count="10" type="stmt"/>
+        <line num="53" count="10" type="stmt"/>
+        <line num="54" count="10" type="stmt"/>
+        <line num="56" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="57" count="9" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="62" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="63" count="9" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="68" count="10" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
+        <line num="72" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="92" count="10" type="stmt"/>
+        <line num="93" count="7" type="stmt"/>
+        <line num="94" count="7" type="stmt"/>
+        <line num="102" count="10" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
+        <line num="104" count="1" type="stmt"/>
+      </file>
+      <file name="template-renderer.service.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/engine/template-renderer.service.ts">
+        <metrics statements="34" coveredstatements="33" conditionals="25" coveredconditionals="20" methods="4" coveredmethods="4"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="29" count="8" type="stmt"/>
+        <line num="30" count="442" type="stmt"/>
+        <line num="31" count="442" type="stmt"/>
+        <line num="33" count="442" type="cond" truecount="4" falsecount="0"/>
+        <line num="34" count="37" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="28" type="stmt"/>
+        <line num="36" count="28" type="stmt"/>
+        <line num="38" count="405" type="cond" truecount="5" falsecount="0"/>
+        <line num="39" count="9" type="stmt"/>
+        <line num="40" count="9" type="stmt"/>
+        <line num="41" count="396" type="cond" truecount="4" falsecount="0"/>
+        <line num="42" count="9" type="stmt"/>
+        <line num="43" count="9" type="stmt"/>
+        <line num="46" count="387" type="stmt"/>
+        <line num="49" count="442" type="stmt"/>
+        <line num="52" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="53" count="8" type="stmt"/>
+        <line num="56" count="8" type="stmt"/>
+        <line num="57" count="36" type="stmt"/>
+        <line num="60" count="36" type="cond" truecount="1" falsecount="1"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="36" type="stmt"/>
+      </file>
+    </package>
+    <package name="core.mcp">
+      <metrics statements="149" coveredstatements="148" conditionals="74" coveredconditionals="66" methods="18" coveredmethods="17"/>
+      <file name="squad.service.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/mcp/squad.service.ts">
+        <metrics statements="149" coveredstatements="148" conditionals="74" coveredconditionals="66" methods="18" coveredmethods="17"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="30" count="33" type="stmt"/>
+        <line num="31" count="33" type="stmt"/>
+        <line num="32" count="33" type="stmt"/>
+        <line num="33" count="33" type="stmt"/>
+        <line num="34" count="33" type="stmt"/>
+        <line num="35" count="33" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="52" count="14" type="stmt"/>
+        <line num="56" count="21" type="stmt"/>
+        <line num="57" count="14" type="stmt"/>
+        <line num="58" count="14" type="stmt"/>
+        <line num="59" count="14" type="stmt"/>
+        <line num="60" count="14" type="stmt"/>
+        <line num="62" count="14" type="stmt"/>
+        <line num="66" count="14" type="stmt"/>
+        <line num="68" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="70" count="6" type="stmt"/>
+        <line num="71" count="6" type="stmt"/>
+        <line num="72" count="6" type="stmt"/>
+        <line num="80" count="6" type="stmt"/>
+        <line num="83" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="88" count="2" type="stmt"/>
+        <line num="93" count="12" type="stmt"/>
+        <line num="95" count="15" type="stmt"/>
+        <line num="96" count="15" type="stmt"/>
+        <line num="104" count="11" type="stmt"/>
+        <line num="107" count="8" type="stmt"/>
+        <line num="110" count="10" type="stmt"/>
+        <line num="116" count="14" type="stmt"/>
+        <line num="120" count="17" type="stmt"/>
+        <line num="121" count="14" type="stmt"/>
+        <line num="122" count="14" type="stmt"/>
+        <line num="123" count="14" type="stmt"/>
+        <line num="124" count="14" type="stmt"/>
+        <line num="126" count="14" type="stmt"/>
+        <line num="130" count="14" type="stmt"/>
+        <line num="132" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="133" count="1" type="stmt"/>
+        <line num="134" count="2" type="stmt"/>
+        <line num="135" count="2" type="stmt"/>
+        <line num="136" count="2" type="stmt"/>
+        <line num="144" count="2" type="stmt"/>
+        <line num="147" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="151" count="1" type="stmt"/>
+        <line num="152" count="1" type="stmt"/>
+        <line num="157" count="13" type="stmt"/>
+        <line num="159" count="15" type="stmt"/>
+        <line num="160" count="15" type="stmt"/>
+        <line num="168" count="7" type="stmt"/>
+        <line num="171" count="5" type="stmt"/>
+        <line num="174" count="6" type="stmt"/>
+        <line num="182" count="33" type="stmt"/>
+        <line num="203" count="21" type="stmt"/>
+        <line num="204" count="21" type="cond" truecount="2" falsecount="0"/>
+        <line num="205" count="1" type="stmt"/>
+        <line num="208" count="20" type="stmt"/>
+        <line num="212" count="20" type="stmt"/>
+        <line num="213" count="20" type="stmt"/>
+        <line num="214" count="20" type="stmt"/>
+        <line num="215" count="20" type="stmt"/>
+        <line num="221" count="20" type="stmt"/>
+        <line num="224" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="228" count="20" type="stmt"/>
+        <line num="230" count="20" type="stmt"/>
+        <line num="232" count="20" type="stmt"/>
+        <line num="239" count="19" type="stmt"/>
+        <line num="241" count="1" type="stmt"/>
+        <line num="248" count="19" type="cond" truecount="4" falsecount="0"/>
+        <line num="249" count="1" type="stmt"/>
+        <line num="254" count="18" type="stmt"/>
+        <line num="262" count="17" type="cond" truecount="1" falsecount="1"/>
+        <line num="263" count="17" type="stmt"/>
+        <line num="264" count="17" type="stmt"/>
+        <line num="265" count="17" type="stmt"/>
+        <line num="266" count="17" type="stmt"/>
+        <line num="279" count="17" type="stmt"/>
+        <line num="302" count="17" type="stmt"/>
+        <line num="303" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="304" count="1" type="stmt"/>
+        <line num="307" count="16" type="cond" truecount="1" falsecount="1"/>
+        <line num="311" count="16" type="stmt"/>
+        <line num="312" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="314" count="16" type="cond" truecount="4" falsecount="0"/>
+        <line num="315" count="15" type="stmt"/>
+        <line num="320" count="15" type="stmt"/>
+        <line num="321" count="15" type="stmt"/>
+        <line num="322" count="15" type="stmt"/>
+        <line num="328" count="1" type="stmt"/>
+        <line num="337" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="341" count="1" type="stmt"/>
+        <line num="348" count="13" type="stmt"/>
+        <line num="355" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="357" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="358" count="1" type="stmt"/>
+        <line num="361" count="12" type="stmt"/>
+        <line num="362" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="363" count="1" type="stmt"/>
+        <line num="367" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="370" count="12" type="stmt"/>
+        <line num="371" count="12" type="stmt"/>
+        <line num="372" count="12" type="stmt"/>
+        <line num="373" count="12" type="stmt"/>
+        <line num="379" count="12" type="stmt"/>
+        <line num="382" count="12" type="stmt"/>
+        <line num="384" count="12" type="stmt"/>
+        <line num="386" count="12" type="stmt"/>
+        <line num="394" count="1" type="stmt"/>
+        <line num="401" count="11" type="cond" truecount="4" falsecount="0"/>
+        <line num="402" count="1" type="stmt"/>
+        <line num="407" count="10" type="stmt"/>
+        <line num="414" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="415" count="9" type="stmt"/>
+        <line num="416" count="9" type="stmt"/>
+        <line num="417" count="9" type="stmt"/>
+        <line num="418" count="9" type="stmt"/>
+        <line num="431" count="9" type="stmt"/>
+        <line num="443" count="0" type="stmt"/>
+        <line num="447" count="38" type="stmt"/>
+        <line num="454" count="52" type="cond" truecount="2" falsecount="0"/>
+        <line num="455" count="6" type="stmt"/>
+        <line num="457" count="46" type="cond" truecount="2" falsecount="0"/>
+        <line num="458" count="44" type="stmt"/>
+        <line num="460" count="2" type="stmt"/>
+        <line num="467" count="28" type="stmt"/>
+        <line num="468" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="469" count="1" type="stmt"/>
+        <line num="471" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="472" count="1" type="stmt"/>
+        <line num="474" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="475" count="1" type="stmt"/>
+        <line num="477" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="478" count="1" type="stmt"/>
+        <line num="480" count="24" type="stmt"/>
+      </file>
+    </package>
+    <package name="core.prompt">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="prompt-builder.service.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/prompt/prompt-builder.service.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="18" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="52" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="core.roles">
+      <metrics statements="31" coveredstatements="31" conditionals="12" coveredconditionals="11" methods="5" coveredmethods="5"/>
+      <file name="role-repository.service.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/roles/role-repository.service.ts">
+        <metrics statements="31" coveredstatements="31" conditionals="12" coveredconditionals="11" methods="5" coveredmethods="5"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="15" type="stmt"/>
+        <line num="12" count="15" type="stmt"/>
+        <line num="15" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="22" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="25" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="14" type="stmt"/>
+        <line num="30" count="14" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+        <line num="33" count="14" type="stmt"/>
+        <line num="34" count="14" type="stmt"/>
+        <line num="35" count="13" type="stmt"/>
+        <line num="36" count="13" type="stmt"/>
+        <line num="39" count="13" type="stmt"/>
+        <line num="40" count="13" type="stmt"/>
+        <line num="41" count="13" type="stmt"/>
+        <line num="42" count="13" type="stmt"/>
+        <line num="43" count="13" type="stmt"/>
+        <line num="45" count="12" type="stmt"/>
+        <line num="52" count="12" type="stmt"/>
+        <line num="56" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="62" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="core.telemetry">
+      <metrics statements="33" coveredstatements="11" conditionals="15" coveredconditionals="0" methods="6" coveredmethods="1"/>
+      <file name="squad-telemetry.service.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/core/telemetry/squad-telemetry.service.ts">
+        <metrics statements="33" coveredstatements="11" conditionals="15" coveredconditionals="0" methods="6" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="nest.entities">
+      <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="agent.entity.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/nest/entities/agent.entity.ts">
+        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+      </file>
+      <file name="session.entity.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/nest/entities/session.entity.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+      </file>
+      <file name="squad.entity.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/nest/entities/squad.entity.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared">
+      <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="squad-db-path.ts" path="/home/runner/work/gs-squad-mcp/gs-squad-mcp/src/shared/squad-db-path.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
